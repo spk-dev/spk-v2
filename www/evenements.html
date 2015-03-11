@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../www/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../www/css/select2.css" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link href="../www/css/freelancer.css" rel="stylesheet">
+    <link href="../www/css/custo.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="www/_trash_font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+
+    <![endif]-->
+
+    <script src='../www/js/googleMap.js'></script>
+</head>
+
+<body id="page-top" class="index">
+    <div id="fb-root"></div>
+    <!-- SDK Facebook -->
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- FIN SDK Facebook -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="" href="#page-top">
+                    <img src="../www/img/spk.png" alt="logo spk" class="img-responsive"/>
+                    
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#evenements" id="top_menu_evenements">Evénements</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#organisateurs" id="top_menu_organisateurs">Organisateurs</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#thematiques" id="top_menu_thematiques">Thématiques</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#inscription" id="top_menu_inscription">Inscription</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+       
+    </nav>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="intro-text">
+                        <span class="skills">Vivez les <span class="high1">événements</span> qui vous  <span class="high2">ressemblent</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+    
+    
+    
+    
+    <!--    Dynamique grid EVENEMENTS-->
+    <section id="evenements" class="">
+        
+        <div class="container">
+            
+            <div class='col-lg-3 col-md-3 col-sm-12 col-xs-12'>
+                <div class='row hidden-xs hidden-sm hidden-md'>
+                    <a href='#map'>
+                        <img src='../www/img/flaticon-map.png' alt='Voir la carte' class='img-responsive'/>
+                    </a>
+                </div>
+                <div class='row'>
+                   <form role="form" name="formResearch" id="formResearch">
+                       <div class="form-group col-lg-12 col-md-12 col-sm-4 col-xs-4">
+                           <label for="search-organisateurs">Organisateurs</label>
+                           <select name="search-organisateurs" class="form-control" id="search-organisateurs" multiple></select>
+                       </div>
+                       <div class="form-group col-lg-12 col-md-12 col-sm-3 col-xs-3">
+                            <label for="search-types" class='floating-label-form-group'>Types d'événements</label>
+                            <select name="search-types" class="form-control" id="search-types" multiple></select>
+                        </div>
+                       <div class="form-group col-lg-12 col-md-12 col-sm-3 col-xs-3">
+                           <label for="newsletter_email">Thèmes</label>
+                           <select name="search-themes" class="form-control " id="search-themes" multiple></select>
+                       </div>
+
+                       <div class="form-group col-lg-12 col-md-12 col-sm-3 col-xs-3">
+                           <div class="input-daterange input-group " id="datepicker">
+                               <label for="start">Date d'événement</label>
+                               <input type="text" class="form-control" name="start" id='start' placeholder="date minimum"/>
+                               <input type="text" class="form-control" name="end" id='end' placeholder="date maximum"/>
+                           </div>
+                       </div>
+
+
+                        <div class="form-group col-lg-12 col-md-12 col-sm-4 col-xs-4">
+                            <label for="search-motscles">Mots clés</label>
+                            <input type="text" name="search-motscles" class="form-control" id="search-motscles" placeholder="Mots clés">
+                        </div>
+                         <div class="form-group col-lg-12 col-md-12 col-sm-4 col-xs-4">
+                            <button type="submit" class="btn btn-default">Rechercher</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class='col-lg-9 col-md-9 col-sm-12 col-xs-12'>
+                <div class="row">
+                    <div class='col-lg-2 col-md-2 col-sm-3 col-xs-4'>
+                        <select class='form-control nbItemParPage' id="nbItemParPage" onChange="modifyNbItemParPage();">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="10">10</option>
+                            <option value="30">30</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div class='col-lg-10 col-md-10 col-sm-9 col-xs-8'>
+                        <span id="nbItems"></span> événement<span id="plural"></span> correspondant à votre recherche
+                    </div>
+                </div>
+                <div class='row'>
+                    <nav>
+                            <input type="hidden" id="currentPage" value="1"/>
+                        
+                            <ul class="pagination pagination-sm" id="pagination"></ul>
+                        
+                    </nav>
+                </div>
+
+                <div id="listeEvenements" >
+                    <!-- LISTE AJAX EVENEMENTS-->
+                </div>
+                <div class='row'>
+                    <nav>
+
+                        <ul class="pagination pagination-sm" id="pagination2"></ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section  class="hidden-xs hidden-sm hidden-print row">
+        <a name='map'></a>
+        <div class="container" >
+            <div id="map-container" class="col-lg-12"></div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4 col-lg-3 col-sm-12 col-xs-12" id='newsletter-widget'>
+                       <h2 class="titre" id="titre_newsletter"><i class='fa fa-fw fa-envelope'></i>Newsletter</h2>
+                        <p>Restons en contact, et soyez informé des nouveautés.</p>
+                        <form role="form">
+                            <div class="form-group">
+        <!--                        <label for="newsletter_nom" class='floating-label-form-group'>Nom</label>-->
+                                <input type="text" name="newsletter_nom" class="form-control" id="newsletter_nom" placeholder="Nom">
+                            </div>
+                            <div class="form-group">
+        <!--                        <label for="newsletter_prenom">Prénom</label>-->
+                                <input type="text" name='newsletter_prenom' class="form-control" id="newsletter_prenom" placeholder="Prénom">
+                            </div>
+                            <div class="form-group">
+        <!--                        <label for="newsletter_email">Adresse email</label>-->
+                                <input type="email" name="newsletter_email" class="form-control" id="newsletter_email" placeholder="Email">
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="newsletter_part" value="1" checked="checked"> J'accepte de recevoir les mails de spibook et de ses partenaires
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-default row">S'inscrire</button>
+                        </form>
+                    </div>
+                    <div class="footer-col col-md-8 col-lg-9 col-sm-12 hidden-xs ">
+                        <h3>&nbsp;</h3>
+
+                        <div class="fb-like-box panel panel-default" data-href="https://www.facebook.com/pages/Spibook/283290738383457?fref=ts" data-width="700" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#" class="btn-social btn-outline btn-facebook"><i class="fa fa-fw fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline btn-google"><i class="fa fa-fw fa-google-plus"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline btn-twitter"><i class="fa fa-fw fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline btn-youtube"><i class="fa fa-fw fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-link"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Conception, infographie, rédaction et développement réalisé par SPIBOOK. - &copy; Tous droits réservés</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="../www/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../www/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="../www/js/classie.js"></script>
+    <script src="../www/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../www/js/jqBootstrapValidation.js"></script>
+    <!-- <script src="js/contact_me.js"></script>
+
+    <!-- Form tools-->
+
+    <script src="../www/js/bootstrap-datepicker.js"></script>
+    <script src="../www/js/select2.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../www/js/freelancer.js"></script>
+    <script src="../www/js/salvattore.min.js"></script>
+    <script src="../www/js/custo.js"></script>
+
+
+
+    </script>
+
+    <!-- UserVoice JavaScript SDK (only needed once on a page) -->
+    <script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/DTbQzQuxhieQjAGWkTrAw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+
+    <!-- A tab to launch the Classic Widget -->
+    <script>
+        UserVoice = window.UserVoice || [];
+        UserVoice.push(['showTab', 'classic_widget', {
+            mode: 'full',
+            primary_color: '#1b6b74',
+            link_color: '#393c42',
+            default_mode: 'support',
+            forum_id: 259025,
+            tab_label: 'Suggestions',
+            tab_color: '#1b6b74',
+            tab_position: 'middle-right',
+            tab_inverted: true
+        }]);
+    </script>
+
+
+    <script>
+        $(' .input-daterange').datepicker({
+            language: "fr"
+        });
+
+    </script>
+
+    <script>
+
+        $(".select2").select2();
+    </script>
+
+    <script>
+        launcher('evenements');
+    </script>
+</body>
+
+</html>
