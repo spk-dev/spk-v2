@@ -1,31 +1,30 @@
 
-
-
-
-
-
-/**
- * Liste des url
- * @param {type} page
- * @returns {undefined}
- */
-//var urlEvenements = "../rest/evenements";
-//var urlEvenement = "../rest/evenement/";
-//var urlOrganisateurs = "../rest/organisateurs";
-//var urlOrganisateursNextEvent = "../rest/organisateursprochainevenement";
-//var urlOrganisateur = "../rest/organisateur/";
-//var urlNbEvenementParThemes = "../rest/nbevenementsparthemes";
-//var urlThemes = "../rest/themes/";
-//var urlTypes = "../rest/types/";
-
-
-
-
 /**
  * Construire la liste des événements
  * @returns {null}
  */
 function pageHome(){
+    pageHomeEvenement();
+    pageHomeOrganisateurs();
+    getNbEvenementsParThemes();
+    
+}
+
+function pageHomeOrganisateurs(){
+    
+    var url = urlOrganisateursNextEvent;
+    console.log(url);
+    $.getJSON(url, function (data) {
+        $(data.organisateurs).each(function (i, organisateur) {
+            console.log(organisateur);
+            appendOrganisateurHome(organisateur);
+        });
+    });  
+    
+}
+function pageHomeEvenement(){
+    removeItems('#listeEvenements');
+    //removeEvenementHome();
     $.getJSON(urlEvenements, function (data) {
         $(data.evenements).each(function (i, event) {
             var evenement = defineEvenement(event);
@@ -43,19 +42,7 @@ function pageHome(){
             appendEvenementHome(evenement);
         });
     });
-    var url = urlOrganisateursNextEvent;
-    console.log(url);
-    $.getJSON(url, function (data) {
-        $(data.organisateurs).each(function (i, organisateur) {
-            console.log(organisateur);
-            appendOrganisateurHome(organisateur);
-        });
-    });  
-    getNbEvenementsParThemes();
 }
-
-
-
 /**
  * Construire la liste des événements
  * @returns {null}
@@ -64,7 +51,6 @@ function pageEvenements(){
 
 
     $('#listeEvenements div').remove();
-    //console.log('rentre dans pageEvenements');
     $('#loading').show();
     
     formData = $('#formResearch input').serialize();
@@ -80,7 +66,7 @@ function pageEvenements(){
 
     
     $.getJSON(url, function (data) {
-
+        console.log(data);
         nbItems = data.evenements.length;
 //        nbItemsParPage = $("#nbItemParPage option:selected").val();
 
@@ -90,28 +76,28 @@ function pageEvenements(){
         $("#nbItems").html(nbItems);
         $("#plural").html(plural);
 
-        // Création de la pagination
-//        if(nbItems > nbItemsParPage && isoCriteres===true) {
-//            createPagination(nbItems, nbItemsParPage);
-//        }else{
-//            removePagination();
-//        }
-
-//        var nbItemsParPage = $("#nbItemParPage option:selected").val();
-//        var currentPage = $('#currentPage').val();
-//        var min = (nbItemsParPage * currentPage) - nbItemsParPage;
-//        var max = (nbItemsParPage * currentPage) - 1;
-
+       
+        //nomsDesMois = new Array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre") ;
+        var listDate = new Array();
+        
         $(data.evenements).each(function (i, event) {
-
+                
 
 //            if(i >= min && i <= max) {
 
                 var evenement = defineEvenement(event);
                 var debut = evenement.debut;
                 var fin = evenement.fin;
-
-
+                console.log("debut = "+debut);
+                
+                datedebut = formatDate(debut,"moisAn");
+                //datedebut = nomsDesMois[datedebut.getUTCMonth()]+" "+datedebut.getUTCFullYear();
+                console.log("datedebug = "+datedebut);
+                if($.inArray(datedebut,listDate)<1){
+                    listDate.push(datedebut);
+                    appendEvenementsDate(datedebut);
+                }
+                
                 // lister les coordonnées GPS dans le tableauMarqueurs
                 tableauMarqueurs.push({
                     lat: evenement.lat,
@@ -127,6 +113,8 @@ function pageEvenements(){
 
 
         });
+        appendEvenementsListeOrder(listDate);
+        console.log(listDate);
     });
     $('#loading').hide();
 }
@@ -160,25 +148,7 @@ function pageEvenement(id){
             var evenement = defineEvenement(event);
             var debut = evenement.debut;
             var fin = evenement.fin;
-            //console.log('evenement themes ['+evenement.themes+"]");
-            //tableauMarqueurs.length = 0;
-//            Marqueur = {
-//                lat: evenement.lat,
-//                lng: evenement.long,
-//                popup: evenement.titre,
-//                date: debut + ' <br/> ' + fin,
-//                lieu: evenement.ville,
-//            }
-            
-//            tableauMarqueurs.push({
-//                
-//                lat: evenement.lat,
-//                lng: evenement.long,
-//                popup: evenement.titre,
-//                date: debut + ' <br/> ' + fin,
-//                lieu: evenement.ville,
-//                
-//            });
+      
             appendEvenement(evenement);
         });
     });
@@ -191,65 +161,28 @@ function pageEvenement(id){
  * @returns {null}
  */
 function pageOrganisateurs(isoCriteres, filter){
-
-    console.log('rentre dans pageOrganisateurs');
-
-    formData = $('#formResearch').serialize();
     var url = "";
-    var plural = "";
 
     url = urlOrganisateurs;
-    console.log('url : '+url);
 
-    var nbItems;
-    var nbItemsParPage;
-
-    $('#listeItems div').remove();
-
+    removeItems('#listeItems');
     $.getJSON(url, function (data) {
-
+        
+        console.log('data : '+data);
         nbItems = data.organisateurs.length;
         nbItemsParPage = $("#nbItemParPage option:selected").val();
 
-        if(nbItems>1){
-            plural = "s";
-        }
-        $("#nbItems").html(nbItems);
-        $("#plural").html(plural);
-
-        // Création de la pagination
-        if(nbItems > nbItemsParPage && isoCriteres===true) {
-            createPagination(nbItems, nbItemsParPage);
-        }else{
-            removePagination();
-        }
-
-        var nbItemsParPage = $("#nbItemParPage option:selected").val();
-        var currentPage = $('#currentPage').val();
-        var min = (nbItemsParPage * currentPage) - nbItemsParPage;
-        var max = (nbItemsParPage * currentPage) - 1;
-
         $(data.organisateurs).each(function (i, organisateur) {
+            var org = defineOrganisateur(organisateur);
 
+            // lister les coordonnées GPS dans le tableauMarqueurs
+            tableauMarqueurs.push({
+                lat: org.lat,
+                lng: org.long,
+                popup: org.nom,
 
-            if(i >= min && i <= max) {
-
-                var org = defineOrganisateur(organisateur);
-
-
-
-                // lister les coordonnées GPS dans le tableauMarqueurs
-                tableauMarqueurs.push({
-                    lat: org.lat,
-                    lng: org.long,
-                    popup: org.nom,
-
-                });
-                appendOrganisateurs(org);
-            }
-
-
-
+            });
+            appendOrganisateurs(org);
         });
     });
     $('#loading').hide();

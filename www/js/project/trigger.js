@@ -4,10 +4,6 @@
  * and open the template in the editor.
  */
 
-$('#listeEvenements').jscroll({
-    autoTriggerUntil: 3
-});
-
 
 $(function(){
     $('#save_value').click(function(){
@@ -17,7 +13,9 @@ $(function(){
         });
         console.log(valeurs);
     });
-    //shorthand document.ready function
+});
+
+$(function() { //shorthand document.ready function
     $('#formResearch').on('submit', function(e) { //use on if jQuery 1.7+
 
         e.preventDefault();  //prevent form from submitting
@@ -33,19 +31,18 @@ $(function(){
         pageEvenements(false,false);
     });
 });
-//
-//$(function() {
-//    $('#formResearch').submit(function() {
-//        pageEvenements(true,false);
-//    });
-//});
 
-$(window).load(function() {
-  $('img').each(function() {
-    if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
-      // image was broken, replace with your new image
-      this.src = 'img/12.jpg';
-      //alert('error on image');
-    }
-  });
+
+$('#EventSearchColumn').affix({
+  offset: {
+    top: 100,
+    bottom: 1200 
+  }
+})
+
+$(function(){
+    $('.eventFilterEvent').click(function(e){
+        e.preventDefault();
+        pageHomeEvenement();
+    });
 });

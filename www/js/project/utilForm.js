@@ -35,7 +35,7 @@ function setDateField(){
 
 
 /**
- * Récupère tous les themes d'événements et utilise la fonction 
+ * Récupère tous les organisateurs d'événements et utilise la fonction 
  * appendSelectList (Ihm.js) pour écrire
  * @returns {void}
  */
@@ -72,67 +72,12 @@ function setListeThemes(){
  */
 function setListeTypes(){
     var url = urlTypesEvenement + "*";
-    
-    $.getJSON(url, function (data) { 
-        var arr;
+    $.getJSON(url, function (data) {
         $(data.types).each(function (i, type) {
-            arr[type.id] = type.nom;
+            appendSelectList('listeTypes',type.id,type.nom,'types');
         });
-        html = createListe("types","types", arr);
-        appendSelect('listeTypes',html);
     });
-    
 
-}
-
-/**
- * Creation d'une liste Select
- * @param {string} id
- * @param {string} name
- * @param {array} arr
- * @returns {html}
- */
-function createListe(id,name,arr){
-    var html = openSelect(id,name);
-    for(var i=0; i < arr.length(); i++){
-        html += optionSelect(arr[i][0], arr[i][1]);
-    }
-    html += closeSelect();
-    return html;
-}
-
-
-function openSelect(id,name){
-    return "<select name='"+name+"' id='"+id+"'>";
-}
-
-function closeSelect(){
-    return "</select>";
-}
-
-function optionSelect(val,label){
-    return "<option value='"+val+"'>"+label+"</option>";
-}
-
-/**
- * Fonction générique de génération de select
- * @param {type} data
- * @returns {select|String}
- */
-function createSelect(id, name, options){
-    console.log(options);
-    select = "<select>";
-    
-    for(var i=0; i < options.length; i++){
-        select += "<option value='"+options[i][0]+"'>"+options[i][1]+"</option>";
-    }
-//    $(options).each(function (i, option) {
-//       select += "<option value='"+option[0]+"'>"+option[1]+"</option>";
-//    });
-    select += "</select>";
-    console.log('dans createSelect');
-    console.log(select);
-    return select;
 }
 
 ///**
@@ -140,15 +85,15 @@ function createSelect(id, name, options){
 // * appendSelectList (Ihm.js) pour écrire
 // * @returns {void}
 // */
-function setListeOrganisateurs(){
-    //var url = "../rest/organisateurs";
-    $.getJSON(urlOrganisateurs, function (data) {
-        $(data.organisateurs).each(function (i, organisateur) {
-            appendSelectList('search-organisateurs',organisateur.id,organisateur.nom, 'organisateurs');
-        });
-    });
-
-}
+//function setListeOrganisateurs(){
+//    //var url = "../rest/organisateurs";
+//    $.getJSON(urlOrganisateurs, function (data) {
+//        $(data.organisateurs).each(function (i, organisateur) {
+//            appendSelectList('search-organisateurs',organisateur.id,organisateur.nom, 'organisateurs');
+//        });
+//    });
+//
+//}
 
 
 
@@ -294,8 +239,3 @@ $(function() {
 $('#name').focus(function() {
     $('#success').html('');
 });
-
-
-function multiselect(idlist){
-   $(idlist).multiselect(); 
-}

@@ -3,7 +3,11 @@ $liens = array();
 $liens['hom']="index.php";
 $liens['eve']="index.php?page=evenements";
 $liens['org']="index.php?page=organisateurs";
-$liens['sub']="index.php?page=inscription";
+$liens['ins']="index.php?page=inscription";
+$liens['you']="http://www.youtube.com";
+$liens['fac']="http://www.facebook.com";
+$liens['blo']="http://blog.spibook.com";
+$liens['con']="index.php?page=contact";
 
 require('../services/Main.class.php');
 
@@ -15,7 +19,8 @@ $index->setBooAdmin(false);
 $index->setDefault_page("home");
 $index->setPage_dir("../pages/");
 $index->init();
-
+$classHeader = "hidden";
+$classNavBar = "";
 
 //AppLog::ecrireLog("Dans www/index",'debug');
 
@@ -23,6 +28,8 @@ if($index->getPage()=="home"){
     $liens['hom']="#page-top";
     $liens['eve']="#evenements";
     $liens['org']="#organisateurs";
+    $classHeader = "";
+    $classNavBar = "navbar-fixed-top";
 }
 ?>
 
@@ -47,8 +54,7 @@ if($index->getPage()=="home"){
     <link href="css/project/freelancer.css" rel="stylesheet"/>
     <link href="css/project/custo.css" rel="stylesheet"/>
     <link href="css/lib/timeline.css" rel="stylesheet"/>
-    <link href="css/lib/multiselect/jquery.multiselect.css" rel="stylesheet"/>
-    <link href="css/lib/multiselect/jquery.multiselect.filter.css" rel="stylesheet"/>
+
 
     <!-- Custom Fonts -->
     <link href="css/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -81,7 +87,7 @@ if($index->getPage()=="home"){
 
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default <?php echo $classNavBar; ?>">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -110,7 +116,17 @@ if($index->getPage()=="home"){
                         <a href="<?php echo $liens['org']; ?>" id="top_menu_organisateurs">Organisateurs</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#inscription" id="top_menu_inscription">Inscription</a>
+                        <a href="<?php echo $liens['ins']; ?>" id="top_menu_inscription">Inscription</a>
+                    </li>
+                    
+                    <li class="page-scroll">
+                        <a href="<?php echo $liens['fac']; ?>" id="top_menu_inscription">Facebook</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="<?php echo $liens['you']; ?>" id="top_menu_inscription">Youtube</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="<?php echo $liens['blo']; ?>" id="top_menu_inscription">Le blog</a>
                     </li>
                 </ul>
             </div>
@@ -121,32 +137,32 @@ if($index->getPage()=="home"){
     </nav>
     
     <!-- Header -->
-    <header>
-        <div class="container">
+    
+    <header class="<?php echo $classHeader; ?>" >
+        <div class="container " id="top">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="intro-text">
+                    <div class="intro-text " >
                         <span class="skills">Vivez les <span class="high1">événements</span> qui vous  <span class="high2">ressemblent</span></span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-
+   
     <?php
     // MAIN INCLUDE HERE
     $index->run();
     // END MAIN INCLUDE
     ?>
 
-
+   
 
 
     
 
     <!-- Footer -->
-    <footer class="text-center">
+    <footer class="text-center" id="footers">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
@@ -247,22 +263,20 @@ if($index->getPage()=="home"){
 
     <script src="js/lib/bootstrap-datepicker.js"></script>
     
-    <script src="js/lib/multiselect/jquery.multiselect.filter.min.js"></script>
-    <script src="js/lib/multiselect/jquery.multiselect.min.js"></script>
-    <script src="js/lib/jquery.jscroll.min.js"></script>
-    
     <!-- Custom Theme JavaScript -->
+    <script src="js/project/trigger.js"></script>
     <script src="js/project/url.js"></script>
     <script src="js/project/freelancer.js"></script>
     <script src="js/project/service.js"></script>
     <script src="js/project/Ihm.js"></script>
     <script src="js/project/model.js"></script>
-    <script src="js/project/trigger.js"></script>
+
     <script src="js/project/util.js"></script>
     <script src="js/project/utilForm.js"></script>
     <script src="js/project/api.js"></script>
-
     
+    <script src="js/lib/bootstrap-select.js"></script>
+    <script src="js/lib/infiniteScroll.js"></script>
     <script src="js/project/root.js"></script>
     <script>
         launcher('<?php echo $index->getPage(); ?>','<?php echo $index->getId(); ?>');

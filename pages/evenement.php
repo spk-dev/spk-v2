@@ -57,7 +57,42 @@
 
             </div>
 
-            
+            <div class="row row-evenement" id="">
+                <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' id="evenement-block-adresse">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 block text-center">
+                        <h3><span class="glyphicon glyphicon-th" aria-hidden="true">&nbsp;</span>Thématiques</h3>
+                        <div id="evenement-liste-themes">
+                            <!-- LISTE DES THEMES -->
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 block text-center">
+                        <h3><span class="glyphicon glyphicon-map-marker" aria-hidden="true">&nbsp;</span>Adresse</h3>
+                        <p id="evenement-adresse"><!-- te --></p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 block text-center">
+                            <h3><span class="glyphicon glyphicon-calendar" aria-hidden="true">&nbsp;</span>horaires</h3>
+                            <p>
+                                du <span id="evenement-time-debut"></span>
+                                <br/>au <span id="evenement-time-fin"></span>
+                            </p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 block text-center">
+                            <h3><span class="glyphicon glyphicon-envelope" aria-hidden="true">&nbsp;</span>Contact</h3>
+                            <p>
+                                <span id="evenement-mail" class="evenement-mail"><!-- mail --></span>
+                                <br/>
+                                <span id="evenement-web"><!-- site --></span>
+                            </p>
+                            <p class="text-right">
+                                <a href="#description" onclick="manageTabs('evenement-description-tabs','evenement-informations-complementaires',1);">En savoir plus</a></p>
+
+<!--                        </div>-->
+                    </div>
+                </div>
+                
+            </div>
             <a name="description"></a>
             <div class="row">
 
@@ -72,48 +107,13 @@
                       <li role="presentation" class="active"><a href="#evenement-description" aria-controls="evenement-description" role="tab" data-toggle="tab">Description</a></li>
                       <li role="presentation"><a href="#evenement-informations-complementaires" aria-controls="evenement-informations-complementaires" role="tab" data-toggle="tab">Informations</a></li>
                       <li role="presentation"><a href="#evenement-informations-contact" aria-controls="evenement-informations-contact" role="tab" data-toggle="tab">Contact<span class="hidden-sm hidden-xs">er l'organisateur</span></a></li>
-                      <li role="presentation"><a href="#evenement-informations-map" aria-controls="evenement-informations-map" role="tab" data-toggle="tab">Localiser</a></li>
 
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="block tab-pane active text-justify" id="evenement-description">
-                            <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' id="evenement-block-adresse">
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 block text-center panel-page-evenement">
-                                    <h3><span class="glyphicon glyphicon-th" aria-hidden="true">&nbsp;</span>Thématiques</h3>
-                                    <div id="evenement-liste-themes">
-                                        <!-- LISTE DES THEMES -->
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 block text-center  panel-page-evenement">
-                                    <h3><span class="glyphicon glyphicon-map-marker" aria-hidden="true">&nbsp;</span>Adresse</h3>
-                                    <p id="evenement-adresse"><!-- te --></p>
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 block text-center  panel-page-evenement">
-                                        <h3><span class="glyphicon glyphicon-calendar" aria-hidden="true">&nbsp;</span>horaires</h3>
-                                        <p>
-                                            du <span id="evenement-time-debut"></span>
-                                            <br/>au <span id="evenement-time-fin"></span>
-                                        </p>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 block text-center panel-page-evenement">
-                                        <h3><span class="glyphicon glyphicon-envelope" aria-hidden="true">&nbsp;</span>Contact</h3>
-                                        <p>
-                                            <span id="evenement-mail" class="evenement-mail"><!-- mail --></span>
-                                            <br/>
-                                            <span id="evenement-web"><!-- site --></span>
-                                        </p>
-                                        <p class="text-right">
-                                            <a href="#description" onclick="manageTabs('evenement-description-tabs','evenement-informations-complementaires',1);">En savoir plus</a></p>
-
-            <!--                        </div>-->
-                                </div>
-                            </div>
                             <!--    DESCRIPITON DE L'EVENEMENT                  -->
-                            
                         </div>
                         <div role="tabpanel" class="block tab-pane block" id="evenement-informations-complementaires">
                             <!--    INFORMATIONS COMPLEMENTAIRES DE L'EVENEMENT -->
@@ -223,24 +223,22 @@
                                 <button type="submit" class="btn btn-primary" id="sendmessagetoorganisateur">envoyer</button>
                             </form>
                         </div>
-                        <div role="tabpanel" class=" block tab-pane" id="evenement-informations-map">
-                            <div class="row" id="map-event">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="map-container">
-                                    <a name='map'></a>
-                <!--                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92428.70440188362!2d1.4194514125976454!3d43.61909514909934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6fec7552ff%3A0x406f69c2f411030!2sToulouse!5e0!3m2!1sfr!2sfr!4v1417008586684" width="100%" height="520" frameborder="0" style="border:0"></iframe>-->
-
-                                </div> 
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="evenement-covoiturage">
-
-                                </div> 
-                                 <br/>
-                            </div>
-                        </div>
                     </div>
 
                   </div>
 
                 
+            </div>
+            <div class="row" id="map-event">
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12" id="map-container">
+                    <a name='map'></a>
+<!--                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92428.70440188362!2d1.4194514125976454!3d43.61909514909934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6fec7552ff%3A0x406f69c2f411030!2sToulouse!5e0!3m2!1sfr!2sfr!4v1417008586684" width="100%" height="520" frameborder="0" style="border:0"></iframe>-->
+                    
+                </div> 
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="evenement-covoiturage">
+              
+                </div> 
+                 <br/>
             </div>
             
             

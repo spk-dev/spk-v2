@@ -7,82 +7,56 @@
 ?>
 
 
-<section  class="hidden-xs hidden-sm hidden-print row">
-    <div class="container" >
-        <div class="col-lg-5">
-            <div class="row text-left bloc_home_page">
-                <h3>Le portail internet des événéments catholique
-                    <small>
-                        <br/>Prochain événement dans 7 jours
-                    </small>
-                </h3>
-            </div>
-
-            <div class="row text-left bloc_home_page">
-                <h4>Recherche rapide</h4>
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <div class='input-group date' id='datetimepicker9'>
-                            <input type='text' class="form-control" id="start"/>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="form-group">
-                        <div class='input-group date' id='datetimepicker10'>
-                            <input type='text' class="form-control" id="end"/>
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-left bloc_home_page">
-                <div class="col-lg-6">
-                    <input type="text" class="form-control" name="start" id='start' placeholder="mots clés"/>
-                </div>
-                <div class="col-lg-6">
-                    <button type="submit" class="btn btn-default col-lg-12">Rechercher</button>
-                </div>
-
-            </div>
-        </div>
-        <div class="col-lg-7" id="map-container" ></div>
-    </div>
-</section>
-
-
-
-
-<!--    Dynamique grid EVENEMENTS-->
-<section id="evenements" class="">
+<section id="evenements">
     <div class="container">
-            <div class="col-lg-12 text-left" >
-                <h2 class="titre" id="titre_evenement"><i class='fa fa-fw fa-calendar '></i>Les événements</h2>
+        
+        
+        <div>
+            
+        </div>
+        
+        <div class="col-lg-3">
+            <div class="">
+                <a href='index.php?page=evenements'><h2 class="titre" id="titre_evenement">
+                <i class='fa fa-fw fa-calendar '></i>
+                Les événements
+        
+                    <small class='text-right'><br/>Voir tout</small>
+                    </h2></a>
+                <a href="" class='eventFilterEvent' id='event1'><span class="label label-primary">de la semaine</span></a>
+                <a href="" class='eventFilterEvent' id='event2'><span class="label label-primary">Pentecote</span></a>
+                <a href="" class='eventFilterEvent' id='event3'><span class="label label-primary">autour de moi</span></a>
+                <a href="" class='eventFilterEvent' id='event4'><span class="label label-primary">JMJ Cracovie</span></a>
+               
             </div>
+            <div id="map-container"></div>
+            
         </div>
-    <div class="container">
-        <div id="listeEvenements" >
-            <!-- LISTE AJAX EVENEMENTS-->
-        </div>
+        <div class="col-lg-9" id="listeEvenements"><!-- LISTE AJAX EVENEMENTS--></div>
+        
+            
+       
     </div>
     <div class="container text-right">
         <span class="voir-la-suite-blanc"><a href="index.php?page=evenements">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>
     </div>
 </section>
-<!--    /Dynamique grid EVENEMENTS-->
-<!--    Dynamique grid EVENEMENTS-->
+
+
 <section id="organisateurs" class="success">
         <div class="container">
             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" >
 
-                    <h2 class="titre" id="titre_organisateurs"><i class='fa fa-fw fa-map-marker '></i>Les organisateurs</h2>
+                    <h2 class="titre" id="titre_organisateurs">
+                        <i class='fa fa-fw fa-map-marker '></i>
+                        Les organisateurs
+                        
+                            
+                    </h2>
+                    
                     <div class=''>
                         <ul class='list-unstyled liste_organisateur_home' id='listeOrganisateurs'>
 <!--                              <!-- LISTE AJAX ORGANISATEURS-->
-
                         </ul>
                         <div class="row text-right">
                             <span class="voir-la-suite-fonce"><a href="">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>

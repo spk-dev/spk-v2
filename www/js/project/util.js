@@ -5,68 +5,6 @@
  */
 
 
-///**
-// * Fonction de pagination des listes
-// * @param num
-// * @returns {boolean}
-// */
-//function paginate(num){
-//    var numPage = $('#currentPage').val();
-//    var current = parseInt(numPage);
-//
-//    if(num !== current){
-//        if(num === "prev"){
-//            num = current - 1;
-//        }else if(num === "next"){
-//            num = current + 1;
-//        }
-//
-//        if(num <= 1){
-//            $('.prev').addClass('disabled');
-//        }else{
-//            $('.prev').removeClass('disabled');
-//        }
-//
-//        var classInactive = ".page"+numPage;
-//        var classActive = ".page"+num;
-//
-//        $('#currentPage').val(num);
-//        $(classActive).addClass('active');
-//        $(classInactive).removeClass('active');
-//        pageEvenements(true,false);
-//    }
-//
-//    return false;
-//}
-
-
-/**
- * Créer la liste de pagination
- * @param nbItems
- * @param nbItemsParPage
- * @param pageActive
- */
-//function createPagination(nbItems, nbItemsParPage){
-//    var i;
-//    var j = parseInt(nbItems) / parseInt(nbItemsParPage);
-//
-//    var h = '<li class="prev"><span onclick="paginate(\'prev\');">&laquo;</span></li>';
-//    for(i = 1 ; i <= j ; i++){
-//        console.log("i"+i);
-//        h += '<li class="page'+i+'"><span class="page" onclick="paginate('+i+');">'+i+'</span></li>';
-//    }
-//    h += '<li class="next"><span onclick="paginate(\'next\');">&raquo;</span></li>';
-//    removePagination();
-//    $('.pagination').append(h);
-//}
-//
-///**
-// * Retire la pagination quand le nb d'éléments à afficher est inférieur au nb d'item par page
-// */
-//function removePagination(){
-//    $('.pagination li').remove();
-//}
-
 
 /**
  * Format la date jj/mm/aaaa
@@ -75,21 +13,45 @@
  * @returns {String}
  */
 function formatDate(dateTime, format){
+    var d = "";
     var sep = "/";
     var A = dateTime.substr(0,4);
     var M = dateTime.substr(5,2);
     var J = dateTime.substr(8,2);
     
-    var tab_mois = new Array("décembre","janvier", "février", "mars", "avril", "mai", "juin", "juillet","août","septembre","octobre","novembre");
-        
+    
+    var tab_mois = {
+            1 : "janvier",
+            2 : "février", 
+            3 : "mars",
+            4 : "avril",
+            5 : "mai",
+            6 : "juin",
+            7 : "juillet",
+            8 : "août",
+            9 : "septembre",
+            10: "octobre",
+            11: "novembre",
+            12: "décembre"};
+    
     
     if(format==="text"){
         sep = " ";
         M = tab_mois[parseInt(M)];
+        d = J+sep+M+sep+A;
+    }else if(format === "numerique"){
+        d = J+sep+M+sep+A;
+    }else if(format === "moisAn"){
+        sep = " ";
+        M = tab_mois[parseInt(M)];
+        d = M+sep+A;
     }
     
-    return J+sep+M+sep+A;
+    
+    return d;
 }
+
+
 
 
 
@@ -123,3 +85,10 @@ function manageTabs(idUl, tabName, action){
     $('#'+idUl+' a[href="#'+tabName+'"]').tab('show'); // Select tab by name
 }
 
+/**
+ * Trier les événements par mois
+ * @returns {undefined}
+ */
+function sortListEvenement(){
+    
+}

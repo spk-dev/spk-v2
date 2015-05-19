@@ -105,7 +105,7 @@ final class Main {
     public function loadClass($name) {
 
         $classes = array(
-            'Main'                          =>  'services/Main.class.php',
+            'Main'                              =>  'services/Main.class.php',
             
             //TRAITEMENT
             'AjaxAction'                        => 'AjaxAction.class.php',

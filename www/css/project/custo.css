@@ -76,12 +76,8 @@ Couleur jaune: #F2C052;
 }
 
 .vignette{
-/*    margin:1em;*/
-/*border-left:6px solid #fff;
-border-right:6px solid #fff;*/
-    
-    border:6px solid #fff;
-
+border:3px solid #fff;
+background: #fff;
 }
 
 
@@ -217,6 +213,10 @@ border-right:6px solid #fff;*/
     margin:0;
 }
 
+.navbar-default{
+    background-color:#393c42;
+}
+
 .navbar-default .navbar-nav>li>a:hover {
 
 }
@@ -230,9 +230,6 @@ font-family: 'comfortaa';
 #top_menu_thematiques:hover{color:#F2C052;}
 #top_menu_inscription:hover{color:#6b9aa5;}
 
-#mapHomePage{
-    border:6px solid #fff;
-}
 
 .skills{
     line-height: 1em;
@@ -307,8 +304,8 @@ font-family: 'comfortaa';
     margin:1em 0;
 }
 #titre_evenement{
-    height: 70px;
-    line-height: 70px;
+/*    height: 70px;
+    line-height: 70px;*/
     color:#bf5239;
 }
 
@@ -615,7 +612,8 @@ footer .btn-outline {
 }
 
 #map-container { 
-    height: 400px; 
+    height: 20em; 
+    margin:1em 0 0 0;
 }
 
 .infowindowgmap{
@@ -754,17 +752,30 @@ border: solid black 1px;
     font-size: 0.9em;
 }
 
-.panel-page-evenement{
-    background: #ebebeb;
-    border-radius: 0;
-    
+/** AFFIX */
+.affix {
+    top:100px;
 }
 
+.affix-bottom {
+  position: absolute;
+}
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 768px) {
-    .panel-page-evenement{
-        height: 14em;
-        border:1px solid #fff;
-    }
+.monthTitle{
+    text-align : center;
+    margin:1.7em 0 1em 0;
+    background: #f3f3f3;
+    font-family : Comfortaa;
+    font-weight: normal;
+    padding:0.5em 0 0.5em 0;
+    width:100%;
+   /** border-top:0.5em solid #fff;*/
+}
+
+#containerListeEvenements{
+  
+}
+
+#EventSearchColumn{
+   
 }

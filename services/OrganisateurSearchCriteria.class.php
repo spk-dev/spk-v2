@@ -263,8 +263,8 @@ class OrganisateurSearchCriteria{
             
         }
         
-        Applog::ecrireLog("CONDITION ORGANISATEURSERACHCRITERIA", "debug");
-        Applog::ecrireLog($this->condition, "debug");
+//        Applog::ecrireLog("CONDITION ORGANISATEURSERACHCRITERIA", "debug");
+//        Applog::ecrireLog($this->condition, "debug");
         
         return $this->condition;
     }

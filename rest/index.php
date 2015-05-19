@@ -9,7 +9,6 @@ $index = new Main();
 
 $index->setBooAdmin(true);
 $index->init();
-AppLog::ecrireLog("Rentre dans index rest", "debug");
 
 // Routeur REST 
 
@@ -195,11 +194,12 @@ function getEvenement($id){
 
 
 function getEvenements() {
-    AppLog::ecrireLog("DANS REST - getEvenements - 1", "debug");
+    
     $args = array();
     $EvenementTheme = array();
     $EvenementType = array();
     $EvenementOrganisateur = array();
+    
     $criteres = new EvenementSearchCriteria();
     
     if(isset($_GET['organisateurs'])){        
@@ -228,7 +228,12 @@ function getEvenements() {
         if($end != ""){$criteres->setDateMax($end);}
     }
     
+ 
+  
+    $criteres->setEvenementOrder("debut", "ASC");
+    $criteres->setEvenementAfterToday(null);
     $condition = $criteres->getCondition();
+    
     $sql = Query::getListeEvenements($condition); 
     try {
             $db = getConnection();
@@ -286,7 +291,9 @@ function getOrganisateurs(){
         $items = $stmt->fetchAll(PDO::FETCH_OBJ);
         $db = null;
         echo '{"organisateurs": ' . json_encode($items) . '}';
+        
     } catch(PDOException $e) {
+        
         echo '{"error":{"text":'. $e->getMessage() .'}}';
     }
 }

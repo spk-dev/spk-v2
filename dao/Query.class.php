@@ -168,10 +168,10 @@ class Query {
                 left join tev_type_evenement on tev_int_id = eve_tev_int_id
                 left join tet_theme_evenement on tet_eve_int_id = eve_int_id
 
-            WHERE 1=1".$condition." GROUP BY eve_int_id ;";
+            WHERE 1=1".$condition.";";
         
         
-              
+        AppLog::ecrireLog($sql, "debug");      
         return $sql;
     }
     /**
@@ -207,9 +207,9 @@ class Query {
                     org_var_tel as 'tel',
                     org_var_fax as 'fax',
                     org_typ_int_id as 'type_id',
-                    typeNom as 'type_nom',
+                    typ_var_nom as 'type_nom',
                     org_com_int_id as 'communaute_id',
-                    communauteNom as 'communaute_nom',
+                    com_var_nom as 'communaute_nom',
                     org_adm_int_id as 'admin_id',
                     org_date_enregistrement as 'date_enregistrement',
                     org_boo_valid_admin as 'valid_admin',
@@ -393,7 +393,7 @@ class Query {
             'host'  =>  "localhost",
             'user'  =>  "root",
             'pwd'  =>  "root",
-            'dbName'  =>  "spk-prod"
+            'dbName'  =>  "spk"
         );
         return $arr;
     }

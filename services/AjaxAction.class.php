@@ -1,8 +1,8 @@
 <?php
 
-include("MainIndex.class.php");
+include("Main.class.php");
 
-$AjaxAction = new MainIndex();
+$AjaxAction = new Main();
 
 $AjaxAction->setBooAdmin(false);
 $AjaxAction->init();

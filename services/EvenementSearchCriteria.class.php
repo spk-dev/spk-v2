@@ -5,63 +5,80 @@ class EvenementSearchCriteria{
     private $condition;
     
     
-    private $intervenants  =   null;
-    private $Organisateurs =   null;
-    private $garderie      =   null;
-    private $hebergement   =   null;
-    private $dateMin       =   null;
-    private $dateMax       =   null;
-    private $prix          =   null;
-    private $motscles      =   null;
-    private $themes        =   null;
-    private $limit         =   null;
-    private $exclue        =   null;
-    private $types         =   null;
-    private $inclue        =   null;
-    private $order         =   null;
-    private $aftertoday    = null;
-    
-    public function test(){
-        return "TOTO FROM EVENEMENTSEARCHCRITERIA";
-    }
-    
+    private $EvenementIntervenants= null;
+    private $EvenementLieu= null;
+    private $EvenementGarderie= null;
+    private $EvenementHebergement= null;
+    private $EvenementDateMin= null;
+    private $EvenementDateMax= null;
+    private $EvenementPrix= null;
+    private $EvenementMotsCles= null;
+    private $EvenementTheme= null;
+    private $EvenementLimit= null;
+    private $EvenementExclue= null;
+    private $EvenementType= null;
+    private $EvenementInclue= null;
+    private $EvenementOrder= null;
+    private $EvenementAfterToday = null;
 // Genere la condition pour la requete SQL
+    
+    
+    
+    private $fields = array(
+        'id'=>'eve_int_id',
+        'titre'=>'eve_var_titre',
+        'description'=>'eve_var_description',
+        'mail_inscription'=>'eve_var_mail_inscription',
+        'contact'=>'eve_var_contact',
+        'debut'=>'eve_date_debut',
+        'fin'=>'eve_date_fin',
+        'image'=>'eve_var_image',
+        'prix'=>'eve_var_prix',
+        'url'=>'eve_var_url',
+        'garderie'=>'eve_boo_garderie',
+        'hebergement'=>'eve_boo_hebergement',
+        'organisateur'=>'eve_org_int_id',
+        'typeEvenement'=>'eve_tev_int_id',
+        'place'=>'eve_pla_int_id',
+        'enregistrement'=>'eve_date_enregistrement'
+    );
+    
     public function getCondition(){
         
         $listeCritere = array();
         
         // Champ intervenants
-//        if(!is_null($this->intervenants)){
-//            if(is_array($this->intervenants)){
-//                if(sizeof($this->intervenants)>0){
-//                    //$EvenementIds = IntervenantActionDao::recupererRetraitesIntervenant($this->intervenants);
-//                   
-//                    
-//                    $clauseId = Db::get("eve","Id", null)." IN (";
-//			for ($i = 0; $i < sizeof($EvenementIds); $i++) {
-//				$clauseId .= $EvenementIds[$i];
-//				if($i!=sizeof($EvenementIds)-1){
-//					$clauseId .=",";
-//				}
-//			}
-//			$clauseId .= ")";
-//                        array_push($listeCritere, $clauseId);      
-//                }  
-//            }   
-//        }
+        if(!is_null($this->EvenementIntervenants)){
+            if(is_array($this->EvenementIntervenants)){
+                if(sizeof($this->EvenementIntervenants)>0){
+                    $EvenementIds = IntervenantActionDao::recupererRetraitesIntervenant($this->EvenementIntervenants);
+                   
+                    
+                    $clauseId = $this->getFields('id')." IN (";
+			for ($i = 0; $i < sizeof($EvenementIds); $i++) {
+				$clauseId .= $EvenementIds[$i];
+				if($i!=sizeof($EvenementIds)-1){
+					$clauseId .=",";
+				}
+			}
+			$clauseId .= ")";
+                        array_push($listeCritere, $clauseId);      
+                }  
+            }   
+        }
         // Champ theme
-        if(!is_null($this->themes)){
-            if(is_array($this->themes)){
-                if(sizeof($this->themes)>0){
+        if(!is_null($this->EvenementTheme)){
+            if(is_array($this->EvenementTheme)){
+                if(sizeof($this->EvenementTheme)>0){
                     
-                    //$themesIds = ThemeAction::recupererRetraiteFromTheme($this->themes);
+                    $themesIds = ThemeAction::recupererRetraiteFromTheme($this->EvenementTheme);
                     
-                    $clauseTheme = "tet_the_int_id IN (";
-			for ($i = 0; $i < sizeof($this->themes); $i++) {
-                            if ($this->themes[$i])
+                    $clauseTheme = $this->getFields('id')." IN (";
+			for ($i = 0; $i < sizeof($themesIds); $i++) {
+                            if ($themesIds[$i])
                             {
-				$clauseTheme .= $this->themes[$i];
-				if($i!=sizeof($this->themes)-1){
+				$clauseTheme .= $themesIds[$i]->getId();
+				if($i!=sizeof($themesIds)-1){
 					$clauseTheme .=",";
 				}
                             }
@@ -73,12 +90,12 @@ class EvenementSearchCriteria{
             }   
         }
         // Champ Lieu
-        if(!is_null($this->Organisateurs)){
-            if(is_array($this->Organisateurs)){
-                if(sizeof($this->Organisateurs)>0){
-                    $tabSize = sizeof($this->Organisateurs);
-                    $tabLieu = $this->Organisateurs;
-                    $clauseLieu = "eve_org_int_id IN (";
+        if(!is_null($this->EvenementLieu)){
+            if(is_array($this->EvenementLieu)){
+                if(sizeof($this->EvenementLieu)>0){
+                    $tabSize = sizeof($this->EvenementLieu);
+                    $tabLieu = $this->EvenementLieu;
+                    $clauseLieu = $this->getFields('organisateur')." IN (";
                     for ($i = 0; $i < $tabSize; $i++) {
                             $clauseLieu .=$tabLieu[$i];
                             if($i<$tabSize-1){
@@ -92,12 +109,12 @@ class EvenementSearchCriteria{
             }   
         }
         // Champ Exclusion
-        if(!is_null($this->exclue)){
-            if(is_array($this->exclue)){
-                if(sizeof($this->exclue)>0){
-                    $tabSize = sizeof($this->exclue);
-                    $tabLieu = $this->exclue;
-                    $clauseExclu = "eve_int_id NOT IN (";
+        if(!is_null($this->EvenementExclue)){
+            if(is_array($this->EvenementExclue)){
+                if(sizeof($this->EvenementExclue)>0){
+                    $tabSize = sizeof($this->EvenementExclue);
+                    $tabLieu = $this->EvenementExclue;
+                    $clauseExclu = $this->getFields('id')." NOT IN (";
                     for ($i = 0; $i < $tabSize; $i++) {
                             $clauseExclu .=$tabLieu[$i];
                             if($i<$tabSize-1){
@@ -111,12 +128,12 @@ class EvenementSearchCriteria{
             }   
         }
         // Champ Inclusion
-        if(!is_null($this->inclue)){
-            if(is_array($this->inclue)){
-                if(sizeof($this->inclue)>0){
-                    $tabSize = sizeof($this->inclue);
-                    $tabLieu = $this->inclue;
-                    $clauseInclu = "eve_int_id IN (";
+        if(!is_null($this->EvenementInclue)){
+            if(is_array($this->EvenementInclue)){
+                if(sizeof($this->EvenementInclue)>0){
+                    $tabSize = sizeof($this->EvenementInclue);
+                    $tabLieu = $this->EvenementInclue;
+                    $clauseInclu = $this->getFields('id')." IN (";
                     for ($i = 0; $i < $tabSize; $i++) {
                             $clauseInclu .=$tabLieu[$i];
                             if($i<$tabSize-1){
@@ -130,12 +147,12 @@ class EvenementSearchCriteria{
             }   
         }
         // Champ TypesEvenements
-        if(!is_null($this->types)){
-            if(is_array($this->types)){
-                if(sizeof($this->types)>0){
-                    $tabSize = sizeof($this->types);
-                    $tabRet = $this->types;
-                    $clauseType = "eve_tev_int_id IN (";
+        if(!is_null($this->EvenementType)){
+            if(is_array($this->EvenementType)){
+                if(sizeof($this->EvenementType)>0){
+                    $tabSize = sizeof($this->EvenementType);
+                    $tabRet = $this->EvenementType;
+                    $clauseType = $this->getFields('typeEvenement')." IN (";
                     for ($i = 0; $i < $tabSize; $i++) {
                             $clauseType .=$tabRet[$i];
                             if($i<$tabSize-1){
@@ -149,49 +166,49 @@ class EvenementSearchCriteria{
             }   
         }
         // Champ garderie
-        if(!is_null($this->garderie)){
-            if(!is_string($this->hebergement)){
-                if($this->garderie==0 || $this->garderie== 1){
-                    $clauseGarderie = "(eve_boo_garderie=".$this->garderie.")";
+        if(!is_null($this->EvenementGarderie)){
+            if(!is_string($this->EvenementHebergement)){
+                if($this->EvenementGarderie==0 || $this->EvenementGarderie== 1){
+                    $clauseGarderie = "(".$this->getFields('garderie')."=".$this->EvenementGarderie.")";
                     array_push($listeCritere, $clauseGarderie);
                 }
             }
             
         }
         //Champ hebergemenet
-        if(!is_null($this->hebergement)){
-            if(!is_string($this->hebergement)){
-                if($this->hebergement==0 || $this->hebergement== 1){
-                    $clauseHebergement = "(eve_boo_hebergement = ".$this->hebergement.")";
+        if(!is_null($this->EvenementHebergement)){
+            if(!is_string($this->EvenementHebergement)){
+                if($this->EvenementHebergement==0 || $this->EvenementHebergement== 1){
+                    $clauseHebergement = "(".$this->getFields('hebergement')."=".$this->EvenementHebergement.")";
                     array_push($listeCritere, $clauseHebergement);
                 }
             }
             
         }
         // Champs dates
-        if(""!=($this->dateMin) || ""!=($this->dateMax)){
+        if(""!=($this->EvenementDateMin) || ""!=($this->EvenementDateMax)){
             
-            $dateMin = $this->dateMin;
-            $dateMax = $this->dateMax;
+            $dateMin = $this->EvenementDateMin;
+            $dateMax = $this->EvenementDateMax;
             
            if(""!=($dateMin) && ""!=($dateMax)){
-                $clauseDate = " (eve_date_debut BETWEEN '".$dateMin."' AND '".$dateMax."' )";
+                $clauseDate = " (".$this->getFields('debut')." BETWEEN '".$dateMin."' AND '".$dateMax."' )";
             }
             if(""==($dateMin) && ""!=($dateMax)){
-                    $clauseDate = "eve_date_fin <= '".$dateMax."')";
+                    $clauseDate = "(".$this->getFields('fin')." <= '".$dateMax."')";
             }
             if(""!=($dateMin) && ""==($dateMax)){
-                    $clauseDate = "(eve_date_debut >= '".$dateMin."')";
+                    $clauseDate = "(".$this->getFields('debut')." >= '".$dateMin."')";
             }
             array_push($listeCritere, $clauseDate);
             
         }
-        if(!is_null($this->aftertoday)){
-            if($this->aftertoday){ 
-                $clauseToday = "eve_date_fin >= CURDATE())";
+        if(!is_null($this->EvenementAfterToday)){
+            if($this->EvenementAfterToday){ 
+                $clauseToday = "(".$this->getFields('fin')." >= CURDATE())";
                 array_push($listeCritere, $clauseToday);
-            }else if(!$this->aftertoday){
-                $clauseToday = "eve_date_fin < CURDATE())";
+            }else if(!$this->EvenementAfterToday){
+                $clauseToday = "(".$this->getFields('fin')." < CURDATE())";
                 array_push($listeCritere, $clauseToday);
             }
         }
@@ -199,15 +216,15 @@ class EvenementSearchCriteria{
         
         
         // Champs prix       
-        if(!is_null($this->prix)){
-            $clausePrix = "(eve_var_prix <= ".$this->prix.")";
+        if(!is_null($this->EvenementPrix)){
+            $clausePrix = "(".$this->getFields('prix')." <= ".$this->EvenementPrix.")";
             array_push($listeCritere, $clausePrix);
         }
         // Champs mots clés
-        if(!is_null($this->motscles)){    
-            if(""!=$this->motscles){
+        if(!is_null($this->EvenementMotsCles)){    
+            if(""!=$this->EvenementMotsCles){
                 //$keywords = $this->EvenementMotsCles;
-                $tabWors = explode(" ", $this->motscles);
+                $tabWors = explode(" ", $this->EvenementMotsCles);
                 $clauseKeyWords = "";
                 $nbWords = count($tabWors);
 
@@ -215,7 +232,7 @@ class EvenementSearchCriteria{
                     // Mot clé sur le Nom de la retraite
                     $clauseKeyWords .="(";
                     for ($i = 0; $i < $nbWords; $i++) {
-                        $clauseKeyWords .= "(eve_var_titre like '%".$tabWors[$i]."%')";
+                        $clauseKeyWords .= "(".$this->getFields('titre')." like '%".$tabWors[$i]."%')";
                         if($i<$nbWords-1){
                             $clauseKeyWords .= " AND ";
                         }
@@ -224,14 +241,14 @@ class EvenementSearchCriteria{
 
                     // Mot clé sur la description
                     for ($i = 0; $i < $nbWords; $i++) {
-                        $clauseKeyWords .= "(eve_var_description like '%".$tabWors[$i]."%')";
+                        $clauseKeyWords .= "(".$this->getFields('description')." like '%".$tabWors[$i]."%')";
                         if($i<$nbWords-1){
                             $clauseKeyWords .= " AND ";
                         }
                     }
                     $clauseKeyWords .=")";
                 }else{
-                    $clauseKeyWords = "((eve_var_titre like '%".$tabWors[0]."%') OR (eve_var_description LIKE '%".$tabWors[0]."%'))";
+                    $clauseKeyWords = "((".$this->getFields('titre')." like '%".$tabWors[0]."%') OR (".$this->getFields('description')." LIKE '%".$tabWors[0]."%'))";
                 }
 
                 array_push($listeCritere, $clauseKeyWords);
@@ -253,148 +270,152 @@ class EvenementSearchCriteria{
             
         
          // AJOUT DU ORDER
-        if(!is_null($this->order)){
-            if(""!=$this->order){
-                $order = $this->order;
-                $this->order .=" ORDER BY ".$order[0]." ".$order[1];
+        if(!is_null($this->EvenementOrder)){
+            if(is_array($this->EvenementOrder)){
+                $order = $this->EvenementOrder;
+                $this->condition .=" ORDER BY ".$order[0]." ".$order[1];
             }
         }
         
-        if(!is_null($this->limit)){
-            if(is_array($this->limit)){
-                $limits = $this->limit;
+        if(!is_null($this->EvenementLimit)){
+            if(is_array($this->EvenementLimit)){
+                $limits = $this->EvenementLimit;
                 $this->condition .= " LIMIT ".$limits[0].",".$limits[1];
             }
             
         }
-        
+        AppLog::ecrireLog($this->condition, "debug");
         return $this->condition;
     }
     
     
     
+// GETTER & SETTER    
+    public function getEvenementTheme() {
+        return $this->EvenementTheme;
+    }
+
+    public function setEvenementTheme($EvenementTheme) {
+        $this->EvenementTheme = $EvenementTheme;
+    }
+
     public function getIntervenants() {
-        return $this->intervenants;
+        return $this->EvenementIntervenants;
     }
 
-    public function getOrganisateurs() {
-        return $this->Organisateurs;
+    public function setIntervenants($Intervenants) {
+        $this->EvenementIntervenants = $Intervenants;
     }
 
-    public function getGarderie() {
-        return $this->garderie;
+    public function getEvenementLieu() {
+        return $this->EvenementLieu;
     }
 
-    public function getHebergement() {
-        return $this->hebergement;
+    public function setEvenementLieu($EvenementLieu) {
+        $this->EvenementLieu = $EvenementLieu;
     }
 
-    public function getDateMin() {
-        return $this->dateMin;
+    public function getEvenementGarderie() {
+        return $this->EvenementGarderie;
     }
 
-    public function getDateMax() {
-        return $this->dateMax;
+    public function setEvenementGarderie($EvenementGarderie) {
+        $this->EvenementGarderie = $EvenementGarderie;
     }
 
-    public function getPrix() {
-        return $this->prix;
+    public function getEvenementHebergement() {
+        return $this->EvenementHebergement;
     }
 
-    public function getMotscles() {
-        return $this->motscles;
+    public function setEvenementHebergement($EvenementHebergement) {
+        $this->EvenementHebergement = $EvenementHebergement;
     }
 
-    public function getThemes() {
-        return $this->themes;
+    public function getEvenementDateMin() {
+        return $this->EvenementDateMin;
     }
 
-    public function getLimit() {
-        return $this->limit;
+    public function setEvenementDateMin($EvenementDateMin) {
+        $this->EvenementDateMin = $EvenementDateMin;
     }
 
-    public function getExclue() {
-        return $this->exclue;
+    public function getEvenementDateMax() {
+        return $this->EvenementDateMax;
     }
 
-    public function getTypes() {
-        return $this->types;
+    public function setEvenementDateMax($EvenementDateMax) {
+        $this->EvenementDateMax = $EvenementDateMax;
     }
 
-    public function getInclue() {
-        return $this->inclue;
+    public function getEvenementPrix() {
+        return $this->EvenementPrix;
     }
 
-    public function getOrder() {
-        return $this->order;
+    public function setEvenementPrix($EvenementPrix) {
+        $this->EvenementPrix = $EvenementPrix;
     }
 
-    public function getAftertoday() {
-        return $this->aftertoday;
+    public function getEvenementMotsCles() {
+        return $this->EvenementMotsCles;
     }
 
-    public function setIntervenants($intervenants) {
-        $this->intervenants = $intervenants;
+    public function setEvenementMotsCles($EvenementMotsCles) {
+        $this->EvenementMotsCles = $EvenementMotsCles;
     }
-
-    public function setOrganisateurs($Organisateurs) {
-        $this->Organisateurs = $Organisateurs;
-    }
-
-    public function setGarderie($garderie) {
-        $this->garderie = $garderie;
-    }
-
-    public function setHebergement($hebergement) {
-        $this->hebergement = $hebergement;
-    }
-
-    public function setDateMin($dateMin) {
-        $this->dateMin = $dateMin;
-    }
-
-    public function setDateMax($dateMax) {
-        $this->dateMax = $dateMax;
-    }
-
-    public function setPrix($prix) {
-        $this->prix = $prix;
-    }
-
-    public function setMotscles($motscles) {
-        $this->motscles = $motscles;
-    }
-
-    public function setThemes($themes) {
-        $this->themes = $themes;
-    }
-
-    public function setLimit($limit) {
-        $this->limit = $limit;
-    }
-
-    public function setExclue($exclue) {
-        $this->exclue = $exclue;
-    }
-
-    public function setTypes($types) {
-        $this->types = $types;
-    }
-
-    public function setInclue($inclue) {
-        $this->inclue = $inclue;
-    }
-
-    public function setOrder($order) {
-        $this->order = $order;
-    }
-
-    public function setAftertoday($aftertoday) {
-        $this->aftertoday = $aftertoday;
-    }
-
-
     
+    public function getEvenementLimit(){
+        return $this->EvenementLimit;
+    }
+    
+    public function setEvenementLimit($start,$nblignes){
+        if(is_null($start) || is_null($nblignes)){
+            $this->EvenementLimit = null;
+        }else{
+          $this->EvenementLimit = array($start,$nblignes);  
+        }
+        
+    }
+    
+    public function getEvenementExclue() {
+        return $this->EvenementExclue;
+    }
+
+    public function setEvenementExclue($EvenementExclue) {
+        $this->EvenementExclue = $EvenementExclue;
+    }
+
+    public function getEvenementType() {
+        return $this->EvenementType;
+    }
+
+    public function setEvenementType($EvenementType) {
+        $this->EvenementType = $EvenementType;
+    }
+
+    public function getEvenementInclue() {
+        return $this->EvenementInclue;
+    }
+
+    public function setEvenementInclue($EvenementInclue) {
+        $this->EvenementInclue = $EvenementInclue;
+    }
+
+    public function getEvenementOrder() {
+        return $this->EvenementOrder;
+    }
+
+    public function setEvenementOrder($champ,$sens) {
+        $champ = $this->getFields($champ);
+        $this->EvenementOrder = array($champ, $sens);
+    }
+
+    public function setEvenementAfterToday($EvenementAfterToday){
+        $this->EvenementAfterToday = $EvenementAfterToday;
+    }
+    
+    private function getFields($key){
+        return $this->fields[$key];
+    }
 
 
 	

@@ -1,1834 +1,620 @@
-[2015-02-01 18:39:29]-[debug]==>Rentre dans index rest
-[2015-02-01 18:39:29]-[debug]==>Rentre dans index rest
-[2015-02-01 18:39:29]-[debug]==>Rentre dans index rest
-[2015-02-01 18:39:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:39:29]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 18:39:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:39:29]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-01 18:39:29]-[debug]==>Rentre dans index rest
-[2015-02-01 18:39:29]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 18:39:59]-[debug]==>Rentre dans index rest
-[2015-02-01 18:39:59]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 18:45:14]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:14]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:14]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:14]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 18:45:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:14]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-01 18:45:14]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:14]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 18:45:18]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:18]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:18]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:18]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:18]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 18:45:18]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:18]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-01 18:45:18]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:18]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:18]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:18]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 18:45:18]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-01 18:45:24]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:24]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:24]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:24]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:24]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 18:45:24]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:24]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-01 18:45:24]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:24]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:24]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:24]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 18:45:24]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:39]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 18:45:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:39]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-01 18:45:39]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-01 18:45:39]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-01 18:45:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-01 18:45:39]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:39]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-01 18:45:39]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 18:45:51]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:51]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:51]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:51]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-01 18:45:51]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-
-[2015-02-01 18:45:51]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 18:45:51]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:45:51]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:51]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:51]-[debug]==>Rentre dans index rest
-[2015-02-01 18:45:51]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 18:45:51]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-01 18:50:40]-[debug]==>Rentre dans index rest
-[2015-02-01 18:50:40]-[debug]==>Rentre dans index rest
-[2015-02-01 18:50:40]-[debug]==>Rentre dans index rest
-[2015-02-01 18:50:40]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:50:40]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 18:50:40]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 18:50:40]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-01 18:50:40]-[debug]==>Rentre dans index rest
-[2015-02-01 18:50:40]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 19:04:08]-[debug]==>Rentre dans index rest
-[2015-02-01 19:04:08]-[debug]==>Rentre dans index rest
-[2015-02-01 19:04:08]-[debug]==>Rentre dans index rest
-[2015-02-01 19:04:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 19:04:08]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 19:04:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 19:04:08]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-01 19:04:08]-[debug]==>Rentre dans index rest
-[2015-02-01 19:04:08]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 23:50:58]-[debug]==>Rentre dans index rest
-[2015-02-01 23:50:58]-[debug]==>Rentre dans index rest
-[2015-02-01 23:50:58]-[debug]==>Rentre dans index rest
-[2015-02-01 23:50:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 23:50:58]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 23:50:58]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 23:50:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 23:59:43]-[debug]==>Rentre dans index rest
-[2015-02-01 23:59:43]-[debug]==>Rentre dans index rest
-[2015-02-01 23:59:43]-[debug]==>Rentre dans index rest
-[2015-02-01 23:59:43]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-01 23:59:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-01 23:59:43]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-01 23:59:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:38:46]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:46]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:46]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:46]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:46]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:46]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-04 22:38:46]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:38:46]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 22:38:46]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:38:46]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-04 22:38:52]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:52]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:52]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:52]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:38:52]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 22:38:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:38:52]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:52]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-04 22:38:52]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-04 22:38:59]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:59]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:59]-[debug]==>Rentre dans index rest
-[2015-02-04 22:38:59]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:38:59]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 22:38:59]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:38:59]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-04 22:39:02]-[debug]==>Rentre dans index rest
-[2015-02-04 22:39:02]-[debug]==>Rentre dans index rest
-[2015-02-04 22:39:02]-[debug]==>Rentre dans index rest
-[2015-02-04 22:39:02]-[debug]==>Rentre dans index rest
-[2015-02-04 22:39:02]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:39:02]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 22:39:02]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:39:02]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-04 22:39:02]-[debug]==>Rentre dans index rest
-[2015-02-04 22:39:02]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-04 22:41:01]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:01]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:01]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:41:01]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 22:41:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:41:11]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:11]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:11]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:11]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:41:11]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 22:41:11]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:41:11]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-04 22:41:17]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:17]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-04 22:41:23]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:23]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:23]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:23]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:23]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:41:23]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 22:41:23]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 22:41:23]-[debug]==>Rentre dans index rest
-[2015-02-04 22:41:23]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-04 22:41:23]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-04 23:21:06]-[debug]==>Rentre dans index rest
-[2015-02-04 23:21:06]-[debug]==>Rentre dans index rest
-[2015-02-04 23:21:06]-[debug]==>Rentre dans index rest
-[2015-02-04 23:21:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 23:21:06]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-04 23:21:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-04 23:21:06]-[debug]==>Rentre dans index rest
-[2015-02-04 23:21:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-04 23:21:06]-[debug]==> AND (the_int_id IN (21) )
-[2015-02-04 23:21:06]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (21) )]
-[2015-02-04 23:21:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-04 23:21:06]-[debug]==> AND (the_int_id IN (21) )
-[2015-02-04 23:21:06]-[debug]==>Rentre dans index rest
-[2015-02-04 23:21:06]-[debug]==>Rentre dans index rest
-[2015-02-04 23:21:06]-[debug]==>Rentre dans index rest
-[2015-02-04 23:21:06]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-04 23:21:06]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:38:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:25]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:38:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-06 07:38:25]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-
-[2015-02-06 07:38:25]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:38:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:38:58]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:58]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:58]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:38:58]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:38:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:38:58]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-06 07:38:58]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-06 07:38:58]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-06 07:38:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-06 07:38:58]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-06 07:38:58]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:58]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:58]-[debug]==>Rentre dans index rest
-[2015-02-06 07:38:58]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-06 07:38:58]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:39:06]-[debug]==>Rentre dans index rest
-[2015-02-06 07:39:06]-[debug]==>Rentre dans index rest
-[2015-02-06 07:39:06]-[debug]==>Rentre dans index rest
-[2015-02-06 07:39:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:39:06]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:39:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:39:06]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:41:00]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:00]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:41:00]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:41:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:41:00]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:00]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:41:41]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:41]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:41:41]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:41:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:41:41]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:41]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:41:47]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:47]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:47]-[debug]==>Rentre dans index rest
-[2015-02-06 07:41:47]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:41:47]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:41:47]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:41:47]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:42:29]-[debug]==>Rentre dans index rest
-[2015-02-06 07:42:29]-[debug]==>Rentre dans index rest
-[2015-02-06 07:42:29]-[debug]==>Rentre dans index rest
-[2015-02-06 07:42:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:42:29]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:42:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:42:29]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:43:02]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:02]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:02]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:43:02]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:43:02]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:43:02]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:02]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:43:23]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:23]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:23]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:43:23]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:43:23]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:43:23]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:23]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:43:31]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:31]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:31]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:43:31]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:43:31]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:43:31]-[debug]==>Rentre dans index rest
-[2015-02-06 07:43:31]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:44:20]-[debug]==>Rentre dans index rest
-[2015-02-06 07:44:20]-[debug]==>Rentre dans index rest
-[2015-02-06 07:44:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:44:20]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:44:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:44:20]-[debug]==>Rentre dans index rest
-[2015-02-06 07:44:20]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:44:48]-[debug]==>Rentre dans index rest
-[2015-02-06 07:44:48]-[debug]==>Rentre dans index rest
-[2015-02-06 07:44:48]-[debug]==>Rentre dans index rest
-[2015-02-06 07:44:48]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:44:48]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:44:48]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:44:48]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:51:51]-[debug]==>Rentre dans index rest
-[2015-02-06 07:51:51]-[debug]==>Rentre dans index rest
-[2015-02-06 07:51:51]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:51:51]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:51:51]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:51:51]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:52:13]-[debug]==>Rentre dans index rest
-[2015-02-06 07:52:13]-[debug]==>Rentre dans index rest
-[2015-02-06 07:52:13]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:52:13]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:52:13]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:52:13]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:52:35]-[debug]==>Rentre dans index rest
-[2015-02-06 07:52:35]-[debug]==>Rentre dans index rest
-[2015-02-06 07:52:35]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:52:35]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:52:35]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:52:35]-[debug]==>Rentre dans index rest
-[2015-02-06 07:52:35]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:53:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:53:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:53:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:53:25]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:53:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:53:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:53:25]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 07:53:25]-[debug]==>Rentre dans index rest
-[2015-02-06 07:53:25]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:56:00]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:00]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:00]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:56:00]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:56:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:56:00]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 07:56:00]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:00]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:56:29]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:29]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:56:29]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:56:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:56:29]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:29]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 07:56:29]-[debug]==>Rentre dans index rest
-[2015-02-06 07:56:29]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 07:58:27]-[debug]==>Rentre dans index rest
-[2015-02-06 07:58:27]-[debug]==>Rentre dans index rest
-[2015-02-06 07:58:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:58:27]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 07:58:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 07:58:27]-[debug]==>Rentre dans index rest
-[2015-02-06 07:58:27]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:03:04]-[debug]==>Rentre dans index rest
-[2015-02-06 08:03:04]-[debug]==>Rentre dans index rest
-[2015-02-06 08:03:04]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:03:04]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:03:04]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:03:04]-[debug]==>Rentre dans index rest
-[2015-02-06 08:03:04]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:03:04]-[debug]==>Rentre dans index rest
-[2015-02-06 08:03:05]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:04:19]-[debug]==>Rentre dans index rest
-[2015-02-06 08:04:19]-[debug]==>Rentre dans index rest
-[2015-02-06 08:04:19]-[debug]==>Rentre dans index rest
-[2015-02-06 08:04:19]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:04:19]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:04:19]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:04:19]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:04:19]-[debug]==>Rentre dans index rest
-[2015-02-06 08:04:19]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:07:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:07:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:07:34]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-06 08:07:34]-[debug]==>Rentre dans index rest
-
-[2015-02-06 08:07:34]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:07:34]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:07:34]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:07:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:07:34]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:09:01]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:01]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:01]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-06 08:09:01]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-
-[2015-02-06 08:09:01]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:09:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:09:01]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:01]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:01]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:09:01]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:01]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-06 08:09:32]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:32]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:09:32]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:09:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:09:32]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:32]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:09:32]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:32]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:32]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:09:32]-[debug]==>Rentre dans index rest
-[2015-02-06 08:09:32]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-06 08:10:56]-[debug]==>Rentre dans index rest
-[2015-02-06 08:10:56]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:10:56]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:10:56]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:10:56]-[debug]==>Rentre dans index rest
-[2015-02-06 08:10:56]-[debug]==>Rentre dans index rest
-[2015-02-06 08:10:56]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:10:56]-[debug]==>Rentre dans index rest
-[2015-02-06 08:10:56]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:10:56]-[debug]==>Rentre dans index rest
-[2015-02-06 08:10:56]-[debug]==>Rentre dans index rest
-[2015-02-06 08:10:56]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-06 08:11:41]-[debug]==>Rentre dans index rest
-[2015-02-06 08:11:41]-[debug]==>Rentre dans index rest
-[2015-02-06 08:11:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:11:41]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:11:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:11:41]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:11:41]-[debug]==>Rentre dans index rest
-[2015-02-06 08:11:41]-[debug]==>Rentre dans index rest
-[2015-02-06 08:11:41]-[debug]==>Rentre dans index rest
-[2015-02-06 08:11:41]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:11:41]-[debug]==>Rentre dans index rest
-[2015-02-06 08:11:41]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-06 08:12:02]-[debug]==>Rentre dans index rest
-[2015-02-06 08:12:02]-[debug]==>Rentre dans index rest
-[2015-02-06 08:12:02]-[debug]==>Rentre dans index rest
-[2015-02-06 08:12:02]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:12:02]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:12:02]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:12:02]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:12:02]-[debug]==>Rentre dans index rest
-[2015-02-06 08:12:02]-[debug]==>Rentre dans index rest
-[2015-02-06 08:12:02]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:12:02]-[debug]==>Rentre dans index rest
-[2015-02-06 08:12:02]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-06 08:37:06]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:06]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:37:06]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:37:06]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:37:06]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:37:07]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:07]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:07]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:07]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:37:07]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-06 08:37:33]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:33]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:33]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:37:33]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-06 08:37:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-06 08:37:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:34]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-06 08:37:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:34]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-06 08:37:34]-[debug]==> AND (the_int_id IN (14,21) )
-[2015-02-06 08:37:34]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (14,21) )]
-[2015-02-06 08:37:34]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-06 08:37:34]-[debug]==> AND (the_int_id IN (14,21) )
-[2015-02-06 08:37:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:34]-[debug]==>Rentre dans index rest
-[2015-02-06 08:37:34]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-06 08:37:34]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-14 19:05:17]-[debug]==>Rentre dans index rest
-[2015-02-14 19:05:17]-[debug]==>Rentre dans index rest
-[2015-02-14 19:05:17]-[debug]==>Rentre dans index rest
-[2015-02-14 19:05:17]-[debug]==>Rentre dans index rest
-[2015-02-14 19:05:17]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-14 19:05:17]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-14 19:05:17]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-14 19:05:17]-[debug]==>Rentre dans index rest
-[2015-02-14 19:05:17]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-14 19:05:17]-[debug]==>Rentre dans index rest
-[2015-02-14 19:05:17]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-14 19:05:17]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:46:15]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:46:15]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-[2015-02-15 16:46:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:46:15]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:46:15]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:46:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:46:15]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>Rentre dans index rest
-[2015-02-15 16:46:15]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:46:15]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:55:50]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:55:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:55:50]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:55:50]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:55:50]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:55:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:55:50]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>Rentre dans index rest
-[2015-02-15 16:55:50]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:55:50]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:56:08]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:56:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:56:08]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:56:08]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:56:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:56:08]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:08]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:56:08]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:56:17]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:56:17]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:56:17]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:56:17]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:56:17]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:56:17]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:17]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:56:17]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:56:33]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:56:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:33]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:56:33]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:56:33]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:56:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:56:33]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:33]-[debug]==>Rentre dans index rest
-[2015-02-15 16:56:33]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:56:33]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-
-[2015-02-15 16:58:32]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:58:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:58:32]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:58:32]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:58:32]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:58:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:58:32]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:32]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:32]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:58:32]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:58:39]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:58:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:58:39]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:58:39]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:58:39]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:58:39]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:58:39]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:39]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:58:39]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:58:54]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:58:54]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:58:54]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:58:54]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:58:54]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:58:54]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:58:54]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>Rentre dans index rest
-[2015-02-15 16:58:54]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:58:54]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:59:27]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:59:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:59:27]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:59:27]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:59:27]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:59:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:59:27]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:27]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:59:27]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:59:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:59:43]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:59:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:59:43]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:59:43]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:59:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:59:43]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:43]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:59:43]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:59:58]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 16:59:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:59:58]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:59:58]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 16:59:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 16:59:58]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>Rentre dans index rest
-[2015-02-15 16:59:58]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 16:59:58]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:00:08]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:08]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:08]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:00:08]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:00:08]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:00:08]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:00:08]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:09]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:09]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:09]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:09]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:00:09]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:09]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:09]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:09]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:09]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:09]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:00:09]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:00:25]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:00:25]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:25]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:25]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:00:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:25]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:25]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:00:25]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:00:32]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:00:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:00:32]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:32]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:32]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:00:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:32]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:32]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:00:32]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:00:50]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:00:50]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-[2015-02-15 17:00:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:50]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:50]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:00:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:00:50]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:00:50]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:00:50]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:01:28]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:01:28]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:01:28]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:01:28]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:01:28]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:01:28]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:01:28]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>Rentre dans index rest
-[2015-02-15 17:01:28]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:01:28]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:02:00]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:02:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:02:00]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:02:00]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:02:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:02:00]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:00]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:02:00]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:02:37]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:37]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:37]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:02:37]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:02:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:02:37]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:02:37]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:38]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:38]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:02:38]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:02:38]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:02:38]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:02:38]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:02:38]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:38]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:38]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:38]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:02:38]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:02:52]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:02:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:02:52]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:02:52]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:02:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:02:52]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:02:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:02:52]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:03:04]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:03:04]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:03:04]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:03:04]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:03:04]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:03:04]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:03:04]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:04]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:03:04]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:03:20]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:03:20]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-[2015-02-15 17:03:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:03:20]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:03:20]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:03:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:03:20]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:20]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:03:20]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:03:41]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:41]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:41]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:03:41]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:03:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:03:41]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:41]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:03:41]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:03:41]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:03:41]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:03:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:03:41]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:03:42]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:42]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:42]-[debug]==>Rentre dans index rest
-[2015-02-15 17:03:42]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:03:42]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:04:12]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:04:12]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:04:12]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:04:12]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:04:12]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:04:12]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:04:12]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:12]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:04:12]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:04:33]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:33]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:33]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:04:33]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:04:33]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:04:34]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:04:34]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:34]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:04:34]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:04:34]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:04:34]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:04:34]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:04:34]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:34]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:34]-[debug]==>Rentre dans index rest
-[2015-02-15 17:04:34]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:04:34]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:08:50]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:08:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:08:50]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:08:50]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:08:50]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:08:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:08:50]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:50]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:08:50]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-
-[2015-02-15 17:08:52]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:08:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:08:52]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:08:52]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:08:52]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:08:52]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:08:52]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:52]-[debug]==>Rentre dans index rest
-[2015-02-15 17:08:52]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:08:52]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:09:27]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 17:09:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 17:09:27]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:09:27]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:09:27]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 17:09:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 17:09:27]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>Rentre dans index rest
-[2015-02-15 17:09:27]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 17:09:27]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:22:15]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:22:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:22:15]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:22:15]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:22:15]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:22:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:22:15]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>Rentre dans index rest
-[2015-02-15 23:22:15]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:22:15]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:25:25]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:25:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:25:25]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:25:25]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:25:25]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:25:25]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:25:25]-[debug]==>Rentre dans index rest
-[2015-02-15 23:25:25]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:38:37]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:38:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:38:37]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:38:37]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:38:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:38:37]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>Rentre dans index rest
-[2015-02-15 23:38:37]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:38:37]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:40:35]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:40:35]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:40:35]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:40:35]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:40:35]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:40:35]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:40:35]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>Rentre dans index rest
-[2015-02-15 23:40:35]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:40:35]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:44:14]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:44:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:44:14]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:44:14]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:44:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:44:14]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:14]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:44:14]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:44:36]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:44:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:44:36]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:44:36]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:44:36]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:44:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:44:36]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:44:36]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:44:36]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:45:14]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:45:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:45:14]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:45:14]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:45:14]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:45:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:45:14]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:14]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:45:14]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:45:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:45:53]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:45:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:45:53]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:45:53]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:45:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:45:53]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:45:53]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:45:53]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:46:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:46:00]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:46:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:46:00]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:46:00]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:46:00]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:46:00]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>Rentre dans index rest
-[2015-02-15 23:46:00]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:46:00]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:47:32]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:47:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:47:32]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:47:32]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:47:32]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:47:32]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>Rentre dans index rest
-[2015-02-15 23:47:32]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:47:32]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:48:42]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:48:42]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:48:42]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:48:42]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:48:42]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:48:42]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>Rentre dans index rest
-[2015-02-15 23:48:42]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:48:42]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:50:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:50:36]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:50:36]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:50:36]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:50:36]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>Rentre dans index rest
-[2015-02-15 23:50:36]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:50:36]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:51:53]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-15 23:51:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-15 23:51:53]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:51:53]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:51:53]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (11,12,15) )]
-[2015-02-15 23:51:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-15 23:51:53]-[debug]==> AND (the_int_id IN (11,12,15) )
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>Rentre dans index rest
-[2015-02-15 23:51:53]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-15 23:51:53]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-19 22:39:18]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:18]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:18]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-19 22:39:18]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-19 22:39:18]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-19 22:39:18]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:18]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:18]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-19 22:39:18]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:18]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:18]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-02-19 22:39:18]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-19 22:39:20]-[debug]==>dans getThemesEvenement  condition : []
-[2015-02-19 22:39:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-02-19 22:39:20]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-19 22:39:20]-[debug]==> AND (the_int_id IN (15,21) )
-[2015-02-19 22:39:20]-[debug]==>dans getThemesEvenement  condition : [ AND (the_int_id IN (15,21) )]
-[2015-02-19 22:39:20]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-[2015-02-19 22:39:20]-[debug]==> AND (the_int_id IN (15,21) )
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>Rentre dans index rest
-[2015-02-19 22:39:20]-[debug]==>DANS REST - getEvenements - 1
-[2015-02-19 22:39:20]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-03-02 21:18:29]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:29]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:29]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:29]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:18:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:18:29]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:18:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:18:29]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:29]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:29]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:29]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:18:29]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-03-02 21:18:43]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:43]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:43]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:18:43]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:18:43]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:18:43]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:18:43]-[debug]==>Rentre dans index rest
-[2015-03-02 21:18:43]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:51:41]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:41]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:41]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:51:41]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:51:41]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:51:41]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:51:41]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:41]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:41]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:41]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:51:41]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-03-02 21:51:47]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:47]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:47]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:47]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:51:47]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:51:47]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:51:47]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:51:47]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:47]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:51:56]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:56]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:56]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:56]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:51:56]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:51:56]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:51:56]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:51:56]-[debug]==>Rentre dans index rest
-[2015-03-02 21:51:56]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:54:14]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:14]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:54:14]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:54:14]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:54:14]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:14]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:54:14]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:14]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:54:30]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:30]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:30]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:30]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:54:30]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:54:30]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:54:30]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:54:30]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:30]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:54:58]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:58]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:58]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:54:58]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:54:58]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:54:58]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:54:58]-[debug]==>Rentre dans index rest
-[2015-03-02 21:54:58]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-02 21:55:01]-[debug]==>Rentre dans index rest
-[2015-03-02 21:55:01]-[debug]==>Rentre dans index rest
-[2015-03-02 21:55:01]-[debug]==>Rentre dans index rest
-[2015-03-02 21:55:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:55:01]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-02 21:55:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-02 21:55:01]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-02 21:55:01]-[debug]==>Rentre dans index rest
-[2015-03-02 21:55:02]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-11 21:41:10]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:10]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:10]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:10]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-11 21:41:10]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-11 21:41:10]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-11 21:41:10]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-11 21:41:10]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:10]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:10]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:10]-[debug]==>DANS REST - getEvenements - 1
-[2015-03-11 21:41:10]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
-                FROM tet_theme_evenement, the_theme
-                WHERE tet_the_int_id = the_int_id
-                GROUP BY tet_the_int_id]
-[2015-03-11 21:41:16]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:16]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:16]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:16]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-11 21:41:16]-[debug]==>dans getThemesEvenement  condition : []
-[2015-03-11 21:41:16]-[debug]==>CONDITION THEMES SEARCH CRITERIA
-
-[2015-03-11 21:41:16]-[debug]==>CONDITION ORGANISATEURSERACHCRITERIA
-
-[2015-03-11 21:41:16]-[debug]==>Rentre dans index rest
-[2015-03-11 21:41:16]-[debug]==>DANS REST - getEvenements - 1
+[2015-05-18 23:18:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:18:37]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:18:37]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:19:12]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:19:12]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:19:12]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:29:30]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:29:30]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:29:30]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:33:56]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:33:56]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:33:56]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:33:56]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:33:56]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:34:21]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:34:21]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:34:21]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:35:10]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/]
+[2015-05-18 23:35:11]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:35:11]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:35:11]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:35:11]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:35:11]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:35:11]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
+                FROM tet_theme_evenement, the_theme
+                WHERE tet_the_int_id = the_int_id
+                GROUP BY tet_the_int_id]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/organisateurs/]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:26]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:27]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:28]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:29]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:35:30]-[debug]==>PAGE 404 rest url [http://localhost:8888/spk-v2/rest/www/index.php]
+[2015-05-18 23:39:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:39:29]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:39:29]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:01]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:41:01]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:05]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:05]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:41:05]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:48]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:48]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:41:48]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:57]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:41:57]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:41:57]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:42:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:42:33]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:42:33]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:47:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:47:27]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:47:27]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:53:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:53:53]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:53:53]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:53:53]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:53:53]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:53:53]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
+                FROM tet_theme_evenement, the_theme
+                WHERE tet_the_int_id = the_int_id
+                GROUP BY tet_the_int_id]
+[2015-05-18 23:53:56]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:53:56]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:53:57]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:53:57]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:53:58]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:53:58]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:54:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:54:15]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:54:15]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:54:15]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:54:15]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:54:15]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
+                FROM tet_theme_evenement, the_theme
+                WHERE tet_the_int_id = the_int_id
+                GROUP BY tet_the_int_id]
+[2015-05-18 23:54:16]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:54:16]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-18 23:54:16]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-18 23:54:16]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-18 23:54:16]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-18 23:54:16]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
+                FROM tet_theme_evenement, the_theme
+                WHERE tet_the_int_id = the_int_id
+                GROUP BY tet_the_int_id]
+[2015-05-19 00:00:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-19 00:00:50]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-19 00:00:50]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-19 00:00:50]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-19 00:00:50]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+[2015-05-19 00:03:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-19 00:03:06]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-19 00:03:06]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-19 08:15:55]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-19 08:15:55]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-19 08:15:55]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+
+[2015-05-19 08:15:55]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-19 08:15:55]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;

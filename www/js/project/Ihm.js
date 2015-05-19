@@ -15,13 +15,6 @@ function appendSelectList(cssId, id, value,fieldName){
     $('#'+cssId).append(h);
 }
 
-
-function appendSelect(cssId, html){
-    console.log('dans ihm appendSelect');
-    console.log(html);
-    $('#'+cssId).append(html);
-}
-
 /**
  * Ecriture de l'événement dans la page de détail
  * @param {type} event
@@ -93,7 +86,7 @@ function appendEvenement(event) {
     $('#evenement-web').append('<a href="'+event.url+'"  target="_blank">'+event.url+'</a>');
     $('#evenement-tel').append(event.tel);
     $('#evenement-adresse').append(event.adresse1+"<br/>"+event.adresse2+"<br/>"+event.cp+"<br/>"+event.ville+"<br/>"+event.pays+"<br/>");
-    $('#evenement-image').append('<img src="imgData/Evenement/'+img+'" class="img-responsive" id="evenement-'+event.type_id+'-'+event.id+'" width="100%"/>');
+    $('#evenement-image').append('<img src="imgData/Evenement/'+img+'" class="img-responsive" width="100%"/>');
     $('#evenement-inscription').append(event.contact);
     $('#evenement-hebergement').append(hebergement);
     $('#evenement-intervenants').append(event.intervenants);
@@ -107,6 +100,15 @@ function appendEvenement(event) {
 }
 
 // --------------------------------------------------- HOME PAGE
+
+function removeEvenementHome(){
+    $('#listeEvenements div').remove();
+}
+
+function removeItems(idDivParent){
+    $(idDivParent+' div').remove();
+}
+
 /**
  * Ecriture de la liste d'événements en Home Page
  * @param {type} event
@@ -120,7 +122,7 @@ function appendEvenementHome(event) {
     if(img === '' || !img){img = 'default_evenements.png'; }
 
 
-    var h = '<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 vignette" ><a href="index.php?page=evenement&id='+event.id+'">';
+    var h = '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 vignette" ><a href="index.php?page=evenement&id='+event.id+'">';
 
     h += '          <div class="row  hidden-xs vignette_image">';
     h += '              <img src="imgData/Evenement/'+img+'" class="img-responsive"/>';
@@ -194,12 +196,28 @@ function appendOrganisateurHome(org) {
 }
 // ---------------------------------------------------/HOME PAGE
 
+function appendEvenementsDate(date){
+    $('#listeEvenements').append("<a name='"+date+"'></a><h3 class='monthTitle'>"+date+"</h3>");
+    
+}
+
+function appendEvenementsListeOrder(listeDate){
+    var h = "";
+    $(listeDate).each(function (i, date) {
+        h += "<li class='list-group-item'><a href='#"+date+"'>"+date+"</a></li>";
+    });
+                
+    $('#listeOrder').append(h);
+}
+
 /**
  * Ecriture de la liste d'événements dans la page evenements
  * @param {type} event
  * @returns {undefined}
  */
 function appendEvenements(event) {
+   
+   
    
     var img = event.image;
     if(img === '' || !img){img = 'default_evenements.png'; }
