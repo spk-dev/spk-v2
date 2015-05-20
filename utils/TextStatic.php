@@ -100,17 +100,17 @@ class TextStatic{
         /**
          * Charge les fichiers de langues en SESSION et mets à jour en fonction du choix. 
          */
-        public static function defineLanguage(){
+        public static function defineLanguage($level){
         
            // Chargement des texts static dans des tableaux en Session
             $languagesData = LoadConfig::getInstance(); 
-            $_SESSION["language_fr"] = $languagesData->getProperties("../lang/fr_lang.ini");
+            $_SESSION["language_fr"] = $languagesData->getProperties($level."lang/fr_lang.ini");
 
-            if(file_exists("../lang/en_lang.ini")){
-                $_SESSION["language_en"] = $languagesData->getProperties("../lang/en_lang.ini");
+            if(file_exists($level."lang/en_lang.ini")){
+                $_SESSION["language_en"] = $languagesData->getProperties($level."lang/en_lang.ini");
             }        
-            if(file_exists("../lang/es_lang.ini")){
-                $_SESSION["language_es"] = $languagesData->getProperties("../lang/es_lang.ini");
+            if(file_exists($level."lang/es_lang.ini")){
+                $_SESSION["language_es"] = $languagesData->getProperties($level."lang/es_lang.ini");
             }
             
             // S'il n'y a pas de langue par défaut en Session, alors affecter le FR.
@@ -132,12 +132,12 @@ class TextStatic{
        /*********************************
         * 
         */
-        public static function reloadLanguage(){
+        public static function reloadLanguage($level){
             echo "<script language='javascript'>alert('reload text');</script>";
             $languagesData = LoadConfig::getInstance(); 
-             $_SESSION["language_fr"] = $languagesData->getProperties("../lang/fr_lang.ini");
-             $_SESSION["language_en"] = $languagesData->getProperties("../lang/en_lang.ini");
-             $_SESSION["language_es"] = $languagesData->getProperties("../lang/es_lang.ini");
+             $_SESSION["language_fr"] = $languagesData->getProperties($level."lang/fr_lang.ini");
+             $_SESSION["language_en"] = $languagesData->getProperties($level."lang/en_lang.ini");
+             $_SESSION["language_es"] = $languagesData->getProperties($level."lang/es_lang.ini");
         }
 }
 ?>

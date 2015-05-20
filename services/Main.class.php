@@ -40,7 +40,7 @@ final class Main {
             $confValue = LoadConfig::getInstance();
             $_ENV["properties"] = $confValue->getProperties($configPath);
         }
-        TextStatic::defineLanguage();
+        TextStatic::defineLanguage($this->getPath());
         if(isset($_GET['resetLangue'])){TextStatic::reloadLanguage();}
     }
 

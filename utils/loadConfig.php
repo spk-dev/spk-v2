@@ -25,13 +25,19 @@ final class LoadConfig{
      * Charge en mémoire la valeur du fichier de conf
      */
     private function loadFile($fileUrl){
+        
         $fileConfig = array();
-           if(file_exists($fileUrl) && $fileConfig=parse_ini_file($fileUrl,true)){
-            //$this->tableauIni = $fileConfig;
-           return $fileConfig;
+        if(file_exists($fileUrl)){
+            if($fileConfig=parse_ini_file($fileUrl,true)){
+                return $fileConfig;
+            }else{
+                 echo "Fichier [".$fileUrl."] illisible ou n'est pas un fichier .ini .";
+            }
         }else{
-            echo "Le fichier est introuvable ou incompatible<br />";
-        }    
+            echo "Fichier [".$fileUrl."] introuvable.";
+        }
+        die('stop');
+           
     }
     
     /**

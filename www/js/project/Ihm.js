@@ -105,10 +105,6 @@ function removeEvenementHome(){
     $('#listeEvenements div').remove();
 }
 
-function removeItems(idDivParent){
-    $(idDivParent+' div').remove();
-}
-
 /**
  * Ecriture de la liste d'événements en Home Page
  * @param {type} event

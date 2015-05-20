@@ -291,9 +291,7 @@ function getOrganisateurs(){
         $items = $stmt->fetchAll(PDO::FETCH_OBJ);
         $db = null;
         echo '{"organisateurs": ' . json_encode($items) . '}';
-        
     } catch(PDOException $e) {
-        
         echo '{"error":{"text":'. $e->getMessage() .'}}';
     }
 }

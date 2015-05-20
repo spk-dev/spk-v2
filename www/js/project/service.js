@@ -23,8 +23,7 @@ function pageHomeOrganisateurs(){
     
 }
 function pageHomeEvenement(){
-    removeItems('#listeEvenements');
-    //removeEvenementHome();
+    removeEvenementHome();
     $.getJSON(urlEvenements, function (data) {
         $(data.evenements).each(function (i, event) {
             var evenement = defineEvenement(event);
@@ -161,28 +160,65 @@ function pageEvenement(id){
  * @returns {null}
  */
 function pageOrganisateurs(isoCriteres, filter){
+
+    console.log('rentre dans pageOrganisateurs');
+
+    formData = $('#formResearch').serialize();
     var url = "";
+    var plural = "";
 
     url = urlOrganisateurs;
+    console.log('url : '+url);
 
-    removeItems('#listeItems');
+    var nbItems;
+    var nbItemsParPage;
+
+    $('#listeItems div').remove();
+
     $.getJSON(url, function (data) {
-        
-        console.log('data : '+data);
+
         nbItems = data.organisateurs.length;
         nbItemsParPage = $("#nbItemParPage option:selected").val();
 
+        if(nbItems>1){
+            plural = "s";
+        }
+        $("#nbItems").html(nbItems);
+        $("#plural").html(plural);
+
+        // Création de la pagination
+        if(nbItems > nbItemsParPage && isoCriteres===true) {
+            createPagination(nbItems, nbItemsParPage);
+        }else{
+            removePagination();
+        }
+
+        var nbItemsParPage = $("#nbItemParPage option:selected").val();
+        var currentPage = $('#currentPage').val();
+        var min = (nbItemsParPage * currentPage) - nbItemsParPage;
+        var max = (nbItemsParPage * currentPage) - 1;
+
         $(data.organisateurs).each(function (i, organisateur) {
-            var org = defineOrganisateur(organisateur);
 
-            // lister les coordonnées GPS dans le tableauMarqueurs
-            tableauMarqueurs.push({
-                lat: org.lat,
-                lng: org.long,
-                popup: org.nom,
 
-            });
-            appendOrganisateurs(org);
+            if(i >= min && i <= max) {
+
+                var org = defineOrganisateur(organisateur);
+
+
+
+                // lister les coordonnées GPS dans le tableauMarqueurs
+                tableauMarqueurs.push({
+                    lat: org.lat,
+                    lng: org.long,
+                    popup: org.nom,
+
+                });
+                appendOrganisateurs(org);
+            }
+
+
+
         });
     });
     $('#loading').hide();
