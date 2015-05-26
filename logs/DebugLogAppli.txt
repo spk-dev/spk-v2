@@ -13268,3 +13268,44 @@
 [2015-05-20 15:29:04]-[debug]==>dans getThemesEvenement  condition : []
 [2015-05-20 15:29:04]-[debug]==>CONDITION THEMES SEARCH CRITERIA
 
+[2015-05-26 13:23:54]-[debug]==> ORDER BY eve_date_debut ASC
+[2015-05-26 13:23:54]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+[2015-05-26 13:23:54]-[debug]==>dans getNbEvenementParTheme [SELECT tet_the_int_id AS id, the_var_nom AS nom, COUNT(tet_eve_int_id) AS nb
+                FROM tet_theme_evenement, the_theme
+                WHERE tet_the_int_id = the_int_id
+                GROUP BY tet_the_int_id]
+[2015-05-26 13:23:54]-[debug]==>dans getThemesEvenement  condition : []
+[2015-05-26 13:23:54]-[debug]==>CONDITION THEMES SEARCH CRITERIA
+[2015-05-26 13:23:54]-[debug]==>SELECT 
+                distinct(eve_int_id) as 'id',
+                eve_var_titre as 'titre',
+                eve_var_description as 'description',
+                eve_var_mail_inscription as 'mail',
+                eve_var_contact as 'contact',
+                eve_date_debut as 'debut',
+                eve_date_fin as 'fin',
+                eve_var_image as 'image',
+                eve_var_prix as 'prix',
+                eve_var_url as 'url',
+                eve_boo_garderie as 'garderie',
+                eve_boo_hebergement as 'hebergement',
+                eve_org_int_id as 'lieu_id',
+                org_var_nom as 'lieu_nom',
+                eve_tev_int_id as 'type_id',
+                tev_var_nom as 'type_nom',
+                pla_var_adresse1 as 'adresse1',
+                pla_var_adresse2 as 'adresse2',
+                pla_int_cp as 'cp',
+                pla_var_ville as 'ville',
+                pla_var_pays as 'pays',
+                pla_dec_lat as 'lat',
+                pla_dec_long as 'long',
+                tet_the_int_id as 'theme'
+            FROM eve_evenements 
+                left join org_organisateurs on eve_org_int_id = org_int_id
+                left join pla_places on eve_pla_int_id = pla_int_id
+                left join tev_type_evenement on tev_int_id = eve_tev_int_id
+                left join tet_theme_evenement on tet_eve_int_id = eve_int_id
+
+            WHERE 1=1 ORDER BY eve_date_debut ASC;
+

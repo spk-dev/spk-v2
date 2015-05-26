@@ -48,6 +48,9 @@
     <!-- Custom Fonts -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Custom spk -->
+    <link href="css/custo.css" rel="stylesheet" type="text/css"/>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -270,12 +273,12 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="user-profil.php"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="index.php?page=user-profil"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
+<!--                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>-->
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -299,27 +302,43 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                             <a href="index.php?page=dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                             <a href="index.php?page=dashboard"><i class="fa fa-dashboard fa-fw"></i> Tableau de bord</a>
                         </li>
                         <li>
-                             <a href="index.php?page=evenements"><i class="fa fa-star fa-fw"></i> Tous les événéments</a>
-                        </li>
-                        <li>
-                             <a href="#"><i class="fa fa-map-marker fa-fw"></i> Organisation 1 <span class="fa arrow"></span></a>
-                             
-                        </li>
-                         <li>
-                             <a href="#"><i class="fa fa-map-marker fa-fw"></i> Organisation 1 <span class="fa arrow"></span></a>
+                             <a href="#"><i class="fa fa-envelope fa-fw"></i> Messagerie </a>
                              
                         </li>
                         <li>
-                             <a href="#"><i class="fa fa-ambulance fa-fw"></i> Assistance <span class="fa arrow"></span></a>
-                             
+                            <a><i class="fa fa-star fa-fw"></i>Evenements</a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="index.php?page=event-list"><i class="fa fa-list-ul fa-fw"></i> Voir tous les événements</a></li>
+                                <li><a href="index.php?page=event-add"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
+                                
+                            </ul>
                         </li>
+                        
                         <li>
-                             <a href="#"><i class="fa fa-mail-reply-all fa-fw"></i> Contact <span class="fa arrow"></span></a>
-                             
+                             <a href="#"><i class="fa fa-map-marker fa-fw"></i> Organisations</a>
+                             <ul class="nav nav-second-level">
+                                <li><a href="index.php?page=org-list"><i class="fa fa-list-ul fa-fw"></i> Voir toutes les organsiations</a></li>
+                                <li><a href="index.php?page=org-add"><i class="fa fa-plus-circle fa-fw"></i> Ajouter une organisation</a></li>
+                                
+                            </ul>
                         </li>
+                        
+                         
+                        <li>
+                            <a><i class="fa fa-ambulance fa-fw"></i> Assistance <span class="fa arrow "></span></a>
+                             <ul class="nav nav-second-level">
+                                <li class="">
+                                   <a href="index.php?page=help"><i class="fa fa-question"></i> FAQ</a>
+                                </li>
+                                <li class="">
+                                    <a href="index.php?page=contact"><i class="fa fa-mail-forward"></i> Contact</a>
+                                </li>
+                             </ul>
+                        </li>
+                        
                         
                     </ul>
                 </div>
@@ -379,7 +398,13 @@
    </script>
     
    
-    
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>       
     
         <!-- Flot Charts JavaScript -->
     <script src="bower_components/flot/excanvas.min.js"></script>
@@ -400,13 +425,7 @@
     <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-                responsive: true
-        });
-    });
-    </script>
+    
     
     
     <!-- Custom Theme JavaScript -->
@@ -428,25 +447,24 @@
 
     <script>
         
-        $(document).on("click", "a", function(evt){
-            var href = $(this).attr("href");
-            
-            var firstcar = href.substring(0, 1); 
-            
-            if(firstcar !== "#"){
-                evt.preventDefault();
-                var end = href.lastIndexOf('.'); // Plus 1 car on ne veut pas le '/'. 
-                var href = href.substring(0, end); 
-                var newhref ="index.php?page="+href
-                $(location).attr('href',newhref);
-            }
-            
-            
-            
-            
-        });
+//        $(document).on("click", "a", function(evt){
+//            var href = $(this).attr("href");
+//            
+//            var firstcar = href.substring(0, 1); 
+//            
+//            if(firstcar !== "#"){
+//                evt.preventDefault();
+//                var end = href.lastIndexOf('.'); // Plus 1 car on ne veut pas le '/'. 
+//                var href = href.substring(0, end); 
+//                var newhref ="index.php?page="+href
+//                $(location).attr('href',newhref);
+//            } 
+//        });
     
     </script>
+
+
+
 </body>
 
 </html>

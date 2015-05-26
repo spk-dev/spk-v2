@@ -1,0 +1,17 @@
+/* 
+    Document   : custo
+    Created on : 26 mai 2015, 13:48:45
+    Author     : phwu963
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.img-left {
+    float:left;
+}
+.img-right{
+    float:right;
+}
+.img-margin-standard{
+    margin:0.5em;
+}

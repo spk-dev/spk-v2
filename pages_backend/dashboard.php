@@ -155,9 +155,9 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-12">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered table-hover table-striped">
+                                        <table class="table table-bordered table-hover table-striped"  id="dataTables-example">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
