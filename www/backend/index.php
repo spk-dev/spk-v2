@@ -58,6 +58,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!--    Geolocalisation picker-->
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+ 
+    
+    
 </head>
 
 <body>
@@ -372,30 +378,7 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <script>
-        var url= document.URL; 
-       
-        
-        var egal = url.lastIndexOf('=')+1; // Plus 1 car on ne veut pas le '/'. 
-        var end = url.length;
-        var page = url.substring(egal, end); 
-//        
-//         if(page === "morris"){ 
-//              
-//              $.getScript("bower_components/raphael/raphael-min.js");
-//              $.getScript("bower_components/morrisjs/morris.min.js");
-//              $.getScript("js/morris-data.js");
-//                
-//         }else if (page === "flot"){
-//             $.getScript("bower_components/flot/excanvas.min.js");
-//             $.getScript("bower_components/flot/jquery.flot.js");
-//             $.getScript("bower_components/flot/jquery.flot.pie.js");
-//             $.getScript("bower_components/flot/jquery.flot.resize.js");
-//             $.getScript("bower_components/flot/jquery.flot.time.js");
-//             $.getScript("bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js");
-//             $.getScript("js/flot-data.js");
-//         }
-   </script>
+    
     
    
 <script>
@@ -425,8 +408,7 @@
     <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
-    
-    
+
     
     <!-- Custom Theme JavaScript -->
     <script src="dist/js/sb-admin-2.js"></script>
@@ -444,25 +426,10 @@
         .popover()
     </script>
     
-
-    <script>
-        
-//        $(document).on("click", "a", function(evt){
-//            var href = $(this).attr("href");
-//            
-//            var firstcar = href.substring(0, 1); 
-//            
-//            if(firstcar !== "#"){
-//                evt.preventDefault();
-//                var end = href.lastIndexOf('.'); // Plus 1 car on ne veut pas le '/'. 
-//                var href = href.substring(0, end); 
-//                var newhref ="index.php?page="+href
-//                $(location).attr('href',newhref);
-//            } 
-//        });
     
-    </script>
-
+    <script src="js/typeahead.js"></script>
+    <script src="js/typeahead-addresspicker.js"></script>
+    <script src="js/geopicker-custo.js"></script>
 
 
 </body>
