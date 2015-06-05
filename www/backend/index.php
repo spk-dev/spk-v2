@@ -48,8 +48,12 @@
     <!-- Custom Fonts -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- SUMMER NOTE -->
+    <link href="dist/summernote/summernote.css" rel="stylesheet">
+    
     <!-- Custom spk -->
     <link href="css/custo.css" rel="stylesheet" type="text/css"/>
+    <link href="css/typeahead.css" rel="stylesheet" type="text/css"/>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,9 +62,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!--    Geolocalisation picker-->
-    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
  
     
     
@@ -318,7 +320,7 @@
                             <a><i class="fa fa-star fa-fw"></i>Evenements</a>
                             <ul class="nav nav-second-level">
                                 <li><a href="index.php?page=event-list"><i class="fa fa-list-ul fa-fw"></i> Voir tous les événements</a></li>
-                                <li><a href="index.php?page=event-add"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
+                                <li><a href="index.php?page=event-manage"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
                                 
                             </ul>
                         </li>
@@ -327,7 +329,7 @@
                              <a href="#"><i class="fa fa-map-marker fa-fw"></i> Organisations</a>
                              <ul class="nav nav-second-level">
                                 <li><a href="index.php?page=org-list"><i class="fa fa-list-ul fa-fw"></i> Voir toutes les organsiations</a></li>
-                                <li><a href="index.php?page=org-add"><i class="fa fa-plus-circle fa-fw"></i> Ajouter une organisation</a></li>
+                                <li><a href="index.php?page=org-manage"><i class="fa fa-plus-circle fa-fw"></i> Ajouter une organisation</a></li>
                                 
                             </ul>
                         </li>
@@ -390,18 +392,18 @@
     </script>       
     
         <!-- Flot Charts JavaScript -->
-    <script src="bower_components/flot/excanvas.min.js"></script>
+<!--    <script src="bower_components/flot/excanvas.min.js"></script>
     <script src="bower_components/flot/jquery.flot.js"></script>
     <script src="bower_components/flot/jquery.flot.pie.js"></script>
     <script src="bower_components/flot/jquery.flot.resize.js"></script>
     <script src="bower_components/flot/jquery.flot.time.js"></script>
     <script src="bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="js/flot-data.js"></script>
+    <script src="js/flot-data.js"></script>-->
     
     <!-- MORRIS -->
-    <script src="bower_components/raphael/raphael-min.js"></script>
+<!--    <script src="bower_components/raphael/raphael-min.js"></script>
     <script src="bower_components/morrisjs/morris.min.js"></script>
-    <script src="js/morris-data.js"></script>    
+    <script src="js/morris-data.js"></script>    -->
 
 
     <!-- DataTables JavaScript -->
@@ -427,10 +429,86 @@
     </script>
     
     
-    <script src="js/typeahead.js"></script>
-    <script src="js/typeahead-addresspicker.js"></script>
-    <script src="js/geopicker-custo.js"></script>
+<!--    GEOLOCALISATION-->
+ <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+<!-- <script src="bower_components/jquery/jquery.js"></script>-->
+ <script src="bower_components/typeahead.js/dist/bloodhound.js"></script>
+ <script src="bower_components/typeahead.js/dist/typeahead.jquery.js"></script>
+ <script src="dist/typeahead-addresspicker/typeahead-addresspicker.js"></script>
+ <script>
+     
+  function displayResults(result, div) {
 
+    $("#Latitude").val(result.lat());
+    $("#Longitude").val(result.lng());
+    $("#administrative_area_level_1").val(result.nameForType('administrative_area_level_1',false));
+    $("#administrative_area_level_2").val(result.nameForType('administrative_area_level_2',false));
+    $("#street_number").val(result.nameForType('street_number',false));
+    $("#route").val(result.nameForType('route',false));
+    $("#postal_code").val(result.nameForType('postal_code',false));
+    $("#country").val(result.nameForType('country',false));
+    $("#locality").val(result.nameForType('locality',false));
+ 
+  }
+
+  $( function() {
+    var addressPicker = new AddressPicker();
+    $('#address1').typeahead(null, {
+      displayKey: 'description',
+      source: addressPicker.ttAdapter()
+    });
+    addressPicker.bindDefaultTypeaheadEvent($('#address1'))
+    $(addressPicker).on('addresspicker:selected', function (event, result) { displayResults(result, $('#response1'))})
+    $(addressPicker).on('addresspicker:predictions', function(event, result) {
+      if (result && result.length > 0)
+        $('#address1').removeClass("empty")
+      else
+        $('#address1').addClass("empty")
+    })
+  })
+
+  $( function() {
+    // instantiate the addressPicker suggestion engine (based on bloodhound)
+    var addressPicker = new AddressPicker({map: {id: '#map'}, marker: {draggable: true, visible: true}, zoomForLocation: 20, reverseGeocoding: true});
+
+    // instantiate the typeahead UI
+    $('#address2').typeahead(null, {
+      displayKey: 'description',
+      source: addressPicker.ttAdapter()
+    });
+    addressPicker.bindDefaultTypeaheadEvent($('#address2'))
+    $(addressPicker).on('addresspicker:selected', function (event, result) {
+      displayResults(result, $('#response2'))
+      if (result.isReverseGeocoding()) {
+        $('#address2').val(result.address())
+      }
+    });
+  })
+
+
+  </script>
+  
+  <!-- SUMMER NOTE -->
+<script src="dist/summernote/summernote.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('.summernote').summernote({
+          
+            
+            minHeight: 300,             // set minimum height of editor
+            maxHeight: 600,             // set maximum height of editor
+
+           toolbar: [
+                //[groupname, [button list]]
+
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']]
+           ]
+      });
+});
+</script>
 
 </body>
 
