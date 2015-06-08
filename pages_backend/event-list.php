@@ -44,9 +44,9 @@ function generateRandomString($length = 10) {
                 <td><a href=""><?php echo generateRandomString(); ?></a></td>
                 <td>
                     <div class="tooltip-demo">
-                        <a href=""><button type="button" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Voir"><i class="fa fa-search fa-fw"></i></button></a>
-                        <a href=""><button type="button" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fa fa-pencil fa-fw"></i></button></a>
-                        <a href=""><button type="button" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Voir sur le site"><i class="fa fa-globe fa-fw"></i></button></a>
+                        <a href="index.php?page=event-manage&action=r&id=<?php echo $i; ?>"><button type="button" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Voir"><i class="fa fa-search fa-fw"></i></button></a>
+                        <a href="index.php?page=event-manage&action=w&id=<?php echo $i; ?>"><button type="button" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Modifier"><i class="fa fa-pencil fa-fw"></i></button></a>
+                        <a href="../index.php?page=evenement&id=6" target="_blank"><button type="button" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Voir sur le site"><i class="fa fa-globe fa-fw"></i></button></a>
                     </div>
                 </td>
             </tr>
