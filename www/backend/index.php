@@ -313,14 +313,14 @@
                              <a href="index.php?page=dashboard"><i class="fa fa-dashboard fa-fw"></i> Tableau de bord</a>
                         </li>
                         <li>
-                             <a href="#"><i class="fa fa-envelope fa-fw"></i> Messagerie </a>
+                             <a href="index.php?page=msg-list"><i class="fa fa-envelope fa-fw"></i> Messagerie </a>
                              
                         </li>
                         <li>
                             <a><i class="fa fa-star fa-fw"></i>Evenements</a>
                             <ul class="nav nav-second-level">
                                 <li><a href="index.php?page=event-list"><i class="fa fa-list-ul fa-fw"></i> Voir tous les événements</a></li>
-                                <li><a href="index.php?page=event-manage"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
+                                <li><a href="index.php?page=event-manage&action=w"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
                                 
                             </ul>
                         </li>
