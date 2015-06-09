@@ -39,19 +39,19 @@ function generateRandomString($length = 10) {
     while($i<8){
         $val = intval(rand(1, 2));
 ?>
-        <a onClick="alert('lecture du message')">
+        
             <tr style="<?php echo $style[$val]; ?>">
-                <a onClick="alert('lecture du message')">
-                <td><span class="fa <?php echo $star[$val]; ?>" aria-hidden="true"></span> 
-                    <?php echo $etat[$val]; ?></td>
                 
-                <td><?php echo generateRandomString(); ?></td>
-                <td>typ_<?php echo generateRandomString(); ?>...</td>
-                <td><?php echo rand(1, 27)."/".rand(1, 12)."/".rand(2015, 2016)?></td>
+                <td><a href="index.php?page=msg-manage"><span class="fa <?php echo $star[$val]; ?>" aria-hidden="true"></span> 
+                    <?php echo $etat[$val]; ?></a></td>
+                
+                <td><a href="index.php?page=msg-manage"><?php echo generateRandomString(); ?></a></td>
+                <td><a href="index.php?page=msg-manage">typ_<?php echo generateRandomString(); ?>...</a></td>
+                <td><a href="index.php?page=msg-manage"><?php echo rand(1, 27)."/".rand(1, 12)."/".rand(2015, 2016)?></a></td>
                 
                 
             </tr>
-        </a>
+        
             
             
             <?php

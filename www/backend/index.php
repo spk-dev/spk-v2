@@ -317,7 +317,7 @@
                              
                         </li>
                         <li>
-                            <a><i class="fa fa-star fa-fw"></i>Evenements</a>
+                            <a><i class="fa fa-star fa-fw pointer-click"></i>Evenements</a>
                             <ul class="nav nav-second-level">
                                 <li><a href="index.php?page=event-list"><i class="fa fa-list-ul fa-fw"></i> Voir tous les événements</a></li>
                                 <li><a href="index.php?page=event-manage&action=w"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
@@ -326,7 +326,7 @@
                         </li>
                         
                         <li>
-                             <a href="#"><i class="fa fa-map-marker fa-fw"></i> Organisations</a>
+                             <a href="#"><i class="fa fa-map-marker fa-fw pointer-click"></i> Organisations</a>
                              <ul class="nav nav-second-level">
                                 <li><a href="index.php?page=org-list"><i class="fa fa-list-ul fa-fw"></i> Voir toutes les organsiations</a></li>
                                 <li><a href="index.php?page=org-manage"><i class="fa fa-plus-circle fa-fw"></i> Ajouter une organisation</a></li>
@@ -386,7 +386,10 @@
 <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-                responsive: true
+                responsive: true,
+                language: {
+                    url: 'bower_components/datatables-plugins/i18n/French.lang'
+                }
         });
     });
     </script>       
