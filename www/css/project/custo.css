@@ -75,133 +75,32 @@ Couleur jaune: #F2C052;
     top:0;
 }
 
-.vignette{
-border:3px solid #fff;
-background: #fff;
+.vignette_evenement_titre{
+    margin-bottom:2em;
+}
+
+.vignette_evenement_titre h1{
+    text-align: justify;
+    font-size: 1em; 
+    font-weight: normal; 
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.vignette_evenement{
+    background-color:#f9f9f9;
+    border:2em solid #fff;
 }
 
 
-.vignette:hover{
-/*    border-left:6px solid #fff;
-    border-right:6px solid #fff;*/
-    background: #BF5239;
+.vignette_evenement_organisateur{
+    font-size: 0.8em; 
+    color:#253e5a;
 }
 
-
-/**
-*   vignettes Pour large & middle
-*/
-
-.vignette:hover .vignette_caption_large{
-    background: none;
+.vignette_evenement_infos{
+    font-size: 0.8em; 
+    color:#253e5a;
 }
-
-.vignette:hover .vignette_caption_large .vignette_titre{
-    color:#BF5239;
-    background:#fff;
-}
-
-
-.vignette_caption_large{
-    background: rgba(10, 10, 10, 0.3);
-    position:absolute;
-    top:0px;
-    right:0px;
-    padding: 5px 0px;
-    width:100%;
-    height: 100%;
-}
-
-.vignette_caption_large .vignette_description{
-    position:absolute;
-    right:0;
-    bottom:0;
-    width:auto;
-}
-.vignette_caption_large .vignette_titre{
-    font-size: 1.2em;
-    font-weight: bold;
-    color:#f9f2f4;
-    text-align: left;
-    font-family:feathericons, "comfortaa", verdana;
-    width: 100%;
-    right:0;
-    padding:0 0.2em 0 0.2em;
-}
-
-.vignette_caption_large .vignette_date{
-    background: rgba(255, 255, 255, 0.7);
-    font-size: 0.9em;
-    color:#030303;
-    font-weight: normal;
-    text-align: right;
-    width: auto;
-    font-weight: 500;
-    padding: 0 1em;
-}
-.vignette_caption_large:hover .vignette_date{
-    background: #BF5239;
-    color:#fff;
-}
-
-.vignette_caption_large .vignette_lieu{
-    /*background: rgba(255, 255, 255, 0.9);*/
-    font-size: 0.9em;
-    color:#fff;
-    font-weight: normal;
-    text-align: right;
-    width: 100%;
-}
-
-
-
-
-
-
-
-/**
-*   vignettes Pour small & extra small
-*/
-
-
-.vignette:hover .vignette_caption_small .vignette_titre{
-    color:#fff;
-}
-.vignette:hover .vignette_caption_small .vignette_date{
-    color:#fff;
-}
-.vignette:hover .vignette_caption_small .vignette_lieu{
-    color:#fff;
-}
-
-.vignette_caption_small .vignette_titre{
-    font-size: 1.1em;
-    font-weight: bold;
-    color:#030303;
-    text-align: left;
-    font-family:"comfortaa", verdana;
-}
-
-.vignette_caption_small .vignette_date{
-    font-size: 0.9em;
-    color:#BF5239;
-    font-weight: normal;
-    text-align: right;
-    margin:0;
-}
-
-.vignette_caption_small .vignette_lieu{
-    font-size: 0.9em;
-    color:#BF5239;
-    font-weight: normal;
-    text-align: right;
-    margin:0;
-}
-
-
-/**
-*/
-
 
 #signature p{
     font-family: 'comfortaa',verdana, sans-serif;
@@ -778,4 +677,29 @@ border: solid black 1px;
 
 #EventSearchColumn{
    
+}
+
+.tag_type_evenement {
+   float: left;
+   position: absolute;
+   left: 0px;
+   top: 10px;
+   z-index: 1000;
+   padding: 5px 2px 5px 30px;
+   color: #FFFFFF;
+   background-color: #92AD40;
+   font-family: "century Gothic", verdana, sans-serif;
+   font-size: 0.8em;
+}
+
+.tag_type_2{
+    background-image: url('http://placehold.it/15x15');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: #851C2F;
+    
+}
+
+.tag_type_11{
+   background-color: #FF7F00;
 }

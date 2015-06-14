@@ -15,7 +15,7 @@
             
         </div>
         
-        <div class="col-lg-3">
+<!--        <div class="col-lg-3">
             <div class="">
                 <a href='index.php?page=evenements'><h2 class="titre" id="titre_evenement">
                 <i class='fa fa-fw fa-calendar '></i>
@@ -31,12 +31,9 @@
             </div>
             <div id="map-container"></div>
             
-        </div>
-        <div class="col-lg-9" id="listeEvenements"><!-- LISTE AJAX EVENEMENTS--></div>
+        </div>-->
+        <div class="col-lg-12" id="listeEvenements"> <!-- LISTE AJAX EVENEMENTS --></div>
         
-            
-       
-    </div>
     <div class="container text-right">
         <span class="voir-la-suite-blanc"><a href="index.php?page=evenements">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>
     </div>

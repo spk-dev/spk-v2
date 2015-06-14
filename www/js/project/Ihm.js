@@ -112,40 +112,48 @@ function removeEvenementHome(){
  */
 function appendEvenementHome(event) {
    
-   
 
     var img = event.image;
     if(img === '' || !img){img = 'default_evenements.png'; }
 
 
-    var h = '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 vignette" ><a href="index.php?page=evenement&id='+event.id+'">';
+    var h = '        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 vignette_evenement" >';
+    h += '            <div class="row">';
+    h += '                <div class="tag_type_evenement tag_type_'+event.type_id+'"> '+event.type_nom+'</div>';
+    h += '                <img src="imgData/Evenement/'+img+'" class="img-responsive"/>';
+                   
+    h += '            </div>';
+    h += '            <div class="row">';
+    h += '                <div class="row vignette_evenement_titre">';
+                        
+    h += '                    <a href="#">';
+    h += '                        <h1 class="col-xs-12 col-lg-12 col-md-12 col-sm-12">';
+    h +=                               event.titre;
+    h += '                        </h1>';
+    h += '                    </a>';
+    h += '               </div>';
+                    
+    h += '            </div>';
+    h += '            <div class="row">';
+    h += '                <div class="col-lg-10">';
+    h += '                    <p class="vignette_evenement_infos">';
+    h += '                        <span class="glyphicon glyphicon-map-marker"></span>';
+    h +=                         event.ville;
+    h += '                    </p>';
+    h += '                    <p class="vignette_evenement_infos">';
+    h += '                        <span class="glyphicon glyphicon-calendar"></span>';
+    h +=                            formatDate(event.debut,"numerique")+' au '+formatDate(event.fin,"numerique");
+    h += '                    </p>';
+    h += '                </div>';
+    h += '                <div class="col-lg-2">';
+    h += '                    <a href="index.php?page=evenement&id='+event.id+'"><h3><span class="glyphicon glyphicon-arrow-right"></span></h3></a>';
+    h += '                </div>';
+    h += '            </div>';
+                
+    h += '        </div>';
 
-    h += '          <div class="row  hidden-xs vignette_image">';
-    h += '              <img src="imgData/Evenement/'+img+'" class="img-responsive"/>';
-    h += '          </div>';
-    h += '          <div class="hidden-lg hidden-md hidden-sm col-sm-6 col-xs-6 vignette_image">';
-    h += '              <img src="imgData/Evenement/'+img+'" class="img-responsive row"/>';
-    h += '          </div>';
 
 
-// CAPTION POUR SMALL
-    h += '           <div class="hidden-lg hidden-md hidden-sm col-sm-6 col-xs-6 vignette_caption_small">';
-    h += '              <div class="vignette_titre row">'+event.titre.toUpperCase()+'</div>';
-    h += '              <div class="vignette_description row">';
-    h += '                  <p class="vignette_date">du '+formatDate(event.debut,"numerique")+' au '+formatDate(event.fin,"numerique")+'</p>';
-    h += '                  <p class="vignette_lieu">'+event.ville+'</p>';
-    h += '              </div>';
-    h += '          </div>';
-
-// CAPTION POUR LARGE
-    h += '           <div class=" hidden-xs vignette_caption_large">';
-    h += '              <h2 class="vignette_titre">'+event.titre.toUpperCase()+'</h2>';
-    h += '              <div class="vignette_description">';
-    h += '                  <p class="vignette_date">du '+formatDate(event.debut,"numerique")+' au '+formatDate(event.fin,"numerique")+'</p>';
-    h += '                  <p class="vignette_lieu">'+event.ville+'</p>';
-    h += '              </div>';
-    h += '          </div>';
-    h += '     </a></div>';
 
 
     $('#listeEvenements').append(h);
