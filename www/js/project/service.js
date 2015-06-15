@@ -7,6 +7,7 @@ function pageHome(){
     pageHomeEvenement();
     pageHomeOrganisateurs();
     getNbEvenementsParThemes();
+    getListeTypesEvenements();
     
 }
 

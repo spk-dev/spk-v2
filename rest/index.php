@@ -100,7 +100,7 @@ function getTypesOrganisateur($listId){
      $criteres->setTypesId($tab);
     }
     
-    $sql = Query::getListeTypesEvenement($criteres->getCondition());
+    $sql = Query::getListeTypesOrganisateur($criteres->getCondition());
     
     try {
         $db = getConnection();

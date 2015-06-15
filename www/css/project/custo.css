@@ -68,6 +68,9 @@ Couleur jaune: #F2C052;
 }
 
 
+.home_bloc{
+    padding:0 2em 0 2em;
+}
 
 #mapHomePage{
     margin:0;
@@ -75,9 +78,21 @@ Couleur jaune: #F2C052;
     top:0;
 }
 
+.vignette_evenement{
+    background-color:#f9f9f9;
+    border:2em solid #fff;
+}
+
 .vignette_evenement_titre{
     margin-bottom:2em;
+    height: 2em;
+    min-height: 4em;
+    max-height: 4em;
+    overflow: hidden;
+  
 }
+
+
 
 .vignette_evenement_titre h1{
     text-align: justify;
@@ -86,9 +101,8 @@ Couleur jaune: #F2C052;
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.vignette_evenement{
-    background-color:#f9f9f9;
-    border:2em solid #fff;
+.vignette_evenement img{
+    opacity:0.8;
 }
 
 
@@ -100,6 +114,220 @@ Couleur jaune: #F2C052;
 .vignette_evenement_infos{
     font-size: 0.8em; 
     color:#253e5a;
+}
+
+.vignette_evenement h3{
+    margin-right:1em;
+}
+
+.vignette_evenement:hover{
+    background-color:#1b6b74;
+}
+
+.vignette_evenement:hover .vignette_evenement_titre h1{
+    color:#fff;
+}
+.vignette_evenement:hover .vignette_evenement_infos{
+    color:#fff;
+}
+.vignette_evenement:hover h3{
+    color:#fff;
+}
+.vignette_evenement:hover img{
+    opacity:1;
+}
+
+.tag_type_evenement{
+   float: left;
+   position: absolute;
+   left: 0px;
+   top: 10px;
+   z-index: 1000;
+   padding: 5px 2px 5px 30px;
+   color: #FFFFFF;
+   background-color: #92AD40;
+   font-family: "century Gothic", verdana, sans-serif;
+   font-size: 0.8em;
+}
+
+
+.tag_type_evenement_filter {
+   padding:0.5em;
+   width:auto;
+   color: #FFFFFF;
+   background-color: #92AD40;
+   font-family: "century Gothic", verdana, sans-serif;
+   font-size: 0.8em;
+   background-image: none;
+}
+
+
+.tag_type_1{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #f39c11;
+    
+}
+
+.tag_type_2{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #16a086;  
+}
+
+.tag_type_3{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #2dcc70;  
+}
+
+.tag_type_4{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #e67f22;  
+}
+
+.tag_type_5{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #c1392b;  
+}
+.tag_type_6{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #297fb8;
+    
+}
+ 
+.tag_type_7{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #8d44ad;  
+}
+
+.tag_type_8{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #34495e;  
+}
+
+.tag_type_9{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #f1c40f;  
+}
+
+.tag_type_10{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #47c9af;  
+}
+.tag_type_11{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #27ae61;  
+}
+.tag_type_12{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #d25400;
+    
+}
+
+.tag_type_13{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #5cace1;  
+}
+
+.tag_type_14{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #c1392b;  
+}
+
+.tag_type_15{
+    background-image: url('../../img/icon1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #2d3e50;  
+}
+
+
+.tag_type_evenement:hover {
+    background:#f9f9f9;
+    color:#253e5a;
+}
+
+.tag_type_evenement_filter {
+    background-image: none;
+}
+
+.vignette_organisateur{
+    background: #f9f9f9; 
+    padding:0;
+    margin:1em 0;
+}
+
+.vignette_organisateur h1{
+    text-align: justify;
+    font-weight: normal; 
+    font-family: "Century Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:#1b6b74;
+    font-size: 1.1em;
+    line-height: 1.2em;
+
+    margin:0;
+    padding:0;
+    width:60%;
+    float:left;
+}
+
+.vignette_organisateur_link{
+    float:right;
+    margin:0;
+    padding:0;
+    top:0;
+    font-size:1em;
+    width:15%;
+    
+}
+
+
+.vignette_organisateur img{
+    float:left;
+    margin:0 1em 0 0;
+    width:100px;
+    height: 50px;
+    opacity: 0.9;
+}
+
+.vignette_organisateur:hover{
+    background: #1b6b74; 
+}
+
+.vignette_organisateur:hover h1{
+    color:#fff;
+}
+.vignette_organisateur:hover a{
+    color:#fff;
+}
+.vignette_organisateur:hover img{
+    opacity: 1;
 }
 
 #signature p{
@@ -679,27 +907,3 @@ border: solid black 1px;
    
 }
 
-.tag_type_evenement {
-   float: left;
-   position: absolute;
-   left: 0px;
-   top: 10px;
-   z-index: 1000;
-   padding: 5px 2px 5px 30px;
-   color: #FFFFFF;
-   background-color: #92AD40;
-   font-family: "century Gothic", verdana, sans-serif;
-   font-size: 0.8em;
-}
-
-.tag_type_2{
-    background-image: url('http://placehold.it/15x15');
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-color: #851C2F;
-    
-}
-
-.tag_type_11{
-   background-color: #FF7F00;
-}

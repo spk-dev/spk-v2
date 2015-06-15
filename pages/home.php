@@ -9,33 +9,41 @@
 
 <section id="evenements">
     <div class="container">
-        
-        
-        <div>
-            
-        </div>
-        
-<!--        <div class="col-lg-3">
-            <div class="">
-                <a href='index.php?page=evenements'><h2 class="titre" id="titre_evenement">
-                <i class='fa fa-fw fa-calendar '></i>
-                Les événements
-        
-                    <small class='text-right'><br/>Voir tout</small>
-                    </h2></a>
+        <div class="col-lg-12 home_bloc">
+            <div class="col-lg-5">
+                <a href='index.php?page=evenements'>
+                    <h2 class="titre" id="titre_evenement">
+                        <i class='fa fa-fw fa-calendar '></i>
+                        En ce moment sur Spibook
+                    </h2>
+                </a>
+                <h5>Des événements pour vous:</h5>
                 <a href="" class='eventFilterEvent' id='event1'><span class="label label-primary">de la semaine</span></a>
                 <a href="" class='eventFilterEvent' id='event2'><span class="label label-primary">Pentecote</span></a>
                 <a href="" class='eventFilterEvent' id='event3'><span class="label label-primary">autour de moi</span></a>
                 <a href="" class='eventFilterEvent' id='event4'><span class="label label-primary">JMJ Cracovie</span></a>
-               
-            </div>
-            <div id="map-container"></div>
             
-        </div>-->
+                <br/>
+                
+                <h5>Filtrer les types d'événements:</h5>
+                <ul class="list-inline">
+                    <li><a href="#"><div class="tag_type_evenement_filter tag_type_11"> Type evenement 11</div></a></li>
+                    <li><a href="#"><div class="tag_type_evenement_filter tag_type_2"> Type evenement 2</div></a></li>
+                    <li><a href="#"><div class="tag_type_evenement_filter "> Type evenement x</div></a>   </li>
+                </ul>
+                
+                
+                             
+            </div>
+            <div class="col-lg-7">
+                <div id="map-container" ></div>
+            </div>
+        </div>
         <div class="col-lg-12" id="listeEvenements"> <!-- LISTE AJAX EVENEMENTS --></div>
-        
-    <div class="container text-right">
-        <span class="voir-la-suite-blanc"><a href="index.php?page=evenements">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>
+
+        <div class="container text-right">
+            <span class="voir-la-suite-blanc"><a href="index.php?page=evenements">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>
+        </div>
     </div>
 </section>
 
@@ -50,16 +58,10 @@
                         
                             
                     </h2>
-                    
-                    <div class=''>
-                        <ul class='list-unstyled liste_organisateur_home' id='listeOrganisateurs'>
-<!--                              <!-- LISTE AJAX ORGANISATEURS-->
-                        </ul>
-                        <div class="row text-right">
-                            <span class="voir-la-suite-fonce"><a href="">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>
-                        </div>
-                    </div>
-
+                <div id="listeOrganisateurs">
+                     <!-- LISTE AJAX ORGANISATEURS -->
+                </div>
+                
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-lg-offset-1 col-md-offset-1 col-xs-12" id='liste_home_themes'>
                <h2 class="titre" id="titre_thematiques"><i class='fa fa-fw fa-bookmark'></i>Tous les thèmes</h2>

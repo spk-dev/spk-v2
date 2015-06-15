@@ -119,14 +119,14 @@ function appendEvenementHome(event) {
 
     var h = '        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 vignette_evenement" >';
     h += '            <div class="row">';
-    h += '                <div class="tag_type_evenement tag_type_'+event.type_id+'"> '+event.type_nom+'</div>';
-    h += '                <img src="imgData/Evenement/'+img+'" class="img-responsive"/>';
+    h += '                <a href="#"><div class="tag_type_evenement tag_type_'+event.type_id+'"> '+event.type_nom+'</div></a>';
+    h += '                <a href="index.php?page=evenement&id='+event.id+'"><img src="imgData/Evenement/'+img+'" class="img-responsive"/></a>';
                    
     h += '            </div>';
     h += '            <div class="row">';
     h += '                <div class="row vignette_evenement_titre">';
                         
-    h += '                    <a href="#">';
+    h += '                    <a href="index.php?page=evenement&id='+event.id+'">';
     h += '                        <h1 class="col-xs-12 col-lg-12 col-md-12 col-sm-12">';
     h +=                               event.titre;
     h += '                        </h1>';
@@ -135,7 +135,7 @@ function appendEvenementHome(event) {
                     
     h += '            </div>';
     h += '            <div class="row">';
-    h += '                <div class="col-lg-10">';
+    h += '                <div class="col-lg-12">';
     h += '                    <p class="vignette_evenement_infos">';
     h += '                        <span class="glyphicon glyphicon-map-marker"></span>';
     h +=                         event.ville;
@@ -145,9 +145,7 @@ function appendEvenementHome(event) {
     h +=                            formatDate(event.debut,"numerique")+' au '+formatDate(event.fin,"numerique");
     h += '                    </p>';
     h += '                </div>';
-    h += '                <div class="col-lg-2">';
-    h += '                    <a href="index.php?page=evenement&id='+event.id+'"><h3><span class="glyphicon glyphicon-arrow-right"></span></h3></a>';
-    h += '                </div>';
+
     h += '            </div>';
                 
     h += '        </div>';
@@ -166,6 +164,12 @@ function appendListeThemeHome(theme){
     $('#home-list-themes').append(h);
 }
 
+
+function appendListeTypesEvenementsHome(theme){
+    var h ="<li class='label theme_home'><a href='"+theme.id+"'>"+theme.nom+" <span class='badge'>"+theme.nb+"</span></a></li>";
+    $('#home-list-themes').append(h);
+}
+
 /**
  * Ecriture de la liste d'événements en Home Page
  * @param {organisateur} org
@@ -177,22 +181,21 @@ function appendOrganisateurHome(org) {
     if(img === '' || !img){img = 'default_lieux.png'; }
     console.log(org.image);
     
-    var h = '<li class="panel row"><a href="index.php?page=organisateur&id='+org.id+'">';
-                                    
-    h += '    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">';
-    h += '        <img src="imgData/Lieu/small/small_'+img+'" class="img-responsive" />';
-    h += '    </div>';
-    h += '    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">';
-
-    h += '            <h3>'+org.nom+'<small>  - '+org.ville+'  ('+org.cp+')</small></h3>';
-    h += '            <p>Prochain événement dans : '+org.nbjours+' jours</p>';
-    h += '            <p class="row text-right"><a href="index.php?page=organisateur&id='+org.id+'">En savoir plus</a>&nbsp;|&nbsp;<a href="index.php?page=evenements">Voir les événements</a></p>';
-
-    h += '    </div>';
-
-
-    h += '</a></li>';
-
+    var h = '<div class="row vignette_organisateur">';
+    h += '      <a href="index.php?page=organisateur&id='+org.id+'">'
+    h += '          <img src="imgData/Lieu/small/small_'+img+'" class="" />';
+    h += '      </a>';
+    h += '      <a href="index.php?page=organisateur&id='+org.id+'">'
+    h += '          <h1>'+org.nom+' ('+org.cp+')<br/><small>'+org.ville+'  -  Prochain événement dans : '+org.nbjours+' jours</small></h1>';
+    h += '      </a>';
+    h += '      <div class="vignette_organisateur_link">';
+    h += '          <a href="index.php?page=organisateur&id='+org.id+'">';
+    h += '              En savoir plus';
+    h += '          </a>';
+    h += '      </div>';
+    h += '   </div>';
+    
+   
 
     $('#listeOrganisateurs').append(h);
 
