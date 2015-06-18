@@ -16,19 +16,7 @@ $index->init();
 
 $app = new Slim();
 $app->get('/evenements', 'getEvenements');
-$app->get('/evenements/:debut/:offset', 'getEvenementsLimit');
-$app->get('/evenement/:id', 'getEvenement');
-$app->get('/themes/:listId','getThemesEvenement');
-$app->get('/theme/:id',	'getThemeEvenement');
-$app->get('/typesevenement/:listId','getTypesEvenement');
-$app->get('/typesOrganisateur/:listId','getTypesOrganisateur');
-$app->get('/type/:id','getTypeEvenements');
-$app->get('/organisateur/:id','getOrganisateur');
-$app->get('/organisateurs','getOrganisateurs');
-$app->get('/organisateursresume','getListeOrganisateursResume');
-$app->get('/organisateurs/:debut/:offset','getOrganisateursLimit');
-$app->get('/nbevenementsparthemes','getNbEvenementParTheme');
-$app->get('/organisateursprochainevenement', 'getOrganisateurNextEvent');
+
 
 $app->notFound(function () {
     $url = Redirect::getCurrentUrl();
@@ -176,21 +164,6 @@ function getThemesEvenement($listId){
 
 }
 
-// EVENEMENT
-function getEvenement($id){
-
-    $sql = Query::getEvenement($id);
-	try {
-            $db = getConnection();
-            $db->query('SET CHARACTER SET utf8');
-            $stmt = $db->query($sql);  
-            $events = $stmt->fetchAll(PDO::FETCH_OBJ);
-            $db = null;
-            echo '{"evenements": ' . json_encode($events) . '}';
-	} catch(PDOException $e) {
-            echo '{"error":{"text":'. $e->getMessage() .'}}'; 
-	}
-}
 
 
 function getEvenements() {
@@ -235,98 +208,23 @@ function getEvenements() {
     $condition = $criteres->getCondition();
     
     $sql = Query::getListeEvenements($condition); 
+    AppLog::ecrireLog("DANS REST 1", 'debug');
+    AppLog::ecrireLog($sql, 'debug');
+    AppLog::ecrireLog("DANS REST 2", 'debug');
     try {
             $db = getConnection();
             $db->query('SET CHARACTER SET utf8');
             $stmt = $db->query($sql);  
             $events = $stmt->fetchAll(PDO::FETCH_OBJ);
+           
             $db = null;
             echo '{"evenements": ' . json_encode($events) . '}';
     } catch(PDOException $e) {
+            
             echo '{"error":{"text":'. $e->getMessage() .'}}'; 
     }
 }
 
-function getEvenementsLimit($debut, $offset) {
-        $criteres = new EvenementSearchCriteria();
-        $criteres->setEvenementLimit($debut, $offset);
-        $sql = Query::getListeEvenements($criteres->getCondition());
-        
-	try {
-		$db = getConnection();
-                $db->query('SET CHARACTER SET utf8');
-		$stmt = $db->query($sql);  
-		$events = $stmt->fetchAll(PDO::FETCH_OBJ);
-		$db = null;
-		echo '{"evenements": ' . json_encode($events) . '}';
-	} catch(PDOException $e) {
-		echo '{"error":{"text":'. $e->getMessage() .'}}'; 
-	}
-}
-
-// ORGANISATEUR
-function getOrganisateur($id){
-    
-    $sql = Query::getOrganisateur($id);
-   
-    try {
-        $db = getConnection();
-        $db->query('SET CHARACTER SET utf8');
-        $stmt = $db->query($sql);
-        $items = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;
-        echo '{"organisateurs": ' . json_encode($items) . '}';
-    } catch(PDOException $e) {
-        echo '{"error":{"text":'. $e->getMessage() .'}}';
-    }
-}
-
-function getOrganisateurs(){
-    $criteres = new OrganisateurSearchCriteria();
-    $sql = Query::getListeOrganisateurs($criteres->getCondition());
-    try {
-        $db = getConnection();
-        $db->query('SET CHARACTER SET utf8');
-        $stmt = $db->query($sql);
-        $items = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;
-        echo '{"organisateurs": ' . json_encode($items) . '}';
-    } catch(PDOException $e) {
-        echo '{"error":{"text":'. $e->getMessage() .'}}';
-    }
-}
-
-function getListeOrganisateursResume(){
-    $criteres = new OrganisateurSearchCriteria();
-    $sql = Query::getListeOrganisateursResume($criteres->getCondition());
-    try {
-        $db = getConnection();
-        $db->query('SET CHARACTER SET utf8');
-        $stmt = $db->query($sql);
-        $items = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;
-        echo '{"organisateurs": ' . json_encode($items) . '}';
-    } catch(PDOException $e) {
-        echo '{"error":{"text":'. $e->getMessage() .'}}';
-    }
-}
-
-
-function getOrganisateursLimit($debut, $offset){
-    $criteres = new OrganisateurSearchCriteria();
-    $criteres->setOrganisateurLimit($debut, $offset);
-    $sql = Query::getListeOrganisateurs($criteres->getCondition());
-    try {
-        $db = getConnection();
-        $db->query('SET CHARACTER SET utf8');
-        $stmt = $db->query($sql);
-        $items = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;
-        echo '{"organisateurs": ' . json_encode($items) . '}';
-    } catch(PDOException $e) {
-        echo '{"error":{"text":'. $e->getMessage() .'}}';
-    }
-}
 
 
 

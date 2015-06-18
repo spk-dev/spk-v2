@@ -14,13 +14,23 @@ class Query {
      * @return string
      */
     public static function getListeEvenements($condition = ""){
-        $sql = "SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+        $sql = "SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
                 FROM eve_evenements 
                 right join ocu_occurrences on eve_int_id = ocu_eve_id 
                 left join tev_type_evenements on tev_int_id = eve_tev_int_id 
                 left join pla_places on pla_int_id = ocu_pla_id 
                 left join org_organisateurs on eve_org_int_id = org_int_id 
                 WHERE 1=1 ".$condition.";";
+        
+//        SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle, med_var_url
+//                FROM eve_evenements 
+//                right join ocu_occurrences on eve_int_id = ocu_eve_id 
+//                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+//                left join pla_places on pla_int_id = ocu_pla_id 
+//                left join org_organisateurs on eve_org_int_id = org_int_id 
+//                left join med_medias on med_eve_id = eve_int_id
+//                WHERE 1=1
+//                AND med_int_ordre <2;
         return $sql;
     }
 
@@ -121,7 +131,7 @@ class Query {
             'host'  =>  "localhost",
             'user'  =>  "root",
             'pwd'  =>  "root",
-            'dbName'  =>  "spk"
+            'dbName'  =>  "spk-v2.0"
         );
         return $arr;
     }

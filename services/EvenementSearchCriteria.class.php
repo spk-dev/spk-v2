@@ -30,7 +30,7 @@ class EvenementSearchCriteria{
         'description'=>'eve_var_description',
         'mail_inscription'=>'eve_var_mail_inscription',
         'contact'=>'eve_var_contact',
-        'debut'=>'eve_date_debut',
+        'debut'=>'ocu_date_debut',
         'fin'=>'eve_date_fin',
         'image'=>'eve_var_image',
         'prix'=>'eve_var_prix',

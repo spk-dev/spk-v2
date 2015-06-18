@@ -6,13 +6,14 @@
  */
 function defineEvenement(event){
     var evenement = {
-    id                  : event.id,
-    titre               : event.titre,
-    description         : event.description,
-    mail                : event.mail,
-    contact             : event.contact,
-    debut               : event.debut,
-    fin                 : event.fin,
+    eve_id              : event.eve_int_id,
+    ocu_id              : event.ocu_int_id,
+    titre               : event.eve_var_libelle,
+    description         : event.eve_var_description,
+    mail                : event.eve_var_mail_inscription,
+    contact             : event.eve_var_contact,
+    debut               : event.ocu_date_debut,
+    fin                 : event.ocu_date_fin,
     image               : event.image,
     prix                : event.prix,
     url                 : event.url,
