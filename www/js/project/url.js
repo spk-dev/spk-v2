@@ -9,8 +9,9 @@
 var urlAjax = "ajax.php";
 
 var urlEvenements = "../rest/evenements";
-
-
+var urlEvenementsSortTypes = "../rest/evenementsSortTypes/"
+var urlTypesEvenements = "../rest/typesevenements/";
+var urlMarqueur = 'http://www.spibook.com/images/spibook/gmarkers/spibook.png';
 
 
 /*
@@ -23,5 +24,5 @@ var urlNbEvenementParThemes = "../rest/nbevenementsparthemes";
 var urlThemes = "../rest/themes/";
 var urlTypesOrganisateur = "../rest/typesOrganisateur/";
 var urlTypesEvenement = "../rest/typesevenement/";
-var urlMarqueur = 'http://www.spibook.com/images/spibook/gmarkers/spibook.png';
+
 */

@@ -49,7 +49,7 @@ class TypesEvenementSearchCriteria{
                     // Mot clé sur le Nom du lieu
                     $clauseKeyWords .="(";
                     for ($i = 0; $i < $nbWords; $i++) {
-                        $clauseKeyWords .= "(tev_var_nom like '%".$tabWors[$i]."%')";
+                        $clauseKeyWords .= "(tev_var_libelle like '%".$tabWors[$i]."%')";
                         if($i<$nbWords-1){
                             $clauseKeyWords .= " AND ";
                         }
@@ -58,14 +58,14 @@ class TypesEvenementSearchCriteria{
 
                     // Mot clé sur la description
                     for ($i = 0; $i < $nbWords; $i++) {
-                        $clauseKeyWords .= "(tev_var_nom like '%".$tabWors[$i]."%')";
+                        $clauseKeyWords .= "(tev_var_libelle like '%".$tabWors[$i]."%')";
                         if($i<$nbWords-1){
                             $clauseKeyWords .= " AND ";
                         }
                     }
                     $clauseKeyWords .=")";
                 }else{
-                    $clauseKeyWords = "((tev_var_nom like '%".$tabWors[0]."%') OR (tev_var_nom LIKE '%".$tabWors[0]."%'))";
+                    $clauseKeyWords = "((tev_var_libelle like '%".$tabWors[0]."%') OR (tev_var_libelle LIKE '%".$tabWors[0]."%'))";
                 }
 
                 array_push($listeCritere, $clauseKeyWords);

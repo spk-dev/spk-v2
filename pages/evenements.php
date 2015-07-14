@@ -15,8 +15,12 @@
 
     <div class="container">
 
-        <div class='row hidden-xs hidden-smcol-lg-3 col-md-3 col-sm-12 col-xs-12'>
+        <div class='row hidden-xs hidden-sm col-lg-3 col-md-3 col-sm-12 col-xs-12'>
             <div id="EventSearchColumn">
+                <h5>Des événements pour tous</h5>
+               <ul class="list-inline" id="listeTypesEvenements">
+<!--                     Liste des types-->
+                </ul>
                 <h5>Affiner votre recherche</h5>
                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Mots clés">
                  

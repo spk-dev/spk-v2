@@ -6,7 +6,6 @@
  */
 ?>
 
-
 <section id="evenements">
     <div class="container">
         <div class="col-lg-12 home_bloc">
@@ -26,20 +25,21 @@
                 <br/>
                 
                 <h5>Filtrer les types d'événements:</h5>
-                <ul class="list-inline">
-                    <li><a href="#"><div class="tag_type_evenement_filter tag_type_11"> Type evenement 11</div></a></li>
-                    <li><a href="#"><div class="tag_type_evenement_filter tag_type_2"> Type evenement 2</div></a></li>
-                    <li><a href="#"><div class="tag_type_evenement_filter "> Type evenement x</div></a>   </li>
-                </ul>
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" id="listeTypesEvenements">
+<!--                Liste des themes pour filtrer-->
+                </div>
                 
-                
+                <div id="loading" ><img src="img/ajax-loader.gif"/> ... chargement ...</div>
                              
             </div>
             <div class="col-lg-7">
                 <div id="map-container" ></div>
             </div>
         </div>
-        <div class="col-lg-12" id="listeEvenements"> <!-- LISTE AJAX EVENEMENTS --></div>
+        <div class="col-lg-12" id="listeEvenements">
+            
+            <!-- LISTE AJAX EVENEMENTS -->
+        </div>
 
         <div class="container text-right">
             <span class="voir-la-suite-blanc"><a href="index.php?page=evenements">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>

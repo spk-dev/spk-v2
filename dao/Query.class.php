@@ -14,23 +14,28 @@ class Query {
      * @return string
      */
     public static function getListeEvenements($condition = ""){
-        $sql = "SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+        $sql = " SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1 ".$condition.";";
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2) ".$condition.";";
         
-//        SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle, med_var_url
-//                FROM eve_evenements 
-//                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-//                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-//                left join pla_places on pla_int_id = ocu_pla_id 
-//                left join org_organisateurs on eve_org_int_id = org_int_id 
-//                left join med_medias on med_eve_id = eve_int_id
-//                WHERE 1=1
-//                AND med_int_ordre <2;
+        AppLog::ecrireLog("dans query - getlisteEvenement ".$sql, "debug");
+        
         return $sql;
     }
 
@@ -56,14 +61,14 @@ class Query {
      */
     public static function getListeTypeEvenement($avecEvenement){
         if($avecEvenement){
-            $sql ="SELECT  distinct(tev_int_id), tev_var_nom
+            $sql ="SELECT  distinct(tev_int_id), tev_var_libelle
                 FROM eve_evenements 
                 right join ocu_occurrences on eve_int_id = ocu_eve_id 
                 left join tev_type_evenements on tev_int_id = eve_tev_int_id 
                 left join pla_places on pla_int_id = ocu_pla_id 
                 left join org_organisateurs on eve_org_int_id = org_int_id;";
         }else{
-            $sql = "select tev_int_id, tev_var_nom from tev_type_evenements;";
+            $sql = "select tev_int_id, tev_var_libelle from tev_type_evenements;";
         }
         return $sql;
     }
@@ -131,7 +136,7 @@ class Query {
             'host'  =>  "localhost",
             'user'  =>  "root",
             'pwd'  =>  "root",
-            'dbName'  =>  "spk-v2.0"
+            'dbName'  =>  "spk-v2.1"
         );
         return $arr;
     }

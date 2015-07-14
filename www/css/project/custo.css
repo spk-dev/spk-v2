@@ -166,7 +166,7 @@ Couleur jaune: #F2C052;
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #f39c11;
+    background-color: #c1392b;
     
 }
 
@@ -174,14 +174,14 @@ Couleur jaune: #F2C052;
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #16a086;  
+    background-color: #f39c11;
 }
 
 .tag_type_3{
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #2dcc70;  
+    background-color: #16a086;  
 }
 
 .tag_type_4{
@@ -195,13 +195,13 @@ Couleur jaune: #F2C052;
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #c1392b;  
+    background-color:  #297fb8;
 }
 .tag_type_6{
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #297fb8;
+    background-color: #2dcc70;
     
 }
  
@@ -216,7 +216,7 @@ Couleur jaune: #F2C052;
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #34495e;  
+    background-color: #27ae61;
 }
 
 .tag_type_9{
@@ -230,19 +230,19 @@ Couleur jaune: #F2C052;
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #47c9af;  
+    background-color:  #34495e;
 }
 .tag_type_11{
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #27ae61;  
+    background-color: #27ae61;     
 }
 .tag_type_12{
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #d25400;
+    background-color: #47c9af;
     
 }
 
@@ -257,7 +257,7 @@ Couleur jaune: #F2C052;
     background-image: url('../../img/icon1.png');
     background-repeat: no-repeat;
     background-position: left center;
-    background-color: #c1392b;  
+    background-color: #d25400;
 }
 
 .tag_type_15{
@@ -892,7 +892,7 @@ border: solid black 1px;
     text-align : center;
     margin:1.7em 0 1em 0;
     background: #f3f3f3;
-    font-family : Comfortaa;
+    font-family : "Century Gothic",verdana, sans-serif;
     font-weight: normal;
     padding:0.5em 0 0.5em 0;
     width:100%;

@@ -1,72 +1,902 @@
-[2015-06-17 22:08:29]-[debug]==> ORDER BY ocu_date_debut ASC
-[2015-06-17 22:08:29]-[debug]==>DANS REST 1
-[2015-06-17 22:08:29]-[debug]==>SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+[2015-07-14 10:14:58]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:14:58]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1  ORDER BY ocu_date_debut ASC;
-[2015-06-17 22:08:29]-[debug]==>DANS REST 2
-[2015-06-17 22:08:29]-[debug]==>DANS REST 3
-[2015-06-17 22:09:39]-[debug]==> ORDER BY ocu_date_debut ASC
-[2015-06-17 22:09:39]-[debug]==>DANS REST 1
-[2015-06-17 22:09:39]-[debug]==>SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:14:58]-[debug]==>DANS REST 1
+[2015-07-14 10:14:58]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1  ORDER BY ocu_date_debut ASC;
-[2015-06-17 22:09:39]-[debug]==>DANS REST 2
-[2015-06-17 22:09:42]-[debug]==> ORDER BY ocu_date_debut ASC
-[2015-06-17 22:09:42]-[debug]==>DANS REST 1
-[2015-06-17 22:09:42]-[debug]==>SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:14:58]-[debug]==>DANS REST 2
+[2015-07-14 10:17:03]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:17:03]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1  ORDER BY ocu_date_debut ASC;
-[2015-06-17 22:09:42]-[debug]==>DANS REST 2
-[2015-06-17 22:09:48]-[debug]==> ORDER BY ocu_date_debut ASC
-[2015-06-17 22:09:48]-[debug]==>DANS REST 1
-[2015-06-17 22:09:48]-[debug]==>SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:17:03]-[debug]==>DANS REST 1
+[2015-07-14 10:17:03]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1  ORDER BY ocu_date_debut ASC;
-[2015-06-17 22:09:48]-[debug]==>DANS REST 2
-[2015-06-17 22:11:47]-[debug]==> ORDER BY ocu_date_debut ASC
-[2015-06-17 22:11:47]-[debug]==>DANS REST 1
-[2015-06-17 22:11:47]-[debug]==>SELECT eve_int_id as id, eve_var_libelle as libelle, 
-                eve_org_int_id as org_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:17:03]-[debug]==>DANS REST 2
+[2015-07-14 10:22:09]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:22:09]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1  ORDER BY ocu_date_debut ASC;
-[2015-06-17 22:11:47]-[debug]==>DANS REST 2
-[2015-06-17 22:42:39]-[debug]==> ORDER BY ocu_date_debut ASC
-[2015-06-17 22:42:39]-[debug]==>DANS REST 1
-[2015-06-17 22:42:39]-[debug]==>SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:22:09]-[debug]==>DANS REST 1
+[2015-07-14 10:22:09]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1  ORDER BY ocu_date_debut ASC;
-[2015-06-17 22:42:39]-[debug]==>DANS REST 2
-[2015-06-17 22:42:40]-[debug]==> ORDER BY ocu_date_debut ASC
-[2015-06-17 22:42:40]-[debug]==>DANS REST 1
-[2015-06-17 22:42:40]-[debug]==>SELECT eve_int_id, eve_var_libelle, eve_org_int_id, ocu_int_id, ocu_date_debut, ocu_date_fin, tev_int_id, tev_var_nom, pla_var_ville, org_int_id, org_var_libelle 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:22:09]-[debug]==>DANS REST 2
+[2015-07-14 10:22:11]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:22:11]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
                 FROM eve_evenements 
-                right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                left join pla_places on pla_int_id = ocu_pla_id 
-                left join org_organisateurs on eve_org_int_id = org_int_id 
-                WHERE 1=1  ORDER BY ocu_date_debut ASC;
-[2015-06-17 22:42:40]-[debug]==>DANS REST 2
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:22:11]-[debug]==>DANS REST 1
+[2015-07-14 10:22:11]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:22:11]-[debug]==>DANS REST 2
+[2015-07-14 10:32:51]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:32:51]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:32:51]-[debug]==>DANS REST 1
+[2015-07-14 10:32:51]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:32:51]-[debug]==>DANS REST 2
+[2015-07-14 10:33:13]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:33:13]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:33:13]-[debug]==>DANS REST 1
+[2015-07-14 10:33:13]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:33:13]-[debug]==>DANS REST 2
+[2015-07-14 10:33:15]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:33:15]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:33:15]-[debug]==>DANS REST 1
+[2015-07-14 10:33:15]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:33:15]-[debug]==>DANS REST 2
+[2015-07-14 10:44:46]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:46]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:46]-[debug]==>DANS REST 1
+[2015-07-14 10:44:46]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:46]-[debug]==>DANS REST 2
+[2015-07-14 10:44:48]-[debug]==> AND (tev_int_id IN (2) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:48]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (2) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:48]-[debug]==>DANS REST 1
+[2015-07-14 10:44:48]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (2) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:48]-[debug]==>DANS REST 2
+[2015-07-14 10:44:50]-[debug]==> AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:50]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:50]-[debug]==>DANS REST 1
+[2015-07-14 10:44:50]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:50]-[debug]==>DANS REST 2
+[2015-07-14 10:44:51]-[debug]==> AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:51]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:51]-[debug]==>DANS REST 1
+[2015-07-14 10:44:51]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:51]-[debug]==>DANS REST 2
+[2015-07-14 10:44:54]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:54]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:54]-[debug]==>DANS REST 1
+[2015-07-14 10:44:54]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:54]-[debug]==>DANS REST 2
+[2015-07-14 10:44:56]-[debug]==> AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:56]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:56]-[debug]==>DANS REST 1
+[2015-07-14 10:44:56]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:56]-[debug]==>DANS REST 2
+[2015-07-14 10:44:57]-[debug]==> AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:57]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:57]-[debug]==>DANS REST 1
+[2015-07-14 10:44:57]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:57]-[debug]==>DANS REST 2
+[2015-07-14 10:44:58]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:44:58]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:58]-[debug]==>DANS REST 1
+[2015-07-14 10:44:58]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:44:58]-[debug]==>DANS REST 2
+[2015-07-14 10:45:06]-[debug]==> AND (tev_int_id IN (2) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:45:06]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (2) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:06]-[debug]==>DANS REST 1
+[2015-07-14 10:45:06]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (2) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:06]-[debug]==>DANS REST 2
+[2015-07-14 10:45:07]-[debug]==> AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:45:07]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:07]-[debug]==>DANS REST 1
+[2015-07-14 10:45:07]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (11) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:07]-[debug]==>DANS REST 2
+[2015-07-14 10:45:13]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:45:13]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:13]-[debug]==>DANS REST 1
+[2015-07-14 10:45:13]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:13]-[debug]==>DANS REST 2
+[2015-07-14 10:45:16]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:45:16]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:16]-[debug]==>DANS REST 1
+[2015-07-14 10:45:16]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:16]-[debug]==>DANS REST 2
+[2015-07-14 10:45:18]-[debug]==> AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:45:18]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:18]-[debug]==>DANS REST 1
+[2015-07-14 10:45:18]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:18]-[debug]==>DANS REST 2
+[2015-07-14 10:45:19]-[debug]==> AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-14 10:45:19]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:19]-[debug]==>DANS REST 1
+[2015-07-14 10:45:19]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (tev_int_id IN (5) AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:19]-[debug]==>DANS REST 2
+[2015-07-14 10:45:20]-[debug]==> ORDER BY ocu_date_debut ASC
+[2015-07-14 10:45:20]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:20]-[debug]==>DANS REST 1
+[2015-07-14 10:45:20]-[debug]==> SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  ORDER BY ocu_date_debut ASC;
+[2015-07-14 10:45:20]-[debug]==>DANS REST 2

@@ -11,6 +11,7 @@ var zoneMarqueurs = new google.maps.LatLngBounds();
  * @returns {void}
  */
 function initialisation() {
+    console.log("dans initialisation");
         var optionsCarte = {
                 zoom: 8,
                 center: new google.maps.LatLng( 47.389982, 0.688877 ),
@@ -18,6 +19,7 @@ function initialisation() {
         }
         maCarte = new google.maps.Map( document.getElementById("map-container"), optionsCarte );
         
+//         console.log("dans initialisation taille tableauMarqueurs "+tableauMarqueurs.length);
         if(tableauMarqueurs.length === 0){
             ajouteMarqueur( Marqueur );
         }else{
@@ -36,20 +38,21 @@ function initialisation() {
  * @param {object} latlng
  * @returns {void}
  */
-function ajouteMarqueur( latlng ) {
+function ajouteMarqueur( event ) {
         
         var image       = urlMarqueur;
-        var latitude    = latlng.lat;
-        var longitude   = latlng.lng;
-        var popup       = latlng.popup;
-        var date        = latlng.date;
-        var lieu        = latlng.lieu;
-        var id          = latlng.id;
+        var latitude    = event.lat;
+        var longitude   = event.lng;
+        var popup       = event.titre;
+        var date        = event.date;
+        var lieu        = event.titre;
+        var id          = event.id;
         
-        
-        console.log("dans ajouteMarqueur id : {"+id+"}");
-        console.log("dans ajouteMarqueur lat : {"+latitude+"}");
-        
+                
+                
+//        console.log("dans ajouteMarqueur id : {"+id+"}");
+//        console.log("dans ajouteMarqueur lat : {"+latitude+"}");
+//        
         var optionsMarqueur = {
                 map: maCarte,
                 position: new google.maps.LatLng( latitude, longitude ),

@@ -4,15 +4,17 @@
  * @returns {null}
  */
 function pageHome(){
-    pageHomeEvenement();
-    pageHomeOrganisateurs();
-    getNbEvenementsParThemes();
-    getListeTypesEvenements();
+    pageHomeEvenement(null);
+    toutesPagesTypesEvenements(1,"home");
+    
+    //pageHomeOrganisateurs();
+    //getNbEvenementsParThemes();
+    //getListeTypesEvenements();
     
 }
 
 function pageHomeOrganisateurs(){
-    
+    return null;
     var url = urlOrganisateursNextEvent;
     console.log(url);
     $.getJSON(url, function (data) {
@@ -23,48 +25,110 @@ function pageHomeOrganisateurs(){
     });  
     
 }
-function pageHomeEvenement(){
+
+function toutesPagesTypesEvenements(avecEvenement,page){
+    removeElementFromDiv("listeTypesEvenements");
+    var tous = {id:null,libelle:"Tous"};
+    appendTypesEvenements(tous,page);
+    
+    $.getJSON(urlTypesEvenements+avecEvenement, function (data) {
+        $(data.types).each(function (i, type) {
+            console.log(type);
+            var type2 = defineTypesEvenement(type);
+            
+            appendTypesEvenements(type2,page);
+        });
+    });
+}
+
+/**
+ * Récupère les événements à afficher sur la home page
+ * et affiche la map en conséquence
+ **/
+function pageHomeEvenement(type){
+    tableauMarqueurs.length = 0;
+    var url = "";
+    if(type===null){
+        url = urlEvenements;
+      
+    }else{
+        url = urlEvenementsSortTypes+type;
+      
+    }
+    
     removeEvenementHome();
-    $.getJSON(urlEvenements, function (data) {
+    $('#loading').show();
+    for(i=0;i<10000;i++){
+        console.log(i);
+    }
+    $.getJSON(url, function (data) {
         $(data.evenements).each(function (i, event) {
             var evenement = defineEvenement(event);
             var debut = evenement.debut;
             var fin = evenement.fin;
             // lister les coordonnées GPS dans le tableauMarqueurs
-             tableauMarqueurs.push({
-                lat     : evenement.lat,
-                lng     : evenement.long,
-                popup   : evenement.titre,
-                date    : debut+' <br/> '+fin,
-                lieu    : evenement.ville,
-                id      : evenement.id
+//            console.log('dans service/pageHomeEvenement');
+//            console.log('lat '+evenement.lat);
+//            console.log('lng '+evenement.lng);
+//            console.log('titre '+evenement.titre);
+//            console.log('date '+debut+' - '+fin);
+//            console.log('ville '+evenement.ville);
+//            console.log('id '+evenement.id);
+            
+            tableauMarqueurs.push({
+               lat     : evenement.lat,
+               lng     : evenement.lng,
+               titre   : evenement.titre,
+               date    : debut+' <br/> '+fin,
+               ville   : evenement.ville,
+               id      : evenement.id
+//                event : evenement
             });
+            
+            initialisation();
             appendEvenementHome(evenement);
         });
     });
+    $('#loading').hide();
 }
+
+function sleep(seconds){
+    var waitUntil = new Date().getTime() + seconds*1000;
+    while(new Date().getTime() < waitUntil) true;
+}
+
+
 /**
  * Construire la liste des événements
  * @returns {null}
  */
-function pageEvenements(){
-
+function pageEvenements(type){
+    tableauMarqueurs.length = 0;
+    var url = "";
+    if(type===null){
+        url = urlEvenements;
+      
+    }else{
+        url = urlEvenementsSortTypes+type;
+      
+    }
 
     $('#listeEvenements div').remove();
     $('#loading').show();
     
     formData = $('#formResearch input').serialize();
     console.log(formData);
-    var url = "";
-    var plural = "";
+//    var url = "";
+//    var plural = "";
+//
+//    url = urlEvenements+"?"+formData;
+//    console.log('url : '+url);
 
-    url = urlEvenements+"?"+formData;
-    console.log('url : '+url);
+    var nbItems;
+    var nbItemsParPage;
 
-//    var nbItems;
-//    var nbItemsParPage;
 
-    
+
     $.getJSON(url, function (data) {
         console.log(data);
         nbItems = data.evenements.length;
@@ -93,6 +157,7 @@ function pageEvenements(){
                 datedebut = formatDate(debut,"moisAn");
                 //datedebut = nomsDesMois[datedebut.getUTCMonth()]+" "+datedebut.getUTCFullYear();
                 console.log("datedebug = "+datedebut);
+                
                 if($.inArray(datedebut,listDate)<1){
                     listDate.push(datedebut);
                     appendEvenementsDate(datedebut);
@@ -101,7 +166,7 @@ function pageEvenements(){
                 // lister les coordonnées GPS dans le tableauMarqueurs
                 tableauMarqueurs.push({
                     lat: evenement.lat,
-                    lng: evenement.long,
+                    lng: evenement.lng,
                     popup: evenement.titre,
                     date: debut + ' <br/> ' + fin,
                     lieu: evenement.ville,
@@ -113,6 +178,7 @@ function pageEvenements(){
 
 
         });
+        toutesPagesTypesEvenements(1,"event");
         appendEvenementsListeOrder(listDate);
         console.log(listDate);
     });
@@ -212,7 +278,7 @@ function pageOrganisateurs(isoCriteres, filter){
                 tableauMarqueurs.push({
                     lat: org.lat,
                     lng: org.long,
-                    popup: org.nom,
+                    popup: org.nom
 
                 });
                 appendOrganisateurs(org);
@@ -267,7 +333,7 @@ function pageOrganisateur(id){
 
 
 function getNbEvenementsParThemes(){
-    
+    return null;
     $.ajax({
         url : urlNbEvenementParThemes,
         async : false,

@@ -17,7 +17,7 @@ function launcher(page,id){
             pageHome();
             break;
         case 'evenements':
-            pageEvenements(true,false);
+            pageEvenements(null);
             break;
         case 'evenement':
             pageEvenement(id);

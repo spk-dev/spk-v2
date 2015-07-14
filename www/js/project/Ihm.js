@@ -105,6 +105,11 @@ function removeEvenementHome(){
     $('#listeEvenements div').remove();
 }
 
+
+function removeElementFromDiv(divId){
+    $('#'+divId+' div').remove();
+}
+
 /**
  * Ecriture de la liste d'événements en Home Page
  * @param {type} event
@@ -119,7 +124,7 @@ function appendEvenementHome(event) {
 
     var h = '        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 vignette_evenement" >';
     h += '            <div class="row">';
-    h += '                <a href="#"><div class="tag_type_evenement tag_type_'+event.type_id+'"> '+event.type_nom+'</div></a>';
+    h += '                <a href="organisations/'+event.type_nom+'"><div class="tag_type_evenement tag_type_'+event.type_id+'"> '+event.type_nom+'</div></a>';
     h += '                <a href="index.php?page=evenement&id='+event.id+'"><img src="imgData/Evenement/'+img+'" class="img-responsive"/></a>';
                    
     h += '            </div>';
@@ -165,9 +170,18 @@ function appendListeThemeHome(theme){
 }
 
 
-function appendListeTypesEvenementsHome(theme){
-    var h ="<li class='label theme_home'><a href='"+theme.id+"'>"+theme.nom+" <span class='badge'>"+theme.nb+"</span></a></li>";
-    $('#home-list-themes').append(h);
+function appendTypesEvenements(type,page){
+    if(page==="home"){
+        
+        fonction = "pageHomeEvenement";
+        classCss = "col-lg-3 col-md-4 col-sm-12 col-xs-12"
+    }else{
+        fonction = "pageEvenements";
+        classCss = "col-lg-6 col-md-12 col-sm-12 col-xs-12"
+    }
+    var h ="<a href='#' onclick='"+fonction+"("+type.id+");' id='"+type.id+"_tag' ><div class='"+classCss+" tag_type_evenement_filter tag_type_"+type.id+"' >"+type.libelle+"</div></a>";
+   
+    $('#listeTypesEvenements').append(h);
 }
 
 /**
@@ -204,11 +218,14 @@ function appendOrganisateurHome(org) {
 // ---------------------------------------------------/HOME PAGE
 
 function appendEvenementsDate(date){
-    $('#listeEvenements').append("<a name='"+date+"'></a><h3 class='monthTitle'>"+date+"</h3>");
+    $('#listeEvenements').append("<div class='col-lg-12 col-md-12 col-xs-12 col-sm-12'><a name='"+date+"'></a><h3 class='monthTitle'>"+date+"</h3></div>");
     
 }
 
 function appendEvenementsListeOrder(listeDate){
+   
+    
+    $('#listeOrder li').remove();
     var h = "";
     $(listeDate).each(function (i, date) {
         h += "<li class='list-group-item'><a href='#"+date+"'>"+date+"</a></li>";
@@ -223,25 +240,61 @@ function appendEvenementsListeOrder(listeDate){
  * @returns {undefined}
  */
 function appendEvenements(event) {
-   
-   
-   
-    var img = event.image;
+   var img = event.image;
     if(img === '' || !img){img = 'default_evenements.png'; }
 
-    var h= "<div class='row vignette'><a href='index.php?page=evenement&id="+event.id+"'>";
-    h += '      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 " >';
-    h += '          <img src="imgData/Evenement/'+img+'" class="img-responsive"/>';
-    h += '      </div>';
 
-    h += '           <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 vignette_caption_small">';
-    h += '              <div class="vignette_titre row">'+event.titre.toUpperCase()+'</div>';
-    h += '              <div class="vignette_description row">';
-    h += '                  <p class="vignette_date">du '+formatDate(event.debut,"numerique")+' au '+formatDate(event.fin,"numerique")+'</p>';
-    h += '                  <p class="vignette_lieu">'+event.ville+'</p>';
-    h += '              </div>';
-    h += '          </div>';
-    h += ' </a></div>';
+    var h = '        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 vignette_evenement" >';
+    h += '            <div class="row">';
+    h += '                <a href="organisations/'+event.type_nom+'"><div class="tag_type_evenement tag_type_'+event.type_id+'"> '+event.type_nom+'</div></a>';
+    h += '                <a href="index.php?page=evenement&id='+event.id+'"><img src="imgData/Evenement/'+img+'" class="img-responsive"/></a>';
+                   
+    h += '            </div>';
+    h += '            <div class="row">';
+    h += '                <div class="row vignette_evenement_titre">';
+                        
+    h += '                    <a href="index.php?page=evenement&id='+event.id+'">';
+    h += '                        <h1 class="col-xs-12 col-lg-12 col-md-12 col-sm-12">';
+    h +=                               event.titre;
+    h += '                        </h1>';
+    h += '                    </a>';
+    h += '               </div>';
+                    
+    h += '            </div>';
+    h += '            <div class="row">';
+    h += '                <div class="col-lg-12">';
+    h += '                    <p class="vignette_evenement_infos">';
+    h += '                        <span class="glyphicon glyphicon-map-marker"></span>';
+    h +=                         event.ville;
+    h += '                    </p>';
+    h += '                    <p class="vignette_evenement_infos">';
+    h += '                        <span class="glyphicon glyphicon-calendar"></span>';
+    h +=                            formatDate(event.debut,"numerique")+' au '+formatDate(event.fin,"numerique");
+    h += '                    </p>';
+    h += '                </div>';
+
+    h += '            </div>';
+                
+    h += '        </div>';
+
+   
+   
+//    var img = event.image;
+//    if(img === '' || !img){img = 'default_evenements.png'; }
+//
+//    var h= "<div class='row vignette'><a href='index.php?page=evenement&id="+event.id+"'>";
+//    h += '      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 " >';
+//    h += '          <img src="imgData/Evenement/'+img+'" class="img-responsive"/>';
+//    h += '      </div>';
+//
+//    h += '           <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 vignette_caption_small">';
+//    h += '              <div class="vignette_titre row">'+event.titre.toUpperCase()+'</div>';
+//    h += '              <div class="vignette_description row">';
+//    h += '                  <p class="vignette_date">du '+formatDate(event.debut,"numerique")+' au '+formatDate(event.fin,"numerique")+'</p>';
+//    h += '                  <p class="vignette_lieu">'+event.ville+'</p>';
+//    h += '              </div>';
+//    h += '          </div>';
+//    h += ' </a></div>';
     $('#listeEvenements').append(h);
 
 }

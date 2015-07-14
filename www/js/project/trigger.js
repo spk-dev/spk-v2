@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+   
 
 $(function(){
     $('#save_value').click(function(){
@@ -13,9 +14,7 @@ $(function(){
         });
         console.log(valeurs);
     });
-});
 
-$(function() { //shorthand document.ready function
     $('#formResearch').on('submit', function(e) { //use on if jQuery 1.7+
 
         e.preventDefault();  //prevent form from submitting
@@ -30,19 +29,13 @@ $(function() { //shorthand document.ready function
         $('#formResearch')[0].reset();
         pageEvenements(false,false);
     });
-});
 
+//    $('#EventSearchColumn').affix({
+//      offset: {
+//        top: 100,
+//        bottom: 1200 
+//      }
+//    })
 
-$('#EventSearchColumn').affix({
-  offset: {
-    top: 100,
-    bottom: 1200 
-  }
-})
-
-$(function(){
-    $('.eventFilterEvent').click(function(e){
-        e.preventDefault();
-        pageHomeEvenement();
-    });
+    
 });
