@@ -21,12 +21,12 @@ class EvenementSearchCriteria{
     private $EvenementOrder= null;
     private $EvenementAfterToday = null;
 // Genere la condition pour la requete SQL
-    
+    private $EvenementDepartement = null;
     
     
     private $fields = array(
         'id'=>'eve_int_id',
-        'titre'=>'eve_var_titre',
+        'titre'=>'eve_var_libelle',
         'description'=>'eve_var_description',
         'debut'=>'ocu_date_debut',
         'fin'=>'ocu_date_fin',
@@ -38,6 +38,7 @@ class EvenementSearchCriteria{
         'cp'=> 'pla_int_cp',
         'pays' => 'pla_var_pays',  
         'enregistrement'=>'eve_date_enregistrement'
+        
     );
     
     public function getCondition(){
@@ -105,6 +106,29 @@ class EvenementSearchCriteria{
                 }  
             }   
         }
+        
+        
+        // Champ Departement
+        if(!is_null($this->EvenementDepartement)){
+            if(is_array($this->EvenementDepartement)){
+                if(sizeof($this->EvenementDepartement)>0){
+                    $tabSize = sizeof($this->EvenementDepartement);
+                    $tab = $this->EvenementDepartement;
+                    $clauseLieu = "SUBSTR(".$this->getFields('cp').",1,2) IN (";
+                    for ($i = 0; $i < $tabSize; $i++) {
+                            $clause .=$tab[$i];
+                            if($i<$tabSize-1){
+                                    $clauseLieu .=",";
+                            }
+                    }
+                    $clause .= ")";
+                        array_push($listeCritere, $clause);
+
+                }  
+            }   
+        }
+        
+        
         // Champ Exclusion
 //        if(!is_null($this->EvenementExclue)){
 //            if(is_array($this->EvenementExclue)){
@@ -348,8 +372,16 @@ class EvenementSearchCriteria{
         $this->EvenementOrganisateur = $EvenementOrganisateur;
     }
 
-    
-    
+    function getEvenementDepartement() {
+        return $this->EvenementDepartement;
+    }
+
+    function setEvenementDepartement($EvenementDepartement) {
+        AppLog::ecrireLog("dans evenementsearchcriteria - ".$EvenementDepartement, "debug");
+        $this->EvenementDepartement = $EvenementDepartement;
+    }
+
+        
     public function setEvenementLimit($start,$nblignes){
         if(is_null($start) || is_null($nblignes)){
             $this->EvenementLimit = null;

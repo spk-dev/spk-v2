@@ -1,4 +1,6 @@
 
+/* global encodeUR */
+
 /**
  * Construire la liste des événements
  * @returns {null}
@@ -26,6 +28,7 @@ function pageHomeOrganisateurs(){
     
 }
 
+
 function toutesPagesTypesEvenements(avecEvenement,page){
     removeElementFromDiv("listeTypesEvenements");
     var tous = {id:null,libelle:"Tous"};
@@ -33,7 +36,7 @@ function toutesPagesTypesEvenements(avecEvenement,page){
     
     $.getJSON(urlTypesEvenements+avecEvenement, function (data) {
         $(data.types).each(function (i, type) {
-            console.log(type);
+            //console.log(type);
             var type2 = defineTypesEvenement(type);
             
             appendTypesEvenements(type2,page);
@@ -52,15 +55,13 @@ function pageHomeEvenement(type){
         url = urlEvenements;
       
     }else{
-        url = urlEvenementsSortTypes+type;
+        url = urlEvenements+"?types="+type;
       
     }
     
     removeEvenementHome();
     $('#loading').show();
-    for(i=0;i<10000;i++){
-        console.log(i);
-    }
+    
     $.getJSON(url, function (data) {
         $(data.evenements).each(function (i, event) {
             var evenement = defineEvenement(event);
@@ -109,7 +110,8 @@ function pageEvenements(type){
         url = urlEvenements;
       
     }else{
-        url = urlEvenementsSortTypes+type;
+        
+        url = urlEvenements+"?"+getParamEvenement();
       
     }
 
@@ -117,7 +119,7 @@ function pageEvenements(type){
     $('#loading').show();
     
     formData = $('#formResearch input').serialize();
-    console.log(formData);
+    //console.log(formData);
 //    var url = "";
 //    var plural = "";
 //
@@ -130,7 +132,7 @@ function pageEvenements(type){
 
 
     $.getJSON(url, function (data) {
-        console.log(data);
+        //console.log(data);
         nbItems = data.evenements.length;
 //        nbItemsParPage = $("#nbItemParPage option:selected").val();
 
@@ -152,11 +154,11 @@ function pageEvenements(type){
                 var evenement = defineEvenement(event);
                 var debut = evenement.debut;
                 var fin = evenement.fin;
-                console.log("debut = "+debut);
+                //console.log("debut = "+debut);
                 
                 datedebut = formatDate(debut,"moisAn");
                 //datedebut = nomsDesMois[datedebut.getUTCMonth()]+" "+datedebut.getUTCFullYear();
-                console.log("datedebug = "+datedebut);
+                //console.log("datedebug = "+datedebut);
                 
                 if($.inArray(datedebut,listDate)<1){
                     listDate.push(datedebut);
@@ -180,7 +182,7 @@ function pageEvenements(type){
         });
         toutesPagesTypesEvenements(1,"event");
         appendEvenementsListeOrder(listDate);
-        console.log(listDate);
+        //console.log(listDate);
     });
     $('#loading').hide();
 }
@@ -196,7 +198,7 @@ function pageEvenement(id){
 
 
     var url = urlEvenement+id;
-    var i
+    
     console.log('url : '+url);
     console.log(tableauMarqueurs);
     tableauMarqueurs = [];
@@ -439,3 +441,79 @@ function modifyNbItemParPage(){
     pageEvenements(true,false);
 }
 
+/**
+ * setParametre dans les champs
+ * @param {type} arrParam
+ * @param {type} concat
+ * @returns {undefined}
+ */
+function setParamEvenement(inputId, value ,concat){
+    
+    var val  = "";
+    
+    
+    if(value === "null"){
+        $('#'+inputId).val("");
+    }else{
+        if(concat === true){
+        
+            val = $("#"+inputId).val();
+
+            if(val === "-null"){
+                $('#'+inputId).val("-"+value);
+            }else{
+
+
+               if(val.search(-value) !== -1){
+                   val = val.replace("-"+value,"");
+                   $('#'+inputId).val(val);
+               }else{
+                   $('#'+inputId).val(val+"-"+value);
+               }
+            }
+        }else{
+            $('#'+inputId).val("-"+value);
+        }
+    }
+    
+    
+   
+    setParamEvenementStr();
+    pageEvenements();
+   
+      
+}
+
+
+function setParamEvenementStr(){
+    var str = "";
+    var types =     $('#types').val();
+    var mots =      $('#mots').val();
+    var datemin =   $('#datemin').val();
+    var datemax =   $('#datemax').val();
+    var dep     =   $('#dep').val();
+    
+    if(types !== ""){
+        str += "types="+types.substring(1)+"&";
+    }
+    if(mots !== ""){
+        str += "mots="+encodeURIComponent(mots)+"&";
+    }
+    if(datemin !== ""){
+        str += "datemin="+encodeURIComponent(datemin)+"&";
+    }
+    if(datemax !== ""){
+        str += "datemax="+encodeURIComponent(datemax)+"&";
+    }
+    if(dep !== ""){
+        str += "dep="+(dep)+"&";
+    }
+    $('#search').val(str);
+    
+    
+    
+}
+
+function getParamEvenement(){
+    return $('#search').val();
+}

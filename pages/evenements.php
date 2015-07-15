@@ -17,13 +17,17 @@
 
         <div class='row hidden-xs hidden-sm col-lg-3 col-md-3 col-sm-12 col-xs-12'>
             <div id="EventSearchColumn">
-                <h5>Des événements pour tous</h5>
-               <ul class="list-inline" id="listeTypesEvenements">
+                <input type="text" id="search"/>
+               <h5>Des événements pour tous</h5>
+               <ul class="list-inline eventSearchInput" id="listeTypesEvenements">
 <!--                     Liste des types-->
                 </ul>
+                <input type="hidden" class="eventSearchInput" id="types"/>   
                 <h5>Affiner votre recherche</h5>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Mots clés">
-                 
+                <input type="text" class="form-control eventSearchInput" id="mots" placeholder="Mots clés">
+                <input type="text" id="dep" class="form-control eventSearchInput" placeholder="departement"/>
+                <input type="date" id="datemin" class="form-control eventSearchInput" placeholder="date min"/>
+                <input type="date" id="datemax" class="form-control eventSearchInput" placeholder="date max"/>
                 <h5>Vos événements tout le temps</h5>
                 <ul class="list-group"  id="listeOrder">
                     <!-- LISTE DES MOIS -->

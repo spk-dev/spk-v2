@@ -1,6 +1,4 @@
-[2015-07-15 17:29:06]-[debug]==> AND ((ocu_date_fin >= CURDATE()) AND ((eve_var_libelle like '%tptp%') OR (eve_var_description LIKE '%tptp%')) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:29:06]-[debug]==> AND ((ocu_date_fin >= CURDATE()) AND ((eve_var_libelle like '%tptp%') OR (eve_var_description LIKE '%tptp%')) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:29:06]-[debug]==>dans query - getlisteEvenement  SELECT 
+[2015-07-15 17:29:06]-[sql]==> SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -19,10 +17,7 @@
                 (med_int_id is NULL
                 OR
                 med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) AND ((eve_var_libelle like '%tptp%') OR (eve_var_description LIKE '%tptp%')) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:31:51]-[debug]==>dans rest - 
-[2015-07-15 17:31:51]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:31:51]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:31:51]-[debug]==>dans query - getlisteEvenement  SELECT 
+[2015-07-15 17:31:51]-[sql]==> SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -41,12 +36,7 @@
                 (med_int_id is NULL
                 OR
                 med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:31:58]-[debug]==>dans rest - 75
-[2015-07-15 17:32:59]-[debug]==>dans rest - 
-[2015-07-15 17:32:59]-[debug]==>dans evenementsearchcriteria - 
-[2015-07-15 17:32:59]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:32:59]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:32:59]-[debug]==>dans query - getlisteEvenement  SELECT 
+[2015-07-15 17:32:59]-[sql]==> SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -65,12 +55,7 @@
                 (med_int_id is NULL
                 OR
                 med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:33:02]-[debug]==>dans rest - 75
-[2015-07-15 17:49:42]-[debug]==>dans rest - 
-[2015-07-15 17:49:42]-[debug]==>dans evenementsearchcriteria - 
-[2015-07-15 17:49:42]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:49:42]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:49:42]-[debug]==>dans query - getlisteEvenement  SELECT 
+[2015-07-15 17:49:42]-[sql]==> SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -89,4 +74,3 @@
                 (med_int_id is NULL
                 OR
                 med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:49:45]-[debug]==>dans rest - 75

@@ -171,15 +171,22 @@ function appendListeThemeHome(theme){
 
 
 function appendTypesEvenements(type,page){
+    var inputId = "types";
+    var concat ;
     if(page==="home"){
         
-        fonction = "pageHomeEvenement";
-        classCss = "col-lg-3 col-md-4 col-sm-12 col-xs-12"
+        fonction = "pageHomeEvenement("+type.id+")";
+        classCss = "col-lg-3 col-md-4 col-sm-12 col-xs-12";
     }else{
-        fonction = "pageEvenements";
-        classCss = "col-lg-6 col-md-12 col-sm-12 col-xs-12"
+        if(type.id === null){
+            concat = false;
+        }else{
+            concat = true;
+        }
+        fonction = 'setParamEvenement("'+inputId+'","'+type.id+'",'+concat+')';
+        classCss = "col-lg-6 col-md-12 col-sm-12 col-xs-12";
     }
-    var h ="<a href='#' onclick='"+fonction+"("+type.id+");' id='"+type.id+"_tag' ><div class='"+classCss+" tag_type_evenement_filter tag_type_"+type.id+"' >"+type.libelle+"</div></a>";
+    var h ="<a href='#' onclick='"  +fonction+"' id='"+type.id+"_tag' ><div class='"+classCss+" tag_type_evenement_filter tag_type_"+type.id+"' >"+type.libelle+"</div></a>";
    
     $('#listeTypesEvenements').append(h);
 }

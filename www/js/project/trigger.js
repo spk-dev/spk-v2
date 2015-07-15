@@ -37,5 +37,34 @@ $(function(){
 //      }
 //    })
 
+//$('#keyword-search-event').on('keyDown',function(e){
+//    e.preventdefault();
+//    alert(e);
+//})
+
+
+
+// détection de la saisie dans le champ de recherche
+  $('#mots').keyup( function(){
+//    $field = $(this);
+//
+//    
+//    if ($field.keyCode == 8 || $field.keyCode == 46) {
+        setParamEvenementStr();
+        pageEvenements(true);
+//    }
+  });
+
+//$('#mots').on("keypress", function(e) {
+//        if(e.ke)
+//        setParamEvenementStr();
+//        pageEvenements(true);
+//
+//    });
+    
+$('.eventSearchInput').on("change", function(e){
+    setParamEvenementStr();
+    pageEvenements(true);
+}); 
     
 });
