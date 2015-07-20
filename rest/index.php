@@ -11,12 +11,9 @@ $index->setBooAdmin(true);
 $index->init();
 
 $app = new Slim();
-
-
-
-//$app = new Slim();
-
-//$app->get('/evenements', 'getEvenements');
+$app->get('/pays/','getPays');
+$app->get('/area1/:pays','getArea1');
+$app->get('/area2/:area1','getArea2');
 $app->get('/evenementsSortTypes/:idType', 'getEvenementsSortTypes');
 $app->get('/typesevenements/:avecEvenement','getTypeEvenements');
 
@@ -29,27 +26,30 @@ $app->get('/evenements',  function () use ($app) {
         $dateDebut      = $app->request()->params('datemin');
         $dateFin        = $app->request()->params('datemax');
         $organisateur   = $app->request()->params('organisateur');
-        $dep            = $app->request()->params('dep');
+        $pays           = $app->request()->params('pays');
+        $area1          = $app->request()->params('area1');
+        $area2          = $app->request()->params('area2');
         
-        AppLog::ecrireLog("dans rest - ".$dep, "debug");
         
         $criteres = new EvenementSearchCriteria();
         
-        $criteres->setEvenementDepartement(checkParam($dep));
-        
-        
-        $criteres->setEvenementType(checkParam($types));
+        $criteres->setEvenementType(checkParam($types,true));
         $criteres->setEvenementMotsCles($mots);        
         $criteres->setEvenementDateMin($dateDebut);    
         $criteres->setEvenementDateMax($dateFin);
-        $criteres->setEvenementOrganisateur(checkParam($organisateur));
+        $criteres->setEvenementOrganisateur(checkParam($organisateur,true));
+        $criteres->setEvenementPays(checkParam($pays,false));
+        $criteres->setEvenementArea1(checkParam($area1,false)); 
+        $criteres->setEvenementArea2(checkParam($area2,false));
         
         
         $criteres->setEvenementOrder("debut", "ASC");
         $criteres->setEvenementAfterToday(true);
+       
+        
         $condition = $criteres->getCondition();
-
-        AppLog::ecrireLog($condition,"debug");
+        AppLog::ecrireLog($condition, "debug");
+        
         
         $sql = Query::getListeEvenements($condition); 
         
@@ -57,7 +57,6 @@ $app->get('/evenements',  function () use ($app) {
           
           
 });
-//$types = $app->request()->get('types');
 
 $app->notFound(function () {
     $url = Redirect::getCurrentUrl();
@@ -69,7 +68,10 @@ $app->notFound(function () {
 
 $app->run();
 
-// TYPE
+/**
+ * Liste des types d'événements
+ * @param type $avecEvenements
+ */
 function getTypeEvenements($avecEvenements){
     if($avecEvenements==1){
         $avecEvenements = true;
@@ -90,12 +92,49 @@ function getTypeEvenements($avecEvenements){
 
 }
 
+/**
+ * Renvoi la liste des régions en fonction des premières lettres saisies
+ * @param type $q
+ */
+function getPays(){
+    
+    $sql = Query::getPays(); 
+        
+    runQuery($sql, "pays");
+    
+}
 
 /**
+ * Renvoi la liste des régions en fonction des premières lettres saisies
+ * @param type $q
+ */
+function getArea1($pays){
+    $q = urldecode($pays);
+    $sql = Query::getArea1($pays); 
+        
+    runQuery($sql, "area1");
+    
+}
+
+/**
+ * Renvoi la liste des départements en fonction de la région passé en param et des premières lettres
+ * @param type $area1
+ * @param type $q
+ */
+function getArea2($area1){
+    $area1 = urldecode($area1);
+    $sql = Query::getArea2($area1); 
+        
+    runQuery($sql, "area2");
+    
+}
+
+/**
+ * Test le parametre et renvoi un tableau si besoin (explode)
  * @param type $param
  * @return type
  */
-function checkParam($param){
+function checkParam($param, $explode = true){
     if(is_int($param)){
         $param = "-".$param;
     }
@@ -105,12 +144,21 @@ function checkParam($param){
        if($param == ""){
            $ret = null;
        }else{
-          
-           if(strpos($param, "-")==""){
-               $ret = array($param);
-           }else{
-               $ret = explode("-", $param);
+           switch ($explode) {
+               case true:
+                   if(strpos($param, "-")==""){
+                        $ret = array($param);
+                    }else{
+                        $ret = explode("-", $param);
+                    }
+
+                   break;
+
+               case false:
+                   $ret = array($param);
+                   break;
            }
+           
            
        }
     }
@@ -138,73 +186,13 @@ function runQuery($sql,$type){
     }
 }
 
-//function getEvenements() {
-//    
-//    $args = array();
-//    $EvenementTheme = array();
-//    $EvenementType = array();
-//    $EvenementOrganisateur = array();
-//    
-//    $criteres = new EvenementSearchCriteria();
-//    
-//    
-//    
-//    die($types);
-//    
-////    if(isset($_GET['organisateurs'])){        
-////        foreach($_GET['organisateurs'] as $chkbx){array_push($EvenementOrganisateur, $chkbx);}
-////        $criteres->setOrganisateurs($EvenementOrganisateur);
-////    }
-////    if(isset($_GET['themes'])){        
-////        foreach($_GET['themes'] as $chkbx){array_push($EvenementTheme, $chkbx);}
-////        $criteres->setThemes($EvenementTheme);
-////    }
-////    if(isset($_GET['types'])){
-////        foreach($_GET['types'] as $chkbx){array_push($EvenementType, $chkbx);}
-////        $criteres->setTypes($EvenementType);
-////    }
-////    if(isset($_GET['search-motscles'])){
-////        $motcles = $_GET['search-motscles'];
-////        if($motcles != ""){$criteres->setEvenementMotsCles($motcles);}
-////    }
-////    if(isset($_GET['start'])){
-////        $start = $_GET['start'];
-////        if($start != ""){$criteres->setDateMin($start);}
-////    }
-////    
-////    if(isset($_GET['end'])){
-////        $end = $_GET['end'];
-////        if($end != ""){$criteres->setDateMax($end);}
-////    }
-//    
-// 
-//  
-//    $criteres->setEvenementOrder("debut", "ASC");
-//    $criteres->setEvenementAfterToday(null);
-//    $condition = $criteres->getCondition();
-//    
-//    $sql = Query::getListeEvenements($condition); 
-//    AppLog::ecrireLog("DANS REST 1", 'debug');
-//    AppLog::ecrireLog($sql, 'debug');
-//    AppLog::ecrireLog("DANS REST 2", 'debug');
-//    try {
-//            $db = getConnection();
-//            $db->query('SET CHARACTER SET utf8');
-//            $stmt = $db->query($sql);  
-//            $events = $stmt->fetchAll(PDO::FETCH_OBJ);
-//           
-//            $db = null;
-//            echo '{"evenements": ' . json_encode($events) . '}';
-//    } catch(PDOException $e) {
-//            
-//            echo '{"error":{"text":'. $e->getMessage() .'}}'; 
-//    }
-//}
 
 
 
-
-// TECHNIQUE
+/**
+ * Créer et renvoi la connexion
+ * @return \PDO
+ */
 function getConnection() {
     
     $info = Query::infoConnect();

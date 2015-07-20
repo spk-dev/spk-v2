@@ -1,6 +1,6 @@
-[2015-07-15 17:29:06]-[debug]==> AND ((ocu_date_fin >= CURDATE()) AND ((eve_var_libelle like '%tptp%') OR (eve_var_description LIKE '%tptp%')) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:29:06]-[debug]==> AND ((ocu_date_fin >= CURDATE()) AND ((eve_var_libelle like '%tptp%') OR (eve_var_description LIKE '%tptp%')) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:29:06]-[debug]==>dans query - getlisteEvenement  SELECT 
+[2015-07-20 16:34:04]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:04]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:04]-[debug]==>dans query - getlisteEvenement  SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -18,11 +18,262 @@
                 AND
                 (med_int_id is NULL
                 OR
-                med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) AND ((eve_var_libelle like '%tptp%') OR (eve_var_description LIKE '%tptp%')) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:31:51]-[debug]==>dans rest - 
-[2015-07-15 17:31:51]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:31:51]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:31:51]-[debug]==>dans query - getlisteEvenement  SELECT 
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:34:12]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:12]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:12]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:34:15]-[debug]==> AND (pla_var_area1 IN ('null') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:15]-[debug]==> AND (pla_var_area1 IN ('null') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:15]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('null') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:34:17]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:17]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:34:17]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:02]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:02]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:02]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:04]-[debug]==> AND (pla_var_area1 IN ('null') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:04]-[debug]==> AND (pla_var_area1 IN ('null') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:04]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('null') AND pla_var_area2 IN ('null') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:29]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:29]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:29]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:31]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:31]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:31]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:33]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:33]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:33]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:39]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:39]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:39]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:41]-[debug]==> AND (pla_var_area1 IN ('Ile de France') AND pla_var_area2 IN ('') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:41]-[debug]==> AND (pla_var_area1 IN ('Ile de France') AND pla_var_area2 IN ('') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:41]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Ile de France') AND pla_var_area2 IN ('') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:51]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:51]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:51]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:51:55]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:55]-[debug]==> AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:51:55]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('') AND pla_var_area2 IN ('') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:52:41]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:41]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:41]-[debug]==>dans query - getlisteEvenement  SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -41,12 +292,177 @@
                 (med_int_id is NULL
                 OR
                 med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:31:58]-[debug]==>dans rest - 75
-[2015-07-15 17:32:59]-[debug]==>dans rest - 
-[2015-07-15 17:32:59]-[debug]==>dans evenementsearchcriteria - 
-[2015-07-15 17:32:59]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:32:59]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:32:59]-[debug]==>dans query - getlisteEvenement  SELECT 
+[2015-07-20 16:52:44]-[debug]==> AND (pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:44]-[debug]==> AND (pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:44]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:52:50]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:50]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:50]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Catalogne') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:52:52]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('Province de Barcelone') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:52]-[debug]==> AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('Province de Barcelone') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:52]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Catalogne') AND pla_var_area2 IN ('Province de Barcelone') AND pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:52:54]-[debug]==> AND (pla_var_area2 IN ('Province de Barcelone') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:54]-[debug]==> AND (pla_var_area2 IN ('Province de Barcelone') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:54]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area2 IN ('Province de Barcelone') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:52:57]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:57]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:52:57]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:53:00]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Haute','Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:53:00]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Haute','Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:53:00]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Haute','Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:53:05]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Lot') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:53:05]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Lot') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:53:05]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Lot') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:53:13]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Haute','Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:53:13]-[debug]==> AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Haute','Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:53:13]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Midi','Pyrénées') AND pla_var_area2 IN ('Haute','Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:58:22]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:22]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:22]-[debug]==>dans query - getlisteEvenement  SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -65,12 +481,9 @@
                 (med_int_id is NULL
                 OR
                 med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:33:02]-[debug]==>dans rest - 75
-[2015-07-15 17:49:42]-[debug]==>dans rest - 
-[2015-07-15 17:49:42]-[debug]==>dans evenementsearchcriteria - 
-[2015-07-15 17:49:42]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:49:42]-[debug]==> AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
-[2015-07-15 17:49:42]-[debug]==>dans query - getlisteEvenement  SELECT 
+[2015-07-20 16:58:25]-[debug]==> AND (pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:25]-[debug]==> AND (pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:25]-[debug]==>dans query - getlisteEvenement  SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -88,5 +501,67 @@
                 AND
                 (med_int_id is NULL
                 OR
-                med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:49:45]-[debug]==>dans rest - 75
+                med_int_id < 2)  AND (pla_var_pays IN ('Espagne') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:58:27]-[debug]==> AND (pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:27]-[debug]==> AND (pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:27]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:58:31]-[debug]==> AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:31]-[debug]==> AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:31]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:58:39]-[debug]==> AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_area2 IN ('Haute-Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:39]-[debug]==> AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_area2 IN ('Haute-Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC
+[2015-07-20 16:58:39]-[debug]==>dans query - getlisteEvenement  SELECT 
+                    ocu_int_id, ocu_date_debut, ocu_date_fin,
+                    eve_var_libelle, eve_org_int_id, 
+                    tev_int_id, tev_var_libelle, 
+                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
+                    org_int_id, org_var_libelle,
+                    med_var_url
+                
+                FROM eve_evenements 
+                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
+                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
+                    left join pla_places on pla_int_id = ocu_pla_id 
+                    left join org_organisateurs on eve_org_int_id = org_int_id 
+                    left join med_medias on med_eve_id = ocu_eve_id
+                WHERE 1=1
+                AND
+                (med_int_id is NULL
+                OR
+                med_int_id < 2)  AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_area2 IN ('Haute-Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;

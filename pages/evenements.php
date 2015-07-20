@@ -26,6 +26,10 @@
                 <h5>Affiner votre recherche</h5>
                 <input type="text" class="form-control eventSearchInput" id="mots" placeholder="Mots clés">
                 <input type="text" id="dep" class="form-control eventSearchInput" placeholder="departement"/>
+                <select id="listePays" class="form-control"></select>
+                <select id="listeArea1" class="form-control"></select>
+                <select id="listeArea2" class="form-control"></select>
+                
                 <input type="date" id="datemin" class="form-control eventSearchInput" placeholder="date min"/>
                 <input type="date" id="datemax" class="form-control eventSearchInput" placeholder="date max"/>
                 <h5>Vos événements tout le temps</h5>

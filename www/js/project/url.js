@@ -12,8 +12,9 @@ var urlEvenements = "../rest/evenements";
 var urlEvenementsSortTypes = "../rest/evenementsSortTypes/"
 var urlTypesEvenements = "../rest/typesevenements/";
 var urlMarqueur = 'http://www.spibook.com/images/spibook/gmarkers/spibook.png';
-
-
+var urlPays = "../rest/pays/";
+var urlArea1 = "../rest/area1/";
+var urlArea2 = "../rest/area2/";
 /*
 var urlEvenement = "../rest/evenement/";
 var urlOrganisateurs = "../rest/organisateurs";

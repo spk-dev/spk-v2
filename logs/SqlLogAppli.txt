@@ -1,4 +1,4 @@
-[2015-07-15 17:29:06]-[sql]==> SELECT 
+[2015-07-20 16:58:39]-[sql]==> SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -16,61 +16,5 @@
                 AND
                 (med_int_id is NULL
                 OR
-                med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) AND ((eve_var_libelle like '%tptp%') OR (eve_var_description LIKE '%tptp%')) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:31:51]-[sql]==> SELECT 
-                    ocu_int_id, ocu_date_debut, ocu_date_fin,
-                    eve_var_libelle, eve_org_int_id, 
-                    tev_int_id, tev_var_libelle, 
-                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
-                    org_int_id, org_var_libelle,
-                    med_var_url
-                
-                FROM eve_evenements 
-                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                    left join pla_places on pla_int_id = ocu_pla_id 
-                    left join org_organisateurs on eve_org_int_id = org_int_id 
-                    left join med_medias on med_eve_id = ocu_eve_id
-                WHERE 1=1
-                AND
-                (med_int_id is NULL
-                OR
-                med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:32:59]-[sql]==> SELECT 
-                    ocu_int_id, ocu_date_debut, ocu_date_fin,
-                    eve_var_libelle, eve_org_int_id, 
-                    tev_int_id, tev_var_libelle, 
-                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
-                    org_int_id, org_var_libelle,
-                    med_var_url
-                
-                FROM eve_evenements 
-                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                    left join pla_places on pla_int_id = ocu_pla_id 
-                    left join org_organisateurs on eve_org_int_id = org_int_id 
-                    left join med_medias on med_eve_id = ocu_eve_id
-                WHERE 1=1
-                AND
-                (med_int_id is NULL
-                OR
-                med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-15 17:49:42]-[sql]==> SELECT 
-                    ocu_int_id, ocu_date_debut, ocu_date_fin,
-                    eve_var_libelle, eve_org_int_id, 
-                    tev_int_id, tev_var_libelle, 
-                    pla_var_ville, pla_dec_lat, pla_dec_long,pla_var_route,pla_int_cp,
-                    org_int_id, org_var_libelle,
-                    med_var_url
-                
-                FROM eve_evenements 
-                    right join ocu_occurrences on eve_int_id = ocu_eve_id 
-                    left join tev_type_evenements on tev_int_id = eve_tev_int_id 
-                    left join pla_places on pla_int_id = ocu_pla_id 
-                    left join org_organisateurs on eve_org_int_id = org_int_id 
-                    left join med_medias on med_eve_id = ocu_eve_id
-                WHERE 1=1
-                AND
-                (med_int_id is NULL
-                OR
-                med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+                med_int_id < 2)  AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_area2 IN ('Haute-Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-07-20 16:58:51]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;

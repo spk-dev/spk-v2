@@ -68,3 +68,24 @@ $('.eventSearchInput').on("change", function(e){
 }); 
     
 });
+
+$('#listePays').on("change",function(e){
+    var tabpays = {};
+    tabpays['pays'] = $('#listePays').val();
+    loadAreaListes('area1',tabpays);
+    setParamEvenementStr();
+    pageEvenements(true);
+})
+$('#listeArea1').on("change",function(e){
+    var tabarea1 = {};
+    tabarea1['area1'] = $('#listeArea1').val();
+    loadAreaListes('area2',tabarea1);
+    
+    setParamEvenementStr();
+    pageEvenements(true);
+})
+$('#listeArea2').on("change",function(e){
+    setParamEvenementStr();
+    pageEvenements(true);
+   
+})

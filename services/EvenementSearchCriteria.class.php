@@ -20,9 +20,10 @@ class EvenementSearchCriteria{
 //    private $EvenementInclue= null;
     private $EvenementOrder= null;
     private $EvenementAfterToday = null;
-// Genere la condition pour la requete SQL
-    private $EvenementDepartement = null;
-    
+
+    private $EvenementPays = null;
+    private $EvenementArea1 = null;
+    private $EvenementArea2 = null;
     
     private $fields = array(
         'id'=>'eve_int_id',
@@ -36,6 +37,8 @@ class EvenementSearchCriteria{
         'typeEvenement'=>'tev_int_id',
         'ville'=>'pla_var_ville',
         'cp'=> 'pla_int_cp',
+        'area1' => 'pla_var_area1',  
+        'area2' => 'pla_var_area2',  
         'pays' => 'pla_var_pays',  
         'enregistrement'=>'eve_date_enregistrement'
         
@@ -45,48 +48,6 @@ class EvenementSearchCriteria{
         
         $listeCritere = array();
         
-        // Champ intervenants
-//        if(!is_null($this->EvenementIntervenants)){
-//            if(is_array($this->EvenementIntervenants)){
-//                if(sizeof($this->EvenementIntervenants)>0){
-//                    $EvenementIds = IntervenantActionDao::recupererRetraitesIntervenant($this->EvenementIntervenants);
-//                   
-//                    
-//                    $clauseId = $this->getFields('id')." IN (";
-//			for ($i = 0; $i < sizeof($EvenementIds); $i++) {
-//				$clauseId .= $EvenementIds[$i];
-//				if($i!=sizeof($EvenementIds)-1){
-//					$clauseId .=",";
-//				}
-//			}
-//			$clauseId .= ")";
-//                        array_push($listeCritere, $clauseId);      
-//                }  
-//            }   
-//        }
-        // Champ theme
-//        if(!is_null($this->EvenementTheme)){
-//            if(is_array($this->EvenementTheme)){
-//                if(sizeof($this->EvenementTheme)>0){
-//                    
-//                    $themesIds = ThemeAction::recupererRetraiteFromTheme($this->EvenementTheme);
-//                    
-//                    $clauseTheme = $this->getFields('id')." IN (";
-//			for ($i = 0; $i < sizeof($themesIds); $i++) {
-//                            if ($themesIds[$i])
-//                            {
-//				$clauseTheme .= $themesIds[$i]->getId();
-//				if($i!=sizeof($themesIds)-1){
-//					$clauseTheme .=",";
-//				}
-//                            }
-//			}
-//			$clauseTheme .= ")";
-//                        array_push($listeCritere, $clauseTheme);
-//                        
-//                }  
-//            }   
-//        }
         // Champ Lieu
         if(!is_null($this->EvenementOrganisateur)){
             if(is_array($this->EvenementOrganisateur)){
@@ -108,65 +69,8 @@ class EvenementSearchCriteria{
         }
         
         
-        // Champ Departement
-        if(!is_null($this->EvenementDepartement)){
-            if(is_array($this->EvenementDepartement)){
-                if(sizeof($this->EvenementDepartement)>0){
-                    $tabSize = sizeof($this->EvenementDepartement);
-                    $tab = $this->EvenementDepartement;
-                    $clauseLieu = "SUBSTR(".$this->getFields('cp').",1,2) IN (";
-                    for ($i = 0; $i < $tabSize; $i++) {
-                            $clause .=$tab[$i];
-                            if($i<$tabSize-1){
-                                    $clauseLieu .=",";
-                            }
-                    }
-                    $clause .= ")";
-                        array_push($listeCritere, $clause);
-
-                }  
-            }   
-        }
         
         
-        // Champ Exclusion
-//        if(!is_null($this->EvenementExclue)){
-//            if(is_array($this->EvenementExclue)){
-//                if(sizeof($this->EvenementExclue)>0){
-//                    $tabSize = sizeof($this->EvenementExclue);
-//                    $tabLieu = $this->EvenementExclue;
-//                    $clauseExclu = $this->getFields('id')." NOT IN (";
-//                    for ($i = 0; $i < $tabSize; $i++) {
-//                            $clauseExclu .=$tabLieu[$i];
-//                            if($i<$tabSize-1){
-//                                    $clauseExclu .=",";
-//                            }
-//                    }
-//                    $clauseExclu .= ")";
-//                        array_push($listeCritere, $clauseExclu);
-//
-//                }  
-//            }   
-//        }
-        // Champ Inclusion
-//        if(!is_null($this->EvenementInclue)){
-//            if(is_array($this->EvenementInclue)){
-//                if(sizeof($this->EvenementInclue)>0){
-//                    $tabSize = sizeof($this->EvenementInclue);
-//                    $tabLieu = $this->EvenementInclue;
-//                    $clauseInclu = $this->getFields('id')." IN (";
-//                    for ($i = 0; $i < $tabSize; $i++) {
-//                            $clauseInclu .=$tabLieu[$i];
-//                            if($i<$tabSize-1){
-//                                    $clauseInclu .=",";
-//                            }
-//                    }
-//                    $clauseInclu .= ")";
-//                        array_push($listeCritere, $clauseInclu);
-//
-//                }  
-//            }   
-//        }
         // Champ TypesEvenements
         if(!is_null($this->EvenementType)){
             if(is_array($this->EvenementType)){
@@ -186,26 +90,67 @@ class EvenementSearchCriteria{
                 }  
             }   
         }
-        // Champ garderie
-//        if(!is_null($this->EvenementGarderie)){
-//            if(!is_string($this->EvenementGarderie)){
-//                if($this->EvenementGarderie==0 || $this->EvenementGarderie== 1){
-//                    $clauseGarderie = "(".$this->getFields('garderie')."=".$this->EvenementGarderie.")";
-//                    array_push($listeCritere, $clauseGarderie);
-//                }
-//            }
-//            
-//        }
-        //Champ hebergemenet
-//        if(!is_null($this->EvenementHebergement)){
-//            if(!is_string($this->EvenementHebergement)){
-//                if($this->EvenementHebergement==0 || $this->EvenementHebergement== 1){
-//                    $clauseHebergement = "(".$this->getFields('hebergement')."=".$this->EvenementHebergement.")";
-//                    array_push($listeCritere, $clauseHebergement);
-//                }
-//            }
-//            
-//        }
+        
+        
+        // Champ Area1
+        if(!is_null($this->EvenementArea1)){
+            if(is_array($this->EvenementArea1)){
+                if(sizeof($this->EvenementArea1)>0){
+                    $tabSize = sizeof($this->EvenementArea1);
+                    $tabRet = $this->EvenementArea1;
+                    $clauseType = $this->getFields('area1')." IN ('";
+                    for ($i = 0; $i < $tabSize; $i++) {
+                            $clauseType .=$tabRet[$i];
+                            if($i<$tabSize-1){
+                                    $clauseType .="','";
+                            }
+                    }
+                    $clauseType .= "')";
+                    array_push($listeCritere, $clauseType);
+
+                }  
+            }   
+        }
+        
+        // Champ Area1
+        if(!is_null($this->EvenementArea2)){
+            if(is_array($this->EvenementArea2)){
+                if(sizeof($this->EvenementArea2)>0){
+                    $tabSize = sizeof($this->EvenementArea2);
+                    $tabRet = $this->EvenementArea2;
+                    $clauseType = $this->getFields('area2')." IN ('";
+                    for ($i = 0; $i < $tabSize; $i++) {
+                            $clauseType .=$tabRet[$i];
+                            if($i<$tabSize-1){
+                                    $clauseType .="','";
+                            }
+                    }
+                    $clauseType .= "')";
+                    array_push($listeCritere, $clauseType);
+
+                }  
+            }   
+        }
+         // Champ Area1
+        if(!is_null($this->EvenementPays)){
+            if(is_array($this->EvenementPays)){
+                if(sizeof($this->EvenementPays)>0){
+                    $tabSize = sizeof($this->EvenementPays);
+                    $tabRet = $this->EvenementPays;
+                    $clauseType = $this->getFields('pays')." IN ('";
+                    for ($i = 0; $i < $tabSize; $i++) {
+                            $clauseType .=$tabRet[$i];
+                            if($i<$tabSize-1){
+                                    $clauseType .="','";
+                            }
+                    }
+                    $clauseType .= "')";
+                    array_push($listeCritere, $clauseType);
+
+                }  
+            }   
+        }
+        
         // Champs dates
         if(""!=($this->EvenementDateMin) || ""!=($this->EvenementDateMax)){
             
@@ -224,6 +169,8 @@ class EvenementSearchCriteria{
             array_push($listeCritere, $clauseDate);
             
         }
+        
+        // SI EVENT A VENIR OU PASSE
         if(!is_null($this->EvenementAfterToday)){
             if($this->EvenementAfterToday){ 
                 $clauseToday = "(".$this->getFields('fin')." >= CURDATE())";
@@ -235,12 +182,6 @@ class EvenementSearchCriteria{
         }
 
         
-        
-        // Champs prix       
-//        if(!is_null($this->EvenementPrix)){
-//            $clausePrix = "(".$this->getFields('prix')." <= ".$this->EvenementPrix.")";
-//            array_push($listeCritere, $clausePrix);
-//        }
         // Champs mots clés
         if(!is_null($this->EvenementMotsCles)){    
             if(""!=$this->EvenementMotsCles){
@@ -372,16 +313,32 @@ class EvenementSearchCriteria{
         $this->EvenementOrganisateur = $EvenementOrganisateur;
     }
 
-    function getEvenementDepartement() {
-        return $this->EvenementDepartement;
+
+    function getEvenementArea1() {
+        return $this->EvenementArea1;
     }
 
-    function setEvenementDepartement($EvenementDepartement) {
-        AppLog::ecrireLog("dans evenementsearchcriteria - ".$EvenementDepartement, "debug");
-        $this->EvenementDepartement = $EvenementDepartement;
+    function getEvenementArea2() {
+        return $this->EvenementArea2;
     }
 
-        
+    function setEvenementArea1($EvenementArea1) {
+        $this->EvenementArea1 = $EvenementArea1;
+    }
+
+    function setEvenementArea2($EvenementArea2) {
+        $this->EvenementArea2 = $EvenementArea2;
+    }
+
+    function getEvenementPays() {
+        return $this->EvenementPays;
+    }
+
+    function setEvenementPays($EvenementPays) {
+        $this->EvenementPays = $EvenementPays;
+    }
+
+                
     public function setEvenementLimit($start,$nblignes){
         if(is_null($start) || is_null($nblignes)){
             $this->EvenementLimit = null;

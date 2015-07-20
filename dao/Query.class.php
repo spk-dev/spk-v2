@@ -120,11 +120,22 @@ class Query {
         return $sql;
     }
     
+    public static function getPays(){
+        $sql = "SELECT distinct(pla_var_pays) FROM pla_places;";
+        return $sql;
+    }
     
     
+    public static function getArea1($q){
+        $sql = "SELECT distinct(pla_var_area1) FROM pla_places WHERE  pla_var_pays LIKE ('%".$q."%');";
+        return $sql;
+    }
     
     
-    
+    public static function getArea2($area1){
+        $sql = "SELECT distinct(pla_var_area2) FROM pla_places WHERE  pla_var_area1 LIKE ('%".$area1."%');";
+        return $sql;
+    }
     
     
         /**

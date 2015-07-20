@@ -28,6 +28,16 @@ function pageHomeOrganisateurs(){
     
 }
 
+function getListeSelect(){
+    $.getJSON(urlTypesEvenements+avecEvenement, function (data) {
+        $(data.types).each(function (i, type) {
+            //console.log(type);
+            var type2 = defineTypesEvenement(type);
+            
+            appendTypesEvenements(type2,page);
+        });
+    });
+}
 
 function toutesPagesTypesEvenements(avecEvenement,page){
     removeElementFromDiv("listeTypesEvenements");
@@ -487,11 +497,14 @@ function setParamEvenement(inputId, value ,concat){
 
 function setParamEvenementStr(){
     var str = "";
-    var types =     $('#types').val();
-    var mots =      $('#mots').val();
-    var datemin =   $('#datemin').val();
-    var datemax =   $('#datemax').val();
-    var dep     =   $('#dep').val();
+    var types       =   $('#types').val();
+    var mots        =   $('#mots').val();
+    var datemin     =   $('#datemin').val();
+    var datemax     =   $('#datemax').val();
+    var pays        =   $('#listePays').val();
+    var area1       =   $('#listeArea1').val();
+    var area2       =   $('#listeArea2').val();
+    
     
     if(types !== ""){
         str += "types="+types.substring(1)+"&";
@@ -505,8 +518,14 @@ function setParamEvenementStr(){
     if(datemax !== ""){
         str += "datemax="+encodeURIComponent(datemax)+"&";
     }
-    if(dep !== ""){
-        str += "dep="+(dep)+"&";
+    if(pays !== ""){
+        str += "pays="+encodeURIComponent(pays)+"&";
+    }
+    if(area1 !== "" && area1 !== null){
+        str += "area1="+encodeURIComponent(area1)+"&";
+    }
+    if(area2 !== "" && area2 !== null){
+        str += "area2="+encodeURIComponent(area2)+"&";
     }
     $('#search').val(str);
     

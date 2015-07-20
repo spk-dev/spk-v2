@@ -158,84 +158,95 @@ function collectForm(){
 // CONTROLE
 $(function() {
 
-//    $("input,textarea").jqBootstrapValidation({
-//
-//        preventSubmit: true,
-//        submitError: function($form, event, errors) {
-//            // additional error messages or events
-//        },
-//        submitSuccess: function($form, event) {
-//            event.preventDefault(); // prevent default submit behaviour
-//            // get values from FORM
-//            
-//            var idEvenement, nom, email, tel, objets, objet, msg, optInNewsletter, optInPartenaires = "";
-//            nom                 = recupTextField("contact-nom");
-//            email               = recupTextField("contact-email");
-//            tel                 = recupTextField("contact-phone");
-//            objets              = recupCheckbox("objet");
-//            msg                 = recupTextField("contact-message");
-//            optInNewsletter     = recupCheckbox("newsletter-spibook");
-//            optInPartenaires    = recupCheckbox("newsletter-partenaires");
-//            idEvenement         = recupCheckbox("organisateur-evenement-id");
-//            
-//            
-//            $(objets).each(function (i, obj) {
-//                objet += obj;
-//            });
-//
-//            $.ajax({
-//                url: urlAjax,
-//                type: "POST",
-//                data: {
-//                    nom             : nom,
-//                    phone           : tel,
-//                    objet           : objet,
-//                    email           : email,
-//                    message         : msg,
-//                    optinnewsletter : optInNewsletter,
-//                    optinpartenaires: optInPartenaires,
-//                    idEvenement     : idEvenement
-//                    
-//                },
-//                cache: false,
-//                success: function() {
-//                    // Success message
-//                    $('#success').html("<div class='alert alert-success'>");
-//                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-//                        .append("</button>");
-//                    $('#success > .alert-success')
-//                        .append("<strong>Your message has been sent. </strong>");
-//                    $('#success > .alert-success')
-//                        .append('</div>');
-//
-//                    //clear all fields
-//                    $('#contactForm').trigger("reset");
-//                },
-//                error: function() {
-//                    // Fail message
-//                    $('#success').html("<div class='alert alert-danger'>");
-//                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-//                        .append("</button>");
-//                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
-//                    $('#success > .alert-danger').append('</div>');
-//                    //clear all fields
-//                    $('#contactForm').trigger("reset");
-//                }
-//            })
-//        },
-//        filter: function() {
-//            return $(this).is(":visible");
-//        }
-//    });
-//
-//    $("a[data-toggle=\"tab\"]").click(function(e) {
-//        e.preventDefault();
-//        $(this).tab("show");
-//    });
 });
 
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
     $('#success').html('');
+});
+
+function loadAreaListes(listType,arrParam){
+    switch(listType){
+        case "pays":
+            $.getJSON(urlPays, function (data) {
+                $(data.pays).each(function (i, pays) {
+                    var pays = {
+                        id          : pays.pla_var_pays,
+                        libelle     : pays.pla_var_pays
+                    }
+                    if(pays.id !== ""){
+                        h = "<option value='"+pays.id+"'>"+pays.libelle+"</option>";
+                        $('#listePays').append(h);
+                    }
+                    
+                });
+            });
+            break;
+        case "area1":
+            $('#listeArea1 option').remove();
+            $('#listeArea1 optgroup').remove();
+            if(typeof(arrParam['pays']) !== 'undefined' ){
+                console.log('rentre dans area1');
+                var pays = arrParam['pays'];
+                h = "<option disabled='disabled' selected='selected'>Selectionner...</option><optgroup label='"+pays+"'>";
+                $('#listeArea1').append(h);
+                $.getJSON(urlArea1+pays, function (data) {
+                    
+                    $(data.area1).each(function (i, area1) {
+                        var area1 = {
+                            id          : area1.pla_var_area1,
+                            libelle     : area1.pla_var_area1
+                        }
+                        if(area1.id !== ""){
+                            h = "<option value='"+area1.id+"'>"+area1.libelle+"</option>";
+                            $('#listeArea1').append(h);
+                        }
+
+                    });
+                });
+                h = "</optgroup>";
+                $('#listePays').append(h);
+            }else{
+                console.log('rentre pas dans area1');
+            }
+            
+            
+            break;
+        case "area2":
+            $('#listeArea2 option').remove();
+            $('#listeArea2 optgroup').remove();
+            if(typeof(arrParam['area1']) !== 'undefined' ){
+                console.log('rentre dans area2');
+                var area1 = arrParam['area1'];
+                h = "<option disabled='disabled' selected='selected'>Selectionner...</option><optgroup label='"+area1+"'>";
+                $('#listeArea2').append(h);
+                $.getJSON(urlArea2+area1, function (data) {
+                    console.log(urlArea2+area1);
+                    $(data.area2).each(function (i, area2) {
+                        var area2= {
+                            id          : area2.pla_var_area2,
+                            libelle     : area2.pla_var_area2
+                        }
+                        if(area2.id !== ""){
+                            h = "<option value='"+area2.id+"'>"+area2.libelle+"</option>";
+                            $('#listeArea2').append(h);
+                        }
+
+                    });
+                });
+                h = "</optgroup>";
+                $('#listePays').append(h);
+            }else{
+                console.log('rentre pas dans area1');
+            }
+            break;
+    }
+}
+
+
+$( document ).ready(function() {
+   
+   loadAreaListes('pays',null);
+
 });

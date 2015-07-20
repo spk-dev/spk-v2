@@ -55,7 +55,6 @@ if($index->getPage()=="home"){
     <link href="css/project/custo.css" rel="stylesheet"/>
     <link href="css/lib/timeline.css" rel="stylesheet"/>
 
-
     <!-- Custom Fonts -->
     <link href="css/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -251,6 +250,8 @@ if($index->getPage()=="home"){
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/lib/bootstrap.min.js"></script>
+    
+   
 
     <!-- Plugin JavaScript -->
     <script src="js/lib/jquery.easing.min.js"></script>
