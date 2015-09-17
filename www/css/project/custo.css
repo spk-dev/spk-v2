@@ -1,10 +1,19 @@
 /**
 Couleur logo : #1b6b74
-Couleur gris : #393c42
+Couleur gris : #393c42;
 Couleur rouge: #BF5239;
 Couleur verte: #6FB465;
 Couleur jaune: #F2C052;
 */
+
+body{
+    background: #fafafa;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
 
 @font-face {
     font-weight: normal;
@@ -80,7 +89,7 @@ Couleur jaune: #F2C052;
 
 .vignette_evenement{
     background-color:#f9f9f9;
-    border:2em solid #fff;
+    border:1em solid #fff;
 }
 
 .vignette_evenement_titre{
@@ -341,7 +350,7 @@ Couleur jaune: #F2C052;
 }
 
 .navbar-default{
-    background-color:#393c42;
+    background-color:#393c42 /**gris*/;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -352,7 +361,7 @@ Couleur jaune: #F2C052;
 font-family: 'comfortaa';
 }
 
-#top_menu_evenements:hover{color:#BF5239;}
+#top_menu_evenements:hover{color:#BF5239 /**rouge*/;}
 #top_menu_organisateurs:hover{color:#6FB465;}
 #top_menu_thematiques:hover{color:#F2C052;}
 #top_menu_inscription:hover{color:#6b9aa5;}
@@ -416,7 +425,7 @@ font-family: 'comfortaa';
 .btn-outline:active,
 .btn-outline.active {
   color: #fff;
-  background: #393c42;
+  background: #393c42 /**gris*/;
   border: solid 2px #fff;
 }
 
@@ -444,7 +453,7 @@ h2{
     font-size: 1.2em;
     line-height: 2em;
     font-weight: bold;
-    background:#393c42;
+    background:#393c42 /**gris*/;
     padding:0.1em;
     color:#fff;
 }
@@ -463,7 +472,7 @@ small a{
 }
 
 small a:hover{
-    color:#393c42;
+    color:#393c42 /**gris*/;
     font-size: 0.8em;
     text-decoration: none;
 }
@@ -486,7 +495,7 @@ padding: 3em 0;
     margin:0;
 }
 .liste_organisateur_home p{
-    color:#393c42;
+    color:#393c42 /**gris*/;
     font-size: 0.9em;
     margin:0;
 }
@@ -544,7 +553,7 @@ padding: 3em 0;
 }
 
 .theme_evenement:hover{
-    background: #393c42;
+    background: #393c42 /**gris*/;
     
 }
 .theme_evenement:hover a{
@@ -556,23 +565,23 @@ padding: 3em 0;
     
 }
 .theme_home:hover a{
-    color:#393c42;
+    color:#393c42 /**gris*/;
     text-decoration: none;  
 }
 .theme_home:hover .badge{
-    background: #393c42;
+    background: #393c42 /**gris*/;
     
 }
 .theme_home{
     background: #fff;
-    color:#393c42;
+    color:#393c42 /**gris*/;
     font-size: 0.8em;
     font-weight: normal;
     margin:0.4em;
     float:right;
 }
 .theme_home a{
-    color:#393c42;
+    color:#393c42 /**gris*/;
 }
 
 .theme_home .badge{
@@ -596,7 +605,7 @@ padding: 3em 0;
 }
 
 .voir-la-suite-blanc:hover a{
-    color: #393c42;
+    color: #393c42 /**gris*/;
     text-decoration:none;
 }
 
@@ -637,7 +646,7 @@ padding: 3em 0;
 
 .ligneInscription p{
     font-size: 0.9em;
-    color:#393c42;   
+    color:#393c42 /**gris*/;   
 }
 
 .inscription-description p{
@@ -651,7 +660,7 @@ padding: 3em 0;
 
 #newsletter-widget p{
     font-size: 1em;
-    color:#BF5239;
+    color:#BF5239 /**rouge*/;
 }
 
 footer .btn-social {
@@ -752,13 +761,13 @@ footer .btn-outline {
 }
 .infowindowgmap h1{
     font-size:15px;
-    color:#393c42;
+    color:#393c42 /**gris*/;
     font-weight: bold;
 }
 
 .infowindowgmap p{
     font-size:12px;
-    color:#393c42;
+    color:#393c42 /**gris*/;
 }
 .infowindowgmap .date{
     color:#bf5239;
@@ -806,7 +815,7 @@ border: solid black 1px;
 }
 
 .block_gris{
-    background:#393c42;
+    background:#393c42 /**gris*/;
 
 }
 
@@ -821,7 +830,7 @@ border: solid black 1px;
 }
 
 .block_rouge{
-    background: #BF5239;
+    background: #BF5239 /**rouge*/;
 
 }
 
@@ -845,7 +854,7 @@ border: solid black 1px;
 
 .block h3{
     font-size: 1.4em;
-    color:#BF5239;
+    color:#BF5239 /**rouge*/;
     font-weight: bold;
 }
 #evenement-block-adresse{
@@ -878,6 +887,20 @@ border: solid black 1px;
 #evenement p{
     font-size: 0.9em;
 }
+#evenement h1{
+    font-size: 1.4em;
+    color:#393c42 /**gris*/;
+    font-weight: normal;
+}
+#evenement h2{
+    font-size: 1.2em;
+    color:#393c42 /**gris*/;
+    font-weight: normal;
+}
+
+#evenement-description{
+    text-align:justify;
+}
 
 /** AFFIX */
 .affix {
@@ -899,11 +922,72 @@ border: solid black 1px;
    /** border-top:0.5em solid #fff;*/
 }
 
-#containerListeEvenements{
-  
+#listeEvenements{
+ background : #fff; 
+ margin:1em 0 0 0;
 }
-
+#containerListeEvenements{
+    background: #fff;
+}
 #EventSearchColumn{
    
 }
 
+.bloc-titre-evenement{
+    background : #fff; 
+    margin:1em 0 1em 0;
+    min-height: 2em;
+}
+
+.bloc-date-evenement{
+    background : #fff; 
+    padding:1em 0 1em 0;
+    min-height: 3em;
+}
+
+.bloc-text-evenement{
+    text-align: justify;
+    
+}
+
+.floating-right{
+    float:right;
+    margin:2em 1em;
+}
+
+a.link-tab{
+    font-size: 0.9em;
+}
+
+a.link-tab:hover{
+    font-weight: bold;
+    color:#1b6b74;
+}
+
+
+a.link-description{
+    color:#BF5239 /**rouge*/;
+}
+
+a.link-complementaire{
+    color:#6FB465 /**rouge*/;
+}
+a.link-organisateur{
+    color:#F2C052 /**rouge*/;
+}
+
+a.link-contact{
+    color:#393c42 /**rouge*/;
+}
+
+a.active-link{
+    font-weight: bold;
+    color:#1b6b74;
+}
+/**
+Couleur gris : #393c42 
+Couleur rouge: #BF5239 
+Couleur verte: #6FB465
+Couleur jaune: #F2C052;
+
+*/

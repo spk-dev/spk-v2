@@ -1,9 +1,9 @@
-setListeThemes();
-setListeTypes();
-setListeOrganisateurs();
+//setListeThemes();
+//setListeTypes();
+//setListeOrganisateurs();
 
-setDateField();
-loadMap();
+//setDateField();
+//loadMap();
 
 
 /**

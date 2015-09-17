@@ -320,7 +320,7 @@
                             <a><i class="fa fa-star fa-fw pointer-click"></i>Evenements</a>
                             <ul class="nav nav-second-level">
                                 <li><a href="index.php?page=event-list"><i class="fa fa-list-ul fa-fw"></i> Voir tous les événements</a></li>
-                                <li><a href="index.php?page=event-manage&action=w"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
+                                <li><a href="index.php?page=media-list"><i class="fa fa-plus-circle fa-fw"></i> Créer un événement</a></li>
                                 
                             </ul>
                         </li>

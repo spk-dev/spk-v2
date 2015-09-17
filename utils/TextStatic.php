@@ -139,5 +139,18 @@ class TextStatic{
              $_SESSION["language_en"] = $languagesData->getProperties($level."lang/en_lang.ini");
              $_SESSION["language_es"] = $languagesData->getProperties($level."lang/es_lang.ini");
         }
+        /*
+         * @Role : Permet d'afficher une date au format francais j/m/anneee Heure/Minute
+         */
+        public static function FormatDisplayDate($date)
+        {     
+            if( !preg_match( '`(\d{4})-(\d{1,2})-(\d{1,2})`' , $date ) )
+            {  
+                return $date;
+            } else {
+                $test = date('d/m/Y H:i',strtotime($date));
+                return $test;
+            }
+        }
 }
 ?>

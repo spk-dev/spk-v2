@@ -19,16 +19,8 @@
         </thead>
         <tbody>
 <?php 
+    $listMessageRoot = Message::getRootMessage();
 
-function generateRandomString($length = 10) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
-}
     $i=0;
     $star[1] = "fa-envelope";
     $star[2] = "fa-envelope-o";
@@ -36,8 +28,7 @@ function generateRandomString($length = 10) {
     $etat[2] = "Lu";
     $style[1] = "font-weight:bold;";
     $style[2] = "";
-    while($i<8){
-        $val = intval(rand(1, 2));
+
 ?>
         
             <tr style="<?php echo $style[$val]; ?>">
@@ -51,14 +42,6 @@ function generateRandomString($length = 10) {
                 
                 
             </tr>
-        
-            
-            
-            <?php
-    $i++;
-            
-    }
-    ?>
         </tbody>
     </table>
 </div>

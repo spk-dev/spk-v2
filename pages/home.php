@@ -36,14 +36,16 @@
                 <div id="map-container" ></div>
             </div>
         </div>
-        <div class="col-lg-12" id="listeEvenements">
-            
-            <!-- LISTE AJAX EVENEMENTS -->
-        </div>
+        <div class="row" id="containerlisteEvenements">
+            <div class="col-lg-12" id="listeEvenements">
 
-        <div class="container text-right">
-            <span class="voir-la-suite-blanc"><a href="index.php?page=evenements">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>
+                <!-- LISTE AJAX EVENEMENTS -->
+            </div>
+            <div class="container text-right">
+                <span class="voir-la-suite-blanc"><a href="index.php?page=evenements">Voir la suite <i class="fa fa-arrow-circle-o-right fleche"></i></a></span>
+            </div>
         </div>
+        
     </div>
 </section>
 

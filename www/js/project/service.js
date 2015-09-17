@@ -77,14 +77,6 @@ function pageHomeEvenement(type){
             var evenement = defineEvenement(event);
             var debut = evenement.debut;
             var fin = evenement.fin;
-            // lister les coordonnées GPS dans le tableauMarqueurs
-//            console.log('dans service/pageHomeEvenement');
-//            console.log('lat '+evenement.lat);
-//            console.log('lng '+evenement.lng);
-//            console.log('titre '+evenement.titre);
-//            console.log('date '+debut+' - '+fin);
-//            console.log('ville '+evenement.ville);
-//            console.log('id '+evenement.id);
             
             tableauMarqueurs.push({
                lat     : evenement.lat,
@@ -96,7 +88,7 @@ function pageHomeEvenement(type){
 //                event : evenement
             });
             
-            initialisation();
+            //initialisation();
             appendEvenementHome(evenement);
         });
     });
@@ -129,48 +121,31 @@ function pageEvenements(type){
     $('#loading').show();
     
     formData = $('#formResearch input').serialize();
-    //console.log(formData);
-//    var url = "";
-//    var plural = "";
-//
-//    url = urlEvenements+"?"+formData;
-//    console.log('url : '+url);
-
     var nbItems;
-    var nbItemsParPage;
 
 
 
     $.getJSON(url, function (data) {
-        //console.log(data);
+
         nbItems = data.evenements.length;
-//        nbItemsParPage = $("#nbItemParPage option:selected").val();
 
         if(nbItems>1){
             plural = "s";
         }
         $("#nbItems").html(nbItems);
         $("#plural").html(plural);
-
-       
-        //nomsDesMois = new Array("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre") ;
+        
         var listDate = new Array();
         
         $(data.evenements).each(function (i, event) {
                 
-
-//            if(i >= min && i <= max) {
-
                 var evenement = defineEvenement(event);
                 var debut = evenement.debut;
                 var fin = evenement.fin;
-                //console.log("debut = "+debut);
                 
                 datedebut = formatDate(debut,"moisAn");
-                //datedebut = nomsDesMois[datedebut.getUTCMonth()]+" "+datedebut.getUTCFullYear();
-                //console.log("datedebug = "+datedebut);
                 
-                if($.inArray(datedebut,listDate)<1){
+                if(listDate.indexOf(datedebut) === -1) {
                     listDate.push(datedebut);
                     appendEvenementsDate(datedebut);
                 }
@@ -207,30 +182,35 @@ function pageEvenement(id){
     console.log('rentre dans pageEvenement id = ['+id+']');
 
 
-    var url = urlEvenement+id;
+    var url1 = urlEvenement+id;
+    var url2 = urlThemesOccurence+id;
+    var listeTheme;
     
-    console.log('url : '+url);
-    console.log(tableauMarqueurs);
-    tableauMarqueurs = [];
-    console.log(tableauMarqueurs);
-    //$('#Item div').remove();
+    $.getJSON(url2, function (data) {
+        listeTheme = data.themes;
+//        $(data.themes).each(function (i, theme) {
+//            // lister les coordonnées GPS dans le tableauMarqueurs
+//     
+//            appendEvenement(ev);
+//        });
+    });
     
-    
-    
-    $.getJSON(url, function (data) {
-        console.log();
-        $(data.evenements).each(function (i, event) {
+    $.getJSON(url1, function (data) {
+        $(data.evenement).each(function (i, event) {
             // lister les coordonnées GPS dans le tableauMarqueurs
-
-                
-            var evenement = defineEvenement(event);
-            var debut = evenement.debut;
-            var fin = evenement.fin;
+     
+            var ev = defineEvenement(event);
+            console.log(ev);
+            var debut = ev.debut;
+            var fin = ev.fin;
       
-            appendEvenement(evenement);
+            appendEvenement(ev, listeTheme);
         });
     });
-    $('#loading').hide();
+    
+    
+    
+    
 }
 
 

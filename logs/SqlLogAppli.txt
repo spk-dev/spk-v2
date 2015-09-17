@@ -1,4 +1,5 @@
-[2015-07-20 16:58:39]-[sql]==> SELECT 
+[2015-09-09 15:41:02]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-09 15:41:03]-[sql]==> SELECT 
                     ocu_int_id, ocu_date_debut, ocu_date_fin,
                     eve_var_libelle, eve_org_int_id, 
                     tev_int_id, tev_var_libelle, 
@@ -16,5 +17,55 @@
                 AND
                 (med_int_id is NULL
                 OR
-                med_int_id < 2)  AND (pla_var_area1 IN ('Midi-Pyrénées') AND pla_var_area2 IN ('Haute-Garonne') AND pla_var_pays IN ('France') AND (ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
-[2015-07-20 16:58:51]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+                med_int_id < 2)  AND ((ocu_date_fin >= CURDATE()) ) ORDER BY ocu_date_debut ASC;
+[2015-09-09 15:41:06]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-09 15:41:30]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-09 15:42:38]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-09 15:42:43]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 14:51:52]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 14:51:59]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 14:52:41]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 14:58:46]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 14:58:46]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:01:37]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:08:20]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:08:21]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:08:40]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:10:09]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:10:31]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:14:26]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:15:26]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:15:34]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:15:46]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:16:57]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:17:03]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:17:29]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:18:51]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:19:35]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:20:13]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:20:31]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:21:08]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:21:26]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:22:04]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:22:46]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:23:51]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:25:52]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:26:25]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:26:25]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:30:23]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:30:36]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:30:46]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:31:24]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:31:35]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:31:57]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:32:07]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:50:52]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:51:55]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:53:07]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:53:21]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:55:10]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:56:28]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:57:29]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:58:09]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:58:11]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;
+[2015-09-10 15:58:40]-[sql]==>SELECT distinct(pla_var_pays) FROM pla_places;

@@ -34,7 +34,9 @@ final class Main {
     public function init() {
        $this->startTime = $this->getmicrotime();       // Démarrage du chrono
        $this->init_context();
-        // Chargement des properties dans une variable d'environnement       
+        // Chargement des properties dans une variable d'environnement     
+
+       
         if(!isset($_ENV["properties"])){
             $configPath = $this->getPath()."config/config.ini";
             $confValue = LoadConfig::getInstance();
@@ -104,49 +106,8 @@ final class Main {
      */
     public function loadClass($name) {
 
-        $classes = array(
-            'Main'                              =>  'services/Main.class.php',
-            
-            //TRAITEMENT
-            'AjaxAction'                        => 'AjaxAction.class.php',
-            'NewsletterAction'                  => 'services/NewsletterAction.class.php',
-            'EvenementSearchCriteria'           => 'services/EvenementSearchCriteria.class.php',
-            'OrganisateurSearchCriteria'        => 'services/OrganisateurSearchCriteria.class.php',
-            'ThemesSearchCriteria'              => 'services/ThemesSearchCriteria.class.php',
-            'TypesOrganisateurSearchCriteria'   => 'services/TypesOrganisateurSearchCriteria.class.php',
-            'TypesEvenementSearchCriteria'      => 'services/TypesEvenementSearchCriteria.class.php',
-            
-            //TECHNIQUE
-            'Query'                         => 'dao/Query.class.php',
-            'NewsletterDao'                 => 'dao/NewsletterDao.class.php',
-            'UtilDao'                       => 'dao/UtilDao.class.php',
-            
-            //API PUBLIC
-            'Mailjet'                       => 'api/mailjet/php-mailjet.class-mailjet-0.1.php',
-            'PHPMailer'                     => 'api/phpmailer/class.phpmailer.php',
-            'Slim'                          => 'api/Slim/Slim.php',
-
-            //UTILS
-            'AppLog'                        => 'utils/AppLog.class.php',
-            'LoadConfig'                    => 'utils/loadConfig.php',
-            'TextStatic'                    => 'utils/TextStatic.php',
-            'Redirect'                      => 'utils/redirect.php',
-            'imageTreatment'                => 'utils/imageTreatment.php',
-            'DownloadBinaryFile'            => 'utils/DownloadBinaryFile.class.php',
-            'SecurityUtil'                  => 'utils/SecurityUtil.class.php',
-            'UtilSession'                   => 'utils/UtilSession.class.php',
-            'UtilMail'                      => 'utils/UtilMail.class.php',
-            'UtilNavigateur'                => 'utils/UtilNavigateur.class.php',
-            'Util'                          => 'utils/Util.class.php',
-
-            //EXCEPTION
-            'NotFoundException'             => 'exception/NotFoundException.php',
-
-            //DAO
-            'Db'                            => 'dao/Db.class.php',
-            'UtilsDao'                      => 'dao/UtilsDao.class.php'
-
-        );
+        // Chargement du tableau de classe.
+        require("../../utils/classLoader.php");
        
         if (!array_key_exists($name, $classes)) {
             die('Class "' . $name . '" not found.');

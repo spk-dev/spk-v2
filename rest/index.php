@@ -16,6 +16,10 @@ $app->get('/area1/:pays','getArea1');
 $app->get('/area2/:area1','getArea2');
 $app->get('/evenementsSortTypes/:idType', 'getEvenementsSortTypes');
 $app->get('/typesevenements/:avecEvenement','getTypeEvenements');
+$app->get('/evenement/:idEvenement','getEvenement');
+$app->get('/occurences/:idEvenement', 'getOccurences');
+$app->get('/themes/evenements/:idEvenements','getThemesEvenements');
+$app->get('/themes/occurences/:idOccurence','getThemesOccurence');
 
 /**
  * Liste les événements
@@ -61,12 +65,90 @@ $app->get('/evenements',  function () use ($app) {
 $app->notFound(function () {
     $url = Redirect::getCurrentUrl();
     AppLog::ecrireLog("PAGE 404 rest url [".$url."]", "debug");
-    Redirect::toPage("../www/index.php ");
+    Redirect::toPage("../../www/index.php ");
 });
 
 
 
 $app->run();
+
+
+/**
+ * Renvoi les occurences des événements
+ * @param type $idEvenement
+ */
+function getThemesOccurence($idOccurence){
+    $sql = Query::getThemesOccurences($idOccurence);
+    try {
+        $db = getConnection();
+        $db->query('SET CHARACTER SET utf8');
+        $stmt = $db->query($sql);
+        $liste = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $db = null;
+        echo '{"themes": ' . json_encode($liste) . '}';
+        
+    } catch(PDOException $e) {
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
+    }
+}
+/**
+ * Renvoi les occurences des événements
+ * @param type $idEvenement
+ */
+function getThemesEvenements($idEvenement){
+    $sql = Query::getThemesEvenement($idEvenement);
+    try {
+        $db = getConnection();
+        $db->query('SET CHARACTER SET utf8');
+        $stmt = $db->query($sql);
+        $liste = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $db = null;
+        echo '{"themes": ' . json_encode($liste) . '}';
+        
+    } catch(PDOException $e) {
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
+    }
+}
+
+/**
+ * Renvoi les occurences des événements
+ * @param type $idEvenement
+ */
+function getOccurences($idEvenement){
+    $sql = Query::getOccurences($idEvenement);
+    try {
+        $db = getConnection();
+        $db->query('SET CHARACTER SET utf8');
+        $stmt = $db->query($sql);
+        $liste = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $db = null;
+        echo '{"occurences": ' . json_encode($liste) . '}';
+        
+    } catch(PDOException $e) {
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
+    }
+}
+
+
+/**
+ * Renvoi un événement complet
+ * @param type $idEvenement
+ */
+function getEvenement($idEvenement){
+    $sql = Query::getEvenement($idEvenement);
+    try {
+        $db = getConnection();
+        $db->query('SET CHARACTER SET utf8');
+        $stmt = $db->query($sql);
+        $liste = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $db = null;
+        echo '{"evenement": ' . json_encode($liste) . '}';
+        
+    } catch(PDOException $e) {
+        echo '{"error":{"text":'. $e->getMessage() .'}}';
+    }
+}
+
 
 /**
  * Liste des types d'événements

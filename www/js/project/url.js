@@ -4,26 +4,33 @@
  * and open the template in the editor.
  */
 
-
+//var root = "http://localhost/labo/spk-rft/rest/";
+var root = "http://localhost:8888/spk-v2/rest/";
 
 var urlAjax = "ajax.php";
+var urlEvenement = root + "evenement/";
+var urlEvenements = root + "evenements";
+var urlEvenementsSortTypes = root + "evenementsSortTypes/"
+var urlTypesEvenements = root + "typesevenements/";
+var urlPays = root + "pays/";
+var urlArea1 = root + "area1/";
+var urlArea2 = root + "area2/";
+var urlThemesOccurence = root + "/themes/occurences/";
 
-var urlEvenements = "../rest/evenements";
-var urlEvenementsSortTypes = "../rest/evenementsSortTypes/"
-var urlTypesEvenements = "../rest/typesevenements/";
+
+
+
+
 var urlMarqueur = 'http://www.spibook.com/images/spibook/gmarkers/spibook.png';
-var urlPays = "../rest/pays/";
-var urlArea1 = "../rest/area1/";
-var urlArea2 = "../rest/area2/";
 /*
-var urlEvenement = "../rest/evenement/";
-var urlOrganisateurs = "../rest/organisateurs";
-var urlOrganisateursResume = "../rest/organisateursresume";
-var urlOrganisateursNextEvent = "../rest/organisateursprochainevenement";
-var urlOrganisateur = "../rest/organisateur/";
-var urlNbEvenementParThemes = "../rest/nbevenementsparthemes";
-var urlThemes = "../rest/themes/";
-var urlTypesOrganisateur = "../rest/typesOrganisateur/";
-var urlTypesEvenement = "../rest/typesevenement/";
+var urlEvenement = root + "evenement/";
+var urlOrganisateurs = root + "organisateurs";
+var urlOrganisateursResume = root + "organisateursresume";
+var urlOrganisateursNextEvent = root + "organisateursprochainevenement";
+var urlOrganisateur = root + "organisateur/";
+var urlNbEvenementParThemes = root + "nbevenementsparthemes";
+var urlThemes = root + "themes/";
+var urlTypesOrganisateur = root + "typesOrganisateur/";
+var urlTypesEvenement = root + "typesevenement/";
 
 */

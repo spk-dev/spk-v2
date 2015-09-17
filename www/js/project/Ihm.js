@@ -50,38 +50,39 @@ function appendOrganisateur(org) {
  * @param {type} event
  * @returns {undefined}
  */
-function appendEvenement(event) {
+function appendEvenement(event, listeTheme) {
+   //alert(event.titre);
     
-    var listeThemesHtml = createListThemes("","","theme_evenement",event.themes);
-    var formatedDebut = formatTime(event.debut,"text");
-    var formatedFin = formatTime(event.fin,"text")
+    console.log('Dans append Evenement');
+    console.log(event);
+    console.log(listeTheme);
+//    var listeThemesHtml = createListThemes("","","theme_evenement",event.themes);
+//    var formatedDebut = formatTime(event.debut,"text");
+//    var formatedFin = formatTime(event.fin,"text")
     
     var img = event.image;
     if(img === '' || !img){img = 'default_evenements.png'; }
-
+//
     var hebergement = event.hebergement;
     if(hebergement === 1){hebergement = 'Hébergement sur place';}
     else{hebergement = "Pas d'hébergement sur place";}
     
     
-//    var hiddenFormInfos = "<input type='hidden' name='organisateur-evenement-email' value='"+event.mail+"'/>";
-//    hiddenFormInfos += "<input type='hidden' name='organisateur-evenement-titre' value='"+event.titre+"'/>";
-//    hiddenFormInfos += "<input type='hidden' name='organisateur-evenement-dates' value='"+formatDate(event.debut,"numerique")+" - "+formatDate(event.fin,"numerique")+"'/>";
-//    hiddenFormInfos += "<input type='hidden' name='organisateur-evenement-ville' value='"+event.ville+"'/>";
-    
     var hiddenFormInfos = "<input type='hidden' name='organisateur-evenement-id' value='"+event.id+"'/>";
-    
+   
+   
     
     $('#evenement-ville').append(event.ville);
     $('#evenement-titre').append(event.titre);
     $('#evenement-type').append(event.type_nom);
+    $('#evenement-description-resume').append("resumé de la description");
     $('#evenement-description').append(event.description);
     $('#evenement-informations-complementaires').append(event.prix);
     $('#evenement-inscription-contact').append(event.inscription);
     $('#evenement-date-debut').append(formatDate(event.debut,"numerique"));
     $('#evenement-date-fin').append(formatDate(event.fin,"numerique"));
-    $('#evenement-time-debut').append(formatedDebut.date+" à "+formatedDebut.time);
-    $('#evenement-time-fin').append(formatedFin.date+" à "+formatedFin.time);
+//    $('#evenement-time-debut').append(formatedDebut.date+" à "+formatedDebut.time);
+//    $('#evenement-time-fin').append(formatedFin.date+" à "+formatedFin.time);
     $('.evenement-mail').append('<a href="mailto:'+event.mail+'">'+event.mail+'</a>');
     $('#evenement-web').append('<a href="'+event.url+'"  target="_blank">'+event.url+'</a>');
     $('#evenement-tel').append(event.tel);
@@ -90,12 +91,12 @@ function appendEvenement(event) {
     $('#evenement-inscription').append(event.contact);
     $('#evenement-hebergement').append(hebergement);
     $('#evenement-intervenants').append(event.intervenants);
-    $('#evenement-liste-themes').append(listeThemesHtml);
-    
+    $('#evenement-liste-themes').append(listeTheme);
+//    
     $('#evenement-hidden-form-infos').append(hiddenFormInfos);
     
-    //$('#evenement-covoiturage').append(widgetCovoiturage("passager",event.ville)+widgetCovoiturage("conducteur",event.ville));
-    pageHome();
+//    $('#evenement-covoiturage').append(widgetCovoiturage("passager",event.ville)+widgetCovoiturage("conducteur",event.ville));
+//    pageEvenement(event.eve_id);
     
 }
 
